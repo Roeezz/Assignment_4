@@ -1,7 +1,5 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.nio.ByteBuffer;
-
 public class HashTable {
     /**
      * An array representing the table to which we chain the HashLists.
@@ -11,11 +9,6 @@ public class HashTable {
      * The size of the hashtable.
      */
     private int m2;
-    /**
-     * Constants for the hash function.
-     */
-    private static final int FNV_32_INIT = 0x811c9dc5;
-    private static final int FNV_32_PRIME = 0x01000193;
 
     /**
      * Constructs an empty HashTable.
