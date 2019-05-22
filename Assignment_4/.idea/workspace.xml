@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Assignment_4" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>15486907</find>
+      <find>HashFunctions</find>
+      <find>bloom</find>
+      <find>isE</find>
+      <find>equals</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Function.java" />
+        <option value="$PROJECT_DIR$/src/DoublyLinkedListIterrator.java" />
+        <option value="$PROJECT_DIR$/src/HashFunctions.java" />
+        <option value="$PROJECT_DIR$/src/DoublyLinkedListIterator.java" />
+        <option value="$PROJECT_DIR$/src/DoublyLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/TetsBloomFilter.java" />
+        <option value="$PROJECT_DIR$/src/UsefulMethods.java" />
+        <option value="$PROJECT_DIR$/src/TestsBloomFilter.java" />
+        <option value="$PROJECT_DIR$/src/LinkedListIterator.java" />
+        <option value="$PROJECT_DIR$/src/TestsHashFunctionsList.java" />
+        <option value="$PROJECT_DIR$/src/BloomFilterTests.java" />
+        <option value="$PROJECT_DIR$/src/UsefulFunctionsTest.java" />
+        <option value="$PROJECT_DIR$/src/HashFunction.java" />
+        <option value="$PROJECT_DIR$/src/HashFunctionsList.java" />
+        <option value="$PROJECT_DIR$/src/Password.java" />
+        <option value="$PROJECT_DIR$/src/HashFunctionsListTests.java" />
+        <option value="$PROJECT_DIR$/src/orderedPair.java" />
+        <option value="$PROJECT_DIR$/src/OrderedPair.java" />
+        <option value="$PROJECT_DIR$/src/BTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/BTree.java" />
+        <option value="$PROJECT_DIR$/src/Runner.java" />
+        <option value="$PROJECT_DIR$/src/HashTableTest.java" />
+        <option value="$PROJECT_DIR$/src/HashTableAndBloomFlterTest.java" />
+        <option value="$PROJECT_DIR$/src/BloomFilter.java" />
+        <option value="$PROJECT_DIR$/src/UsefulFunctions.java" />
+        <option value="$PROJECT_DIR$/src/HashTableAndBloomFilterTest.java" />
+        <option value="$PROJECT_DIR$/src/HashList.java" />
+        <option value="$PROJECT_DIR$/src/Link.java" />
+        <option value="$PROJECT_DIR$/src/HashListElement.java" />
+        <option value="$PROJECT_DIR$/src/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/HashTable.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Assignment_4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Assignment_4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Assignment_4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Assignment_4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.HashTableAndBloomFilterTest">
+    <configuration name="BloomFilterTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BloomFilterTests" />
+      <module name="Assignment_4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashFunctionsListTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HashFunctionsListTests" />
+      <module name="Assignment_4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashTableAndBloomFilterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HashTableAndBloomFilterTest" />
+      <module name="Assignment_4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Runner" />
+      <module name="Assignment_4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsefulFunctionsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UsefulFunctionsTest" />
+      <module name="Assignment_4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HashTableAndBloomFilterTest" />
+        <item itemvalue="Application.HashFunctionsListTests" />
+        <item itemvalue="Application.Runner" />
+        <item itemvalue="Application.UsefulFunctionsTest" />
+        <item itemvalue="Application.BloomFilterTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="" />
+      <created>1557913128891</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557913128891</updated>
+      <workItem from="1557913134668" duration="2782000" />
+      <workItem from="1557916637556" duration="3370000" />
+      <workItem from="1557940877345" duration="4405000" />
+      <workItem from="1558009052101" duration="82000" />
+      <workItem from="1558009300945" duration="15768000" />
+      <workItem from="1558095730524" duration="4861000" />
+      <workItem from="1558181052381" duration="24673000" />
+      <workItem from="1558221568979" duration="1868000" />
+      <workItem from="1558257137339" duration="1616000" />
+      <workItem from="1558268774992" duration="160000" />
+      <workItem from="1558271580522" duration="9027000" />
+      <workItem from="1558335867076" duration="13081000" />
+      <workItem from="1558446163417" duration="85000" />
+      <workItem from="1558450259014" duration="33000" />
+      <workItem from="1558450372714" duration="11616000" />
+      <workItem from="1558517958449" duration="3409000" />
+      <workItem from="1558521442358" duration="5261000" />
+      <workItem from="1558544640577" duration="684000" />
+      <workItem from="1558547123327" duration="451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="103232000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22184986" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" weight="0.3295302" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32768363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32768363" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32627118" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32768363" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.17090395" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21581769" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" weight="0.3295302" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32768363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32768363" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32627118" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32768363" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.17090395" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Function.java" />
+    <entry file="file://$PROJECT_DIR$/src/HashFunctions.java" />
+    <entry file="file://$PROJECT_DIR$/src/UsefulMethods.java" />
+    <entry file="file://$PROJECT_DIR$/src/TestsBloomFilter.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="147" selection-start-line="146" selection-end-line="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="115" selection-start-line="115" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="3331" selection-start-line="3331" selection-end-line="3331" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="820" column="26" selection-start-line="820" selection-start-column="26" selection-end-line="820" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="433" column="16" selection-start-line="433" selection-start-column="16" selection-end-line="433" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="193" column="23" selection-start-line="193" selection-start-column="20" selection-end-line="193" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/nio/charset/Charset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="638" column="36" lean-forward="true" selection-start-line="638" selection-start-column="36" selection-end-line="638" selection-end-column="36" />
+          <folding>
+            <element signature="e#26078#26079#0" expanded="true" />
+            <element signature="e#26105#26106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/StringCoding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="278" column="16" selection-start-line="278" selection-start-column="16" selection-end-line="278" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="956" column="18" selection-start-line="956" selection-start-column="18" selection-end-line="956" selection-end-column="18" />
+          <folding>
+            <element signature="e#36393#36394#0" expanded="true" />
+            <element signature="e#36459#36460#0" expanded="true" />
+            <element signature="e#117893#117894#0" expanded="true" />
+            <element signature="e#117955#117956#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="1443" column="22" selection-start-line="1443" selection-start-column="22" selection-end-line="1443" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bad_passwords.txt" />
+    <entry file="file://$PROJECT_DIR$/src/hash_functions.txt" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+          <folding>
+            <element signature="e#7471#7472#0" expanded="true" />
+            <element signature="e#7531#7532#0" expanded="true" />
+            <element signature="e#25095#25096#0" expanded="true" />
+            <element signature="e#25133#25134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash_functions.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UsefulFunctionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/nio/file/Files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="3285" column="23" selection-start-line="3285" selection-start-column="23" selection-end-line="3285" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Password.java" />
+    <entry file="file://$PROJECT_DIR$/src/BloomFilterTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashFunctionsListTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashFunctionsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="docComment;field#hashFunctionsList#0;class#HashFunctionsList#0" />
+            <element signature="docComment;method#createFunctionsList#0;class#HashFunctionsList#0" />
+            <element signature="docComment;method#getSize#0;class#HashFunctionsList#0" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="docComment;method#createHashFunction#0;class#HashFunctionsList#0" />
+            <element signature="docComment;method#extractNumber#0;class#HashFunctionsList#0" />
+            <element signature="docComment;method#iterator#0;class#HashFunctionsList#0" />
+            <element signature="method#equals#0;class#HashFunctionsList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedListIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;field#current#0;class#LinkedListIterator#0" />
+            <element signature="docComment;method#LinkedListIterator#0;class#LinkedListIterator#0" />
+            <element signature="n#!!block;n#LinkedListIterator#0;n#LinkedListIterator#0" />
+            <element signature="docComment;method#hasNext#0;class#LinkedListIterator#0" />
+            <element signature="docComment;method#next#0;class#LinkedListIterator#0" />
+            <element signature="method#next#0;class#LinkedListIterator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OrderedPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding>
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#BTree#0;class#BTree#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delete_keys.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="201" column="52" selection-start-line="201" selection-start-column="52" selection-end-line="201" selection-end-column="52" />
+          <folding>
+            <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
+            <element signature="docComment;field#n#0;class#BTreeNode#0" />
+            <element signature="docComment;field#keys#0;class#BTreeNode#0" />
+            <element signature="docComment;field#children#0;class#BTreeNode#0" />
+            <element signature="docComment;method#BTreeNode#0;class#BTreeNode#0" />
+            <element signature="method#BTreeNode#0;class#BTreeNode#0" />
+            <element signature="n#!!block;n#isLeaf#1;n#BTreeNode#0" />
+            <element signature="method#setN#0;class#BTreeNode#0" />
+            <element signature="n#!!block;n#getN#0;n#BTreeNode#0" />
+            <element signature="method#getKeys#0;class#BTreeNode#0" />
+            <element signature="docComment;method#getKey#0;class#BTreeNode#0" />
+            <element signature="method#getKey#0;class#BTreeNode#0" />
+            <element signature="e#1160#1247#1" />
+            <element signature="docComment;method#setKey#0;class#BTreeNode#0" />
+            <element signature="method#setKey#0;class#BTreeNode#0" />
+            <element signature="e#1534#1621#1" />
+            <element signature="docComment;method#getChild#0;class#BTreeNode#0" />
+            <element signature="method#getChild#0;class#BTreeNode#0" />
+            <element signature="e#1865#1952#1" />
+            <element signature="docComment;method#setChild#0;class#BTreeNode#0" />
+            <element signature="method#setChild#0;class#BTreeNode#0" />
+            <element signature="e#2264#2351#1" />
+            <element signature="docComment;method#search#0;class#BTreeNode#0" />
+            <element signature="method#search#0;class#BTreeNode#0" />
+            <element signature="e#2708#2736#1" />
+            <element signature="e#2777#2833#1" />
+            <element signature="e#2857#2893#1" />
+            <element signature="e#2906#2961#1" />
+            <element signature="docComment;method#insert#0;class#BTreeNode#0" />
+            <element signature="method#insert#0;class#BTreeNode#0" />
+            <element signature="e#3134#3203#0" />
+            <element signature="e#3253#3337#1" />
+            <element signature="e#3469#3497#1" />
+            <element signature="e#3543#3581#1" />
+            <element signature="docComment;method#splitChild#0;class#BTreeNode#0" />
+            <element signature="method#splitChild#0;class#BTreeNode#0" />
+            <element signature="e#4050#4109#1" />
+            <element signature="docComment;method#createNodeForSplit#0;class#BTreeNode#0" />
+            <element signature="method#createNodeForSplit#0;class#BTreeNode#0" />
+            <element signature="e#4870#4961#1" />
+            <element signature="docComment;method#copyChildren#0;class#BTreeNode#0" />
+            <element signature="method#copyChildren#0;class#BTreeNode#0" />
+            <element signature="e#5397#5500#1" />
+            <element signature="docComment;method#clearPlaceForChild#0;class#BTreeNode#0" />
+            <element signature="method#clearPlaceForChild#0;class#BTreeNode#0" />
+            <element signature="e#5957#6023#1" />
+            <element signature="e#6132#6190#1" />
+            <element signature="docComment;method#insertToKeysArray#0;class#BTreeNode#0" />
+            <element signature="method#insertToKeysArray#0;class#BTreeNode#0" />
+            <element signature="e#6370#6427#1" />
+            <element signature="e#6503#6566#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BloomFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
+          <folding>
+            <element signature="docComment;field#bloomFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;field#m1#0;class#BloomFilter#0" />
+            <element signature="docComment;field#hashFunctionsList#0;class#BloomFilter#0" />
+            <element signature="docComment;method#BloomFilter#0;class#BloomFilter#0" />
+            <element signature="method#BloomFilter#0;class#BloomFilter#0" />
+            <element signature="e#674#752#1" />
+            <element signature="docComment;method#updateTable#0;class#BloomFilter#0" />
+            <element signature="method#updateTable#0;class#BloomFilter#0" />
+            <element signature="docComment;method#updateFilter#0;class#BloomFilter#0" />
+            <element signature="method#updateFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;method#checkPasswords#0;class#BloomFilter#0" />
+            <element signature="method#checkPasswords#0;class#BloomFilter#0" />
+            <element signature="docComment;method#checkAgainstFilter#0;class#BloomFilter#0" />
+            <element signature="method#checkAgainstFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;method#getFalsePositivePercentage#0;class#BloomFilter#0" />
+            <element signature="method#getFalsePositivePercentage#0;class#BloomFilter#0" />
+            <element signature="docComment;method#goodPasswords#0;class#BloomFilter#0" />
+            <element signature="method#goodPasswords#0;class#BloomFilter#0" />
+            <element signature="docComment;method#falsePositives#0;class#BloomFilter#0" />
+            <element signature="method#falsePositives#0;class#BloomFilter#0" />
+            <element signature="method#equals#0;class#BloomFilter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="82" column="181" selection-start-line="82" selection-start-column="181" selection-end-line="82" selection-end-column="181" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="32" />
+          <folding>
+            <element signature="docComment;field#prime#0;class#HashFunction#0" />
+            <element signature="docComment;field#ALPHA#0;class#HashFunction#0" />
+            <element signature="docComment;method#HashFunction#0;class#HashFunction#0" />
+            <element signature="method#HashFunction#0;class#HashFunction#0" />
+            <element signature="docComment;method#runFunction#0;class#HashFunction#0" />
+            <element signature="method#equals#0;class#HashFunction#0" />
+            <element signature="e#995#1103#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UsefulFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="112" selection-start-line="112" selection-end-line="113" selection-end-column="38" />
+          <folding>
+            <element signature="docComment;method#createNumberWithGivenBase#0;class#UsefulFunctions#0" />
+            <element signature="method#createNumberWithGivenBase#0;class#UsefulFunctions#0" />
+            <element signature="e#535#637#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashListElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="docComment;method#HashListElement#0;class#HashListElement#0" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="method#equals#0;class#HashListElement#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;field#next#0;class#Link#0" />
+            <element signature="docComment;field#data#0;class#Link#0" />
+            <element signature="e#195#395#0" />
+            <element signature="method#Link#0;class#Link#0" />
+            <element signature="e#446#521#1" />
+            <element signature="docComment;method#setData#0;class#Link#0" />
+            <element signature="method#setData#0;class#Link#0" />
+            <element signature="e#1027#1102#1" />
+            <element signature="docComment;method#setNext#0;class#Link#0" />
+            <element signature="docComment;method#getNext#0;class#Link#0" />
+            <element signature="docComment;method#getData#0;class#Link#0" />
+            <element signature="method#equals#0;class#Link#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;method#HashList#1;class#HashList#0" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="method#equals#0;class#HashList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="158" column="39" selection-start-line="158" selection-start-column="39" selection-end-line="158" selection-end-column="39" />
+          <folding>
+            <element signature="docComment;field#first#0;class#LinkedList#0" />
+            <element signature="docComment;field#size#0;class#LinkedList#0" />
+            <element signature="docComment;method#getSize#0;class#LinkedList#0" />
+            <element signature="docComment;method#isEmpty#0;class#LinkedList#0" />
+            <element signature="docComment;method#iterator#0;class#LinkedList#0" />
+            <element signature="docComment;method#add#0;class#LinkedList#0" />
+            <element signature="method#add#0;class#LinkedList#0" />
+            <element signature="n#!!block;n#createLink#0;n#LinkedList#0" />
+            <element signature="docComment;method#indexOf#0;class#LinkedList#0" />
+            <element signature="method#indexOf#0;class#LinkedList#0" />
+            <element signature="docComment;method#get#0;class#LinkedList#0" />
+            <element signature="method#get#0;class#LinkedList#0" />
+            <element signature="docComment;method#remove#0;class#LinkedList#0" />
+            <element signature="method#remove#0;class#LinkedList#0" />
+            <element signature="docComment;method#remove#1;class#LinkedList#0" />
+            <element signature="method#remove#1;class#LinkedList#0" />
+            <element signature="docComment;method#contains#0;class#LinkedList#0" />
+            <element signature="method#contains#0;class#LinkedList#0" />
+            <element signature="method#toString#0;class#LinkedList#0" />
+            <element signature="method#equals#0;class#LinkedList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;field#table#0;class#HashTable#0" />
+            <element signature="docComment;field#m2#0;class#HashTable#0" />
+            <element signature="docComment;field#FNV_32_INIT#0;class#HashTable#0" />
+            <element signature="docComment;method#HashTable#0;class#HashTable#0" />
+            <element signature="docComment;method#updateTable#0;class#HashTable#0" />
+            <element signature="docComment;method#getSearchTime#0;class#HashTable#0" />
+            <element signature="method#getSearchTime#0;class#HashTable#0" />
+            <element signature="docComment;method#hashFunction#0;class#HashTable#0" />
+            <element signature="docComment;method#hashFunction#1;class#HashTable#0" />
+            <element signature="method#checkPasswords#0;class#HashTable#0" />
+            <element signature="e#2752#2837#1" />
+            <element signature="docComment;method#checkInTable#0;class#HashTable#0" />
+            <element signature="n#!!block;n#checkInTable#0;n#HashTable#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashTableAndBloomFilterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/is-MD7KO.tmp/editor-test.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Assignment_4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
