@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="Added .gitignore file">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -19,54 +26,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HashTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="357">
+              <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
               <folding>
-                <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
-                <element signature="docComment;field#n#0;class#BTreeNode#0" />
-                <element signature="docComment;field#keys#0;class#BTreeNode#0" />
-                <element signature="docComment;field#children#0;class#BTreeNode#0" />
-                <element signature="docComment;method#BTreeNode#0;class#BTreeNode#0" />
-                <element signature="method#BTreeNode#0;class#BTreeNode#0" />
-                <element signature="n#!!block;n#isLeaf#1;n#BTreeNode#0" />
-                <element signature="method#setN#0;class#BTreeNode#0" />
-                <element signature="n#!!block;n#getN#0;n#BTreeNode#0" />
-                <element signature="method#getKeys#0;class#BTreeNode#0" />
-                <element signature="docComment;method#getKey#0;class#BTreeNode#0" />
-                <element signature="method#getKey#0;class#BTreeNode#0" />
-                <element signature="docComment;method#setKey#0;class#BTreeNode#0" />
-                <element signature="method#setKey#0;class#BTreeNode#0" />
-                <element signature="docComment;method#getChild#0;class#BTreeNode#0" />
-                <element signature="method#getChild#0;class#BTreeNode#0" />
-                <element signature="docComment;method#setChild#0;class#BTreeNode#0" />
-                <element signature="method#setChild#0;class#BTreeNode#0" />
-                <element signature="docComment;method#search#0;class#BTreeNode#0" />
-                <element signature="method#search#0;class#BTreeNode#0" />
-                <element signature="docComment;method#insert#0;class#BTreeNode#0" />
-                <element signature="method#insert#0;class#BTreeNode#0" />
-                <element signature="docComment;method#splitChild#0;class#BTreeNode#0" />
-                <element signature="method#splitChild#0;class#BTreeNode#0" />
-                <element signature="docComment;method#createNodeForSplit#0;class#BTreeNode#0" />
-                <element signature="method#createNodeForSplit#0;class#BTreeNode#0" />
-                <element signature="docComment;method#copyChildren#0;class#BTreeNode#0" />
-                <element signature="method#copyChildren#0;class#BTreeNode#0" />
-                <element signature="docComment;method#clearPlaceForChild#0;class#BTreeNode#0" />
-                <element signature="method#clearPlaceForChild#0;class#BTreeNode#0" />
-                <element signature="docComment;method#insertToKeysArray#0;class#BTreeNode#0" />
-                <element signature="method#insertToKeysArray#0;class#BTreeNode#0" />
+                <element signature="docComment;field#table#0;class#HashTable#0" />
+                <element signature="docComment;field#m2#0;class#HashTable#0" />
+                <element signature="docComment;field#FNV_32_INIT#0;class#HashTable#0" />
+                <element signature="docComment;method#HashTable#0;class#HashTable#0" />
+                <element signature="method#HashTable#0;class#HashTable#0" />
+                <element signature="e#771#821#1" />
+                <element signature="docComment;method#updateTable#0;class#HashTable#0" />
+                <element signature="method#updateTable#0;class#HashTable#0" />
+                <element signature="e#1208#1332#1" />
+                <element signature="docComment;method#getSearchTime#0;class#HashTable#0" />
+                <element signature="method#getSearchTime#0;class#HashTable#0" />
+                <element signature="docComment;method#hashFunction#0;class#HashTable#0" />
+                <element signature="n#!!block;n#hashFunction#0;n#HashTable#0" />
+                <element signature="docComment;method#checkPasswords#0;class#HashTable#0" />
+                <element signature="method#checkPasswords#0;class#HashTable#0" />
+                <element signature="e#2884#2969#1" />
+                <element signature="docComment;method#checkInTable#0;class#HashTable#0" />
+                <element signature="n#!!block;n#checkInTable#0;n#HashTable#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            <state relative-caret-position="527">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -97,6 +90,11 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -130,9 +128,10 @@
         <option value="$PROJECT_DIR$/src/Link.java" />
         <option value="$PROJECT_DIR$/src/HashListElement.java" />
         <option value="$PROJECT_DIR$/src/LinkedList.java" />
-        <option value="$PROJECT_DIR$/src/HashTable.java" />
-        <option value="$PROJECT_DIR$/src/BTreeNode.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/Learning" />
+        <option value="$PROJECT_DIR$/src/BTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/HashTable.java" />
       </list>
     </option>
   </component>
@@ -148,6 +147,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,12 +156,15 @@
               <item name="Assignment_4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Assignment_4" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Assignment_4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Assignment_4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,10 +235,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UsefulFunctionsTest" />
+        <item itemvalue="Application.Runner" />
         <item itemvalue="Application.HashTableAndBloomFilterTest" />
         <item itemvalue="Application.HashFunctionsListTests" />
-        <item itemvalue="Application.Runner" />
-        <item itemvalue="Application.UsefulFunctionsTest" />
         <item itemvalue="Application.BloomFilterTests" />
       </list>
     </recent_temporary>
@@ -268,7 +272,8 @@
       <workItem from="1558521442358" duration="5261000" />
       <workItem from="1558544640577" duration="684000" />
       <workItem from="1558547123327" duration="4611000" />
-      <workItem from="1558553065125" duration="581000" />
+      <workItem from="1558553065125" duration="3284000" />
+      <workItem from="1558557584682" duration="842000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1558549538559</created>
@@ -312,11 +317,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558553108293</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added .gitignore file">
+      <created>1558553683285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558553683285</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107973000" />
+    <option name="totallyTimeSpent" value="111518000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -331,14 +343,14 @@
     <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22520107" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22520107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" weight="0.3295302" />
-      <window_info id="Learn" order="7" />
+      <window_info id="Learn" order="7" weight="0.3344504" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32768363" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32768363" />
@@ -445,7 +457,8 @@
     <MESSAGE value="Test4" />
     <MESSAGE value="Test5" />
     <MESSAGE value="Deleted stupid comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted stupid comment" />
+    <MESSAGE value="Added .gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added .gitignore file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Function.java" />
@@ -803,29 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;field#table#0;class#HashTable#0" />
-            <element signature="docComment;field#m2#0;class#HashTable#0" />
-            <element signature="docComment;field#FNV_32_INIT#0;class#HashTable#0" />
-            <element signature="docComment;method#HashTable#0;class#HashTable#0" />
-            <element signature="docComment;method#updateTable#0;class#HashTable#0" />
-            <element signature="docComment;method#getSearchTime#0;class#HashTable#0" />
-            <element signature="method#getSearchTime#0;class#HashTable#0" />
-            <element signature="docComment;method#hashFunction#0;class#HashTable#0" />
-            <element signature="docComment;method#hashFunction#1;class#HashTable#0" />
-            <element signature="method#checkPasswords#0;class#HashTable#0" />
-            <element signature="e#2752#2837#1" />
-            <element signature="docComment;method#checkInTable#0;class#HashTable#0" />
-            <element signature="n#!!block;n#checkInTable#0;n#HashTable#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -847,10 +837,24 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Learning">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="-156">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
             <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -888,10 +892,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/HashTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="357">
+          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+          <folding>
+            <element signature="docComment;field#table#0;class#HashTable#0" />
+            <element signature="docComment;field#m2#0;class#HashTable#0" />
+            <element signature="docComment;field#FNV_32_INIT#0;class#HashTable#0" />
+            <element signature="docComment;method#HashTable#0;class#HashTable#0" />
+            <element signature="method#HashTable#0;class#HashTable#0" />
+            <element signature="e#771#821#1" />
+            <element signature="docComment;method#updateTable#0;class#HashTable#0" />
+            <element signature="method#updateTable#0;class#HashTable#0" />
+            <element signature="e#1208#1332#1" />
+            <element signature="docComment;method#getSearchTime#0;class#HashTable#0" />
+            <element signature="method#getSearchTime#0;class#HashTable#0" />
+            <element signature="docComment;method#hashFunction#0;class#HashTable#0" />
+            <element signature="n#!!block;n#hashFunction#0;n#HashTable#0" />
+            <element signature="docComment;method#checkPasswords#0;class#HashTable#0" />
+            <element signature="method#checkPasswords#0;class#HashTable#0" />
+            <element signature="e#2884#2969#1" />
+            <element signature="docComment;method#checkInTable#0;class#HashTable#0" />
+            <element signature="n#!!block;n#checkInTable#0;n#HashTable#0" />
+          </folding>
         </state>
       </provider>
     </entry>

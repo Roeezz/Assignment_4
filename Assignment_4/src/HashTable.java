@@ -61,23 +61,6 @@ public class HashTable {
      */
     public int hashFunction(Integer key){
         return ((5*key + 3) % 15486907) % m2;
-//        byte[] bytes = ByteBuffer.allocate(4).putInt(key).array();
-//        return hashFunction(bytes);
-    }
-
-    /**
-     * Hashes a byte array into an index in m2
-     * @param data a byte array representing the data to hash.
-     * @return an int that is the hashcode of the data.
-     */
-    public int hashFunction(byte[] data){
-        long rv = FNV_32_INIT;
-        for (int i = 0; i < data.length; i++) {
-            byte datum = data[i];
-            rv ^= datum;
-            rv *= FNV_32_PRIME;
-        }
-        return (int) rv % m2;
     }
 
     /**
