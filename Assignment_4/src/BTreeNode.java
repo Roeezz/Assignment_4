@@ -4,7 +4,6 @@ public class BTreeNode {
      */
     private final int T_VAR;
 
-    // what?
     /**
      * The number of keys in node.
      */
