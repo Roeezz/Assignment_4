@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="Test5" />
+    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="51">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
                 <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -34,46 +37,36 @@
                 <element signature="method#getKeys#0;class#BTreeNode#0" />
                 <element signature="docComment;method#getKey#0;class#BTreeNode#0" />
                 <element signature="method#getKey#0;class#BTreeNode#0" />
-                <element signature="e#1160#1247#1" />
                 <element signature="docComment;method#setKey#0;class#BTreeNode#0" />
                 <element signature="method#setKey#0;class#BTreeNode#0" />
-                <element signature="e#1534#1621#1" />
                 <element signature="docComment;method#getChild#0;class#BTreeNode#0" />
                 <element signature="method#getChild#0;class#BTreeNode#0" />
-                <element signature="e#1865#1952#1" />
                 <element signature="docComment;method#setChild#0;class#BTreeNode#0" />
                 <element signature="method#setChild#0;class#BTreeNode#0" />
-                <element signature="e#2264#2351#1" />
                 <element signature="docComment;method#search#0;class#BTreeNode#0" />
                 <element signature="method#search#0;class#BTreeNode#0" />
-                <element signature="e#2708#2736#1" />
-                <element signature="e#2777#2833#1" />
-                <element signature="e#2857#2893#1" />
-                <element signature="e#2906#2961#1" />
                 <element signature="docComment;method#insert#0;class#BTreeNode#0" />
                 <element signature="method#insert#0;class#BTreeNode#0" />
-                <element signature="e#3134#3203#0" />
-                <element signature="e#3253#3337#1" />
-                <element signature="e#3469#3497#1" />
-                <element signature="e#3543#3581#1" />
                 <element signature="docComment;method#splitChild#0;class#BTreeNode#0" />
                 <element signature="method#splitChild#0;class#BTreeNode#0" />
-                <element signature="e#4050#4109#1" />
                 <element signature="docComment;method#createNodeForSplit#0;class#BTreeNode#0" />
                 <element signature="method#createNodeForSplit#0;class#BTreeNode#0" />
-                <element signature="e#4870#4961#1" />
                 <element signature="docComment;method#copyChildren#0;class#BTreeNode#0" />
                 <element signature="method#copyChildren#0;class#BTreeNode#0" />
-                <element signature="e#5397#5500#1" />
                 <element signature="docComment;method#clearPlaceForChild#0;class#BTreeNode#0" />
                 <element signature="method#clearPlaceForChild#0;class#BTreeNode#0" />
-                <element signature="e#5957#6023#1" />
-                <element signature="e#6132#6190#1" />
                 <element signature="docComment;method#insertToKeysArray#0;class#BTreeNode#0" />
                 <element signature="method#insertToKeysArray#0;class#BTreeNode#0" />
-                <element signature="e#6370#6427#1" />
-                <element signature="e#6503#6566#1" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -139,6 +132,7 @@
         <option value="$PROJECT_DIR$/src/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/HashTable.java" />
         <option value="$PROJECT_DIR$/src/BTreeNode.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -160,11 +154,6 @@
             <path>
               <item name="Assignment_4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Assignment_4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Assignment_4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Assignment_4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -279,6 +268,7 @@
       <workItem from="1558521442358" duration="5261000" />
       <workItem from="1558544640577" duration="684000" />
       <workItem from="1558547123327" duration="4611000" />
+      <workItem from="1558553065125" duration="581000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1558549538559</created>
@@ -315,11 +305,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558551922105</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Deleted stupid comment">
+      <created>1558553108293</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558553108293</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107392000" />
+    <option name="totallyTimeSpent" value="107973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -332,8 +329,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22184986" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22520107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -425,6 +423,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
@@ -432,7 +444,8 @@
     <MESSAGE value="Test3" />
     <MESSAGE value="Test4" />
     <MESSAGE value="Test5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test5" />
+    <MESSAGE value="Deleted stupid comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted stupid comment" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Function.java" />
@@ -830,16 +843,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/is-MD7KO.tmp/editor-test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/is-MD7KO.tmp/editor-test.txt" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
             <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -853,46 +864,34 @@
             <element signature="method#getKeys#0;class#BTreeNode#0" />
             <element signature="docComment;method#getKey#0;class#BTreeNode#0" />
             <element signature="method#getKey#0;class#BTreeNode#0" />
-            <element signature="e#1160#1247#1" />
             <element signature="docComment;method#setKey#0;class#BTreeNode#0" />
             <element signature="method#setKey#0;class#BTreeNode#0" />
-            <element signature="e#1534#1621#1" />
             <element signature="docComment;method#getChild#0;class#BTreeNode#0" />
             <element signature="method#getChild#0;class#BTreeNode#0" />
-            <element signature="e#1865#1952#1" />
             <element signature="docComment;method#setChild#0;class#BTreeNode#0" />
             <element signature="method#setChild#0;class#BTreeNode#0" />
-            <element signature="e#2264#2351#1" />
             <element signature="docComment;method#search#0;class#BTreeNode#0" />
             <element signature="method#search#0;class#BTreeNode#0" />
-            <element signature="e#2708#2736#1" />
-            <element signature="e#2777#2833#1" />
-            <element signature="e#2857#2893#1" />
-            <element signature="e#2906#2961#1" />
             <element signature="docComment;method#insert#0;class#BTreeNode#0" />
             <element signature="method#insert#0;class#BTreeNode#0" />
-            <element signature="e#3134#3203#0" />
-            <element signature="e#3253#3337#1" />
-            <element signature="e#3469#3497#1" />
-            <element signature="e#3543#3581#1" />
             <element signature="docComment;method#splitChild#0;class#BTreeNode#0" />
             <element signature="method#splitChild#0;class#BTreeNode#0" />
-            <element signature="e#4050#4109#1" />
             <element signature="docComment;method#createNodeForSplit#0;class#BTreeNode#0" />
             <element signature="method#createNodeForSplit#0;class#BTreeNode#0" />
-            <element signature="e#4870#4961#1" />
             <element signature="docComment;method#copyChildren#0;class#BTreeNode#0" />
             <element signature="method#copyChildren#0;class#BTreeNode#0" />
-            <element signature="e#5397#5500#1" />
             <element signature="docComment;method#clearPlaceForChild#0;class#BTreeNode#0" />
             <element signature="method#clearPlaceForChild#0;class#BTreeNode#0" />
-            <element signature="e#5957#6023#1" />
-            <element signature="e#6132#6190#1" />
             <element signature="docComment;method#insertToKeysArray#0;class#BTreeNode#0" />
             <element signature="method#insertToKeysArray#0;class#BTreeNode#0" />
-            <element signature="e#6370#6427#1" />
-            <element signature="e#6503#6566#1" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
