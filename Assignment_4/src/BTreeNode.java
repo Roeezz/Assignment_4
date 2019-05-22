@@ -1,6 +1,4 @@
 public class BTreeNode {
-    //test something
-
     /**
      * The tree's constant.
      */

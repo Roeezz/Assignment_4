@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="Test2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="Test3">
       <change beforePath="$PROJECT_DIR$/src/BTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BTreeNode.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,9 +21,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
+            <state relative-caret-position="17">
+              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
               <folding>
+                <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
                 <element signature="docComment;field#n#0;class#BTreeNode#0" />
                 <element signature="docComment;field#keys#0;class#BTreeNode#0" />
                 <element signature="docComment;field#children#0;class#BTreeNode#0" />
@@ -280,7 +280,7 @@
       <workItem from="1558517958449" duration="3409000" />
       <workItem from="1558521442358" duration="5261000" />
       <workItem from="1558544640577" duration="684000" />
-      <workItem from="1558547123327" duration="2427000" />
+      <workItem from="1558547123327" duration="3644000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1558549538559</created>
@@ -296,11 +296,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558549930988</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Test3">
+      <created>1558550225533</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558550225533</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105208000" />
+    <option name="totallyTimeSpent" value="106425000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,7 +342,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.17090395" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32909605" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -411,7 +418,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <MESSAGE value="Test2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test2" />
+    <MESSAGE value="Test3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Function.java" />
@@ -817,9 +825,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        <state relative-caret-position="17">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
           <folding>
+            <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
             <element signature="docComment;field#n#0;class#BTreeNode#0" />
             <element signature="docComment;field#keys#0;class#BTreeNode#0" />
             <element signature="docComment;field#children#0;class#BTreeNode#0" />
