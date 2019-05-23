@@ -1,7 +1,5 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.Iterator;
-
 import static java.lang.Integer.parseInt;
 
 public class BTree {
@@ -60,17 +58,20 @@ public class BTree {
         return newRoot;
     }
 
-    public void createFullTree(String s) {
-        //TODO: implement createFullTree
-        throw new NotImplementedException();
+    public void createFullTree(String path) {
+        LinkedList<String> passwordsList = UsefulFunctions.createStringListFromFile(path);
+        assert passwordsList != null;
+        for (String password : passwordsList) {
+            insert(password);
+        }
     }
 
-    public String getSearchTime(String s) {
+    public String getSearchTime(String path) {
         //TODO: implement getSearchTime
         throw new NotImplementedException();
     }
 
-    public void deleteKeysFromTree(String s) {
+    public void deleteKeysFromTree(String path) {
         //TODO: implement deleteKeysFromTree
         throw new NotImplementedException();
     }

@@ -5,23 +5,6 @@ import java.io.IOException;
 
 public class UsefulFunctions {
     /**
-     * Calculates a number from a string using a given base.
-     * @param str the string to calculate the number form.
-     * @param base the given base to calculate with
-     * @return the calculated number.
-     */
-    public static long createNumberWithGivenBase(String str, int base){
-        long output = 0;
-        int power = 1;
-
-        for(int i = str.length()-1; i >= 0; i--) {
-            output = output + (str.charAt(i)- 48)*power;
-            power = power * base;
-        }
-        return output;
-    }
-
-    /**
      * Creates a String LinkedList with elements from a .txt file in the path.
      * @param path the path from which to read the elements.
      * @return LinkedList of Integer keys of the strings in the paths.

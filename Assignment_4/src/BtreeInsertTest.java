@@ -1,15 +1,15 @@
-public class testing {
+public class BtreeInsertTest {
     public static void main (String[] args)
     {
         BTree btree = new BTree("2");
-        btree.insert("A");
+        btree.insert("J");
         btree.insert("B");
-        btree.insert("C");
         btree.insert("D");
         btree.insert("L");
+        btree.insert("A");
         btree.insert("E");
         btree.insert("K");
-        btree.insert("J");
+        btree.insert("C");
         btree.insert("Z");
         btree.insert("X");
         btree.insert("W");

@@ -10,7 +10,6 @@ public class BTreeNode {
      */
     private int n;
     private boolean isLeaf;
-
     /**
      * Array of the keys stored in the node.
      */

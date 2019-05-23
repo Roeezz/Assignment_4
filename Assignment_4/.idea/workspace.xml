@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashFunctionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashFunctionsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UsefulFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UsefulFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BtreeInsertTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding>
                 <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
                 <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -41,60 +48,34 @@
                 <element signature="method#getKeys#0;class#BTreeNode#0" />
                 <element signature="docComment;method#getKey#0;class#BTreeNode#0" />
                 <element signature="method#getKey#0;class#BTreeNode#0" />
-                <element signature="e#1156#1243#1" />
                 <element signature="docComment;method#setKey#0;class#BTreeNode#0" />
                 <element signature="method#setKey#0;class#BTreeNode#0" />
-                <element signature="e#1530#1617#1" />
                 <element signature="docComment;method#getChild#0;class#BTreeNode#0" />
                 <element signature="method#getChild#0;class#BTreeNode#0" />
-                <element signature="e#1861#1948#1" />
                 <element signature="docComment;method#setChild#0;class#BTreeNode#0" />
                 <element signature="method#setChild#0;class#BTreeNode#0" />
-                <element signature="e#2260#2347#1" />
                 <element signature="docComment;method#search#0;class#BTreeNode#0" />
                 <element signature="method#search#0;class#BTreeNode#0" />
-                <element signature="e#2773#2829#1" />
-                <element signature="e#2853#2889#1" />
-                <element signature="e#2902#2957#1" />
                 <element signature="docComment;method#insert#0;class#BTreeNode#0" />
                 <element signature="method#insert#0;class#BTreeNode#0" />
-                <element signature="e#3130#3199#0" />
-                <element signature="e#3249#3333#1" />
-                <element signature="e#3539#3577#1" />
                 <element signature="docComment;method#findExpectedIndexOfKey#0;class#BTreeNode#0" />
                 <element signature="method#findExpectedIndexOfKey#0;class#BTreeNode#0" />
-                <element signature="e#3765#3793#1" />
                 <element signature="docComment;method#splitChild#0;class#BTreeNode#0" />
                 <element signature="method#splitChild#0;class#BTreeNode#0" />
-                <element signature="e#4046#4105#1" />
                 <element signature="docComment;method#insertMedianKey#0;class#BTreeNode#0" />
                 <element signature="method#insertMedianKey#0;class#BTreeNode#0" />
-                <element signature="e#4490#4540#1" />
                 <element signature="docComment;method#createNodeForSplit#0;class#BTreeNode#0" />
                 <element signature="method#createNodeForSplit#0;class#BTreeNode#0" />
-                <element signature="e#4866#4957#1" />
-                <element signature="docComment;method#copyChildren#0;class#BTreeNode#0" />
                 <element signature="method#transferChildren#0;class#BTreeNode#0" />
-                <element signature="e#5393#5496#1" />
                 <element signature="docComment;method#insertNewChild#0;class#BTreeNode#0" />
-                <element signature="method#clearPlaceForChild#0;class#BTreeNode#0" />
-                <element signature="e#5953#6019#1" />
                 <element signature="docComment;method#insertToKeysArray#0;class#BTreeNode#0" />
                 <element signature="method#insertToKeysArray#0;class#BTreeNode#0" />
-                <element signature="e#6366#6423#1" />
-                <element signature="e#6499#6562#1" />
                 <element signature="docComment;method#insertToCorrectChild#0;class#BTreeNode#0" />
                 <element signature="method#insertToCorrectChild#0;class#BTreeNode#0" />
-                <element signature="e#6956#7004#1" />
-                <element signature="e#7017#7069#1" />
                 <element signature="docComment;method#toString#1;class#BTreeNode#0" />
                 <element signature="method#toString#1;class#BTreeNode#0" />
-                <element signature="e#7252#7312#1" />
-                <element signature="e#8677#8852#1" />
-                <element signature="e#8753#8842#1" />
                 <element signature="docComment;method#addKeysToString#0;class#BTreeNode#0" />
                 <element signature="method#addKeysToString#0;class#BTreeNode#0" />
-                <element signature="e#7660#7741#1" />
               </folding>
             </state>
           </provider>
@@ -103,23 +84,138 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+            <state relative-caret-position="456">
+              <caret line="68" column="43" lean-forward="true" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#BTree#0;class#BTree#0" />
-                <element signature="e#1886#1887#0" expanded="true" />
-                <element signature="e#1929#1930#0" expanded="true" />
+                <element signature="method#BTree#0;class#BTree#0" />
+                <element signature="docComment;method#insert#0;class#BTree#0" />
+                <element signature="method#insert#0;class#BTree#0" />
+                <element signature="e#664#700#1" />
+                <element signature="docComment;method#splitRoot#0;class#BTree#0" />
+                <element signature="method#splitRoot#0;class#BTree#0" />
+                <element signature="e#1184#1248#1" />
+                <element signature="docComment;method#createNewRoot#0;class#BTree#0" />
+                <element signature="method#createNewRoot#0;class#BTree#0" />
+                <element signature="method#getSearchTime#0;class#BTree#0" />
+                <element signature="method#deleteKeysFromTree#0;class#BTree#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testing.java">
+        <entry file="file://$PROJECT_DIR$/src/UsefulFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="119">
+              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+              <folding>
+                <element signature="docComment;method#getKeysList#0;class#UsefulFunctions#0" />
+                <element signature="method#getKeysList#0;class#UsefulFunctions#0" />
+                <element signature="docComment;method#binarySearch#0;class#UsefulFunctions#0" />
+                <element signature="n#!!block;n#binarySearch#0;n#UsefulFunctions#0" />
+                <element signature="docComment;method#binarySearch#1;class#UsefulFunctions#0" />
+                <element signature="method#binarySearch#1;class#UsefulFunctions#0" />
+                <element signature="e#2043#2389#1" />
+                <element signature="e#2140#2185#1" />
+                <element signature="e#2248#2322#1" />
+                <element signature="docComment;method#createStringListFromFile#0;class#UsefulFunctions#0" />
+                <element signature="method#createStringListFromFile#0;class#UsefulFunctions#0" />
+                <element signature="e#2906#3053#0" />
+                <element signature="e#2959#3012#1" />
+                <element signature="e#3076#3120#0" />
+                <element signature="docComment;method#convertToKeys#0;class#UsefulFunctions#0" />
+                <element signature="method#convertToKeys#0;class#UsefulFunctions#0" />
+                <element signature="e#3468#3543#1" />
+                <element signature="e#3723#4051#1" />
+                <element signature="e#3887#3987#1" />
+                <element signature="docComment;method#horner#0;class#UsefulFunctions#0" />
+                <element signature="method#horner#0;class#UsefulFunctions#0" />
+                <element signature="e#4557#4632#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HashFunctionsList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <folding>
+                <element signature="docComment;field#hashFunctionsList#0;class#HashFunctionsList#0" />
+                <element signature="n#!!block;n#HashFunctionsList#0;n#HashFunctionsList#0" />
+                <element signature="docComment;method#createFunctionsList#0;class#HashFunctionsList#0" />
+                <element signature="method#createFunctionsList#0;class#HashFunctionsList#0" />
+                <element signature="e#670#745#1" />
+                <element signature="e#759#1310#0" />
+                <element signature="e#1036#1300#1" />
+                <element signature="e#1333#1377#0" />
+                <element signature="docComment;method#getSize#0;class#HashFunctionsList#0" />
+                <element signature="n#!!block;n#getSize#0;n#HashFunctionsList#0" />
+                <element signature="docComment;method#createHashFunction#0;class#HashFunctionsList#0" />
+                <element signature="docComment;method#iterator#0;class#HashFunctionsList#0" />
+                <element signature="method#equals#0;class#HashFunctionsList#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BloomFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+              <folding>
+                <element signature="docComment;field#bloomFilter#0;class#BloomFilter#0" />
+                <element signature="docComment;field#m1#0;class#BloomFilter#0" />
+                <element signature="docComment;field#hashFunctionsList#0;class#BloomFilter#0" />
+                <element signature="docComment;method#BloomFilter#0;class#BloomFilter#0" />
+                <element signature="e#674#752#1" />
+                <element signature="docComment;method#updateTable#0;class#BloomFilter#0" />
+                <element signature="method#updateTable#0;class#BloomFilter#0" />
+                <element signature="docComment;method#updateFilter#0;class#BloomFilter#0" />
+                <element signature="method#updateFilter#0;class#BloomFilter#0" />
+                <element signature="docComment;method#checkPasswords#0;class#BloomFilter#0" />
+                <element signature="method#checkPasswords#0;class#BloomFilter#0" />
+                <element signature="docComment;method#checkAgainstFilter#0;class#BloomFilter#0" />
+                <element signature="method#checkAgainstFilter#0;class#BloomFilter#0" />
+                <element signature="docComment;method#getFalsePositivePercentage#0;class#BloomFilter#0" />
+                <element signature="method#getFalsePositivePercentage#0;class#BloomFilter#0" />
+                <element signature="docComment;method#goodPasswords#0;class#BloomFilter#0" />
+                <element signature="method#goodPasswords#0;class#BloomFilter#0" />
+                <element signature="docComment;method#falsePositives#0;class#BloomFilter#0" />
+                <element signature="method#falsePositives#0;class#BloomFilter#0" />
+                <element signature="method#equals#0;class#BloomFilter#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HashTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <folding>
+                <element signature="docComment;field#table#0;class#HashTable#0" />
+                <element signature="docComment;field#m2#0;class#HashTable#0" />
+                <element signature="docComment;method#HashTable#0;class#HashTable#0" />
+                <element signature="method#HashTable#0;class#HashTable#0" />
+                <element signature="e#575#625#1" />
+                <element signature="docComment;method#updateTable#0;class#HashTable#0" />
+                <element signature="method#updateTable#0;class#HashTable#0" />
+                <element signature="e#1012#1136#1" />
+                <element signature="docComment;method#getSearchTime#0;class#HashTable#0" />
+                <element signature="method#getSearchTime#0;class#HashTable#0" />
+                <element signature="docComment;method#hashFunction#0;class#HashTable#0" />
+                <element signature="n#!!block;n#hashFunction#0;n#HashTable#0" />
+                <element signature="docComment;method#checkPasswords#0;class#HashTable#0" />
+                <element signature="method#checkPasswords#0;class#HashTable#0" />
+                <element signature="e#2140#2225#1" />
+                <element signature="docComment;method#checkInTable#0;class#HashTable#0" />
+                <element signature="n#!!block;n#checkInTable#0;n#HashTable#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,6 +252,7 @@
         <entry key="$PROJECT_DIR$/.." value="master" />
       </map>
     </option>
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -173,7 +270,6 @@
         <option value="$PROJECT_DIR$/src/BloomFilterTests.java" />
         <option value="$PROJECT_DIR$/src/UsefulFunctionsTest.java" />
         <option value="$PROJECT_DIR$/src/HashFunction.java" />
-        <option value="$PROJECT_DIR$/src/HashFunctionsList.java" />
         <option value="$PROJECT_DIR$/src/Password.java" />
         <option value="$PROJECT_DIR$/src/HashFunctionsListTests.java" />
         <option value="$PROJECT_DIR$/src/orderedPair.java" />
@@ -181,8 +277,6 @@
         <option value="$PROJECT_DIR$/src/Runner.java" />
         <option value="$PROJECT_DIR$/src/HashTableTest.java" />
         <option value="$PROJECT_DIR$/src/HashTableAndBloomFlterTest.java" />
-        <option value="$PROJECT_DIR$/src/BloomFilter.java" />
-        <option value="$PROJECT_DIR$/src/UsefulFunctions.java" />
         <option value="$PROJECT_DIR$/src/HashTableAndBloomFilterTest.java" />
         <option value="$PROJECT_DIR$/src/HashList.java" />
         <option value="$PROJECT_DIR$/src/Link.java" />
@@ -190,11 +284,15 @@
         <option value="$PROJECT_DIR$/src/LinkedList.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/Learning" />
-        <option value="$PROJECT_DIR$/src/HashTable.java" />
-        <option value="$PROJECT_DIR$/src/testing.java" />
         <option value="$PROJECT_DIR$/src/BTreeIterator.java" />
-        <option value="$PROJECT_DIR$/src/BTree.java" />
         <option value="$PROJECT_DIR$/src/BTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/testing.java" />
+        <option value="$PROJECT_DIR$/src/BtreeInsertTest.java" />
+        <option value="$PROJECT_DIR$/src/HashTable.java" />
+        <option value="$PROJECT_DIR$/src/BloomFilter.java" />
+        <option value="$PROJECT_DIR$/src/HashFunctionsList.java" />
+        <option value="$PROJECT_DIR$/src/UsefulFunctions.java" />
+        <option value="$PROJECT_DIR$/src/BTree.java" />
       </list>
     </option>
   </component>
@@ -216,6 +314,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,8 +332,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,7 +372,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.testing">
+  <component name="RunManager" selected="Application.BtreeInsertTest">
+    <configuration name="BtreeInsertTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BtreeInsertTest" />
+      <module name="Assignment_4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HashFunctionsListTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HashFunctionsListTests" />
       <module name="Assignment_4" />
@@ -303,16 +408,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testing" />
-      <module name="Assignment_4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testing" />
+        <item itemvalue="Application.BtreeInsertTest" />
         <item itemvalue="Application.UsefulFunctionsTest" />
         <item itemvalue="Application.Runner" />
         <item itemvalue="Application.HashTableAndBloomFilterTest" />
@@ -352,6 +450,7 @@
       <workItem from="1558553065125" duration="3284000" />
       <workItem from="1558557584682" duration="842000" />
       <workItem from="1558614909615" duration="11970000" />
+      <workItem from="1558631724712" duration="788000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1558549538559</created>
@@ -416,11 +515,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558628048534</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cleaning and refactoring of toString, insert and search in BTreeNode.">
+      <created>1558631820065</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558631820065</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124190000" />
+    <option name="totallyTimeSpent" value="124978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -435,7 +541,7 @@
     <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22855228" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23190348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -520,166 +626,83 @@
     <MESSAGE value="Added .gitignore file" />
     <MESSAGE value="- Fixed insert completely in BTree and BtreeNode.&#10;- Fixed toString in BTreeNode." />
     <MESSAGE value="Cleaned and refactored insert and toString," />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned and refactored insert and toString," />
+    <MESSAGE value="Cleaning and refactoring of toString, insert and search in BTreeNode." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning and refactoring of toString, insert and search in BTreeNode." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>133</line>
+          <line>132</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>233</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>134</line>
+          <line>133</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>126</line>
+          <line>125</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>212</line>
+          <line>211</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>96</line>
+          <line>95</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>163</line>
+          <line>162</line>
           <properties />
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>164</line>
+          <line>163</line>
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>160</line>
+          <line>159</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>161</line>
+          <line>160</line>
           <properties />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>213</line>
+          <line>212</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>215</line>
+          <line>214</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>217</line>
+          <line>216</line>
           <properties />
           <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/testing.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint type="java-method">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>92</line>
-          <properties class="BTreeNode" method="setChild">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint type="java-method">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>24</line>
-          <properties class="BTree" method="insert">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint type="java-method">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>211</line>
-          <properties class="BTreeNode" method="transferChildren">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -817,24 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashFunctionsList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-          <folding>
-            <element signature="docComment;field#hashFunctionsList#0;class#HashFunctionsList#0" />
-            <element signature="docComment;method#createFunctionsList#0;class#HashFunctionsList#0" />
-            <element signature="docComment;method#getSize#0;class#HashFunctionsList#0" />
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#1570#1571#0" expanded="true" />
-            <element signature="docComment;method#createHashFunction#0;class#HashFunctionsList#0" />
-            <element signature="docComment;method#extractNumber#0;class#HashFunctionsList#0" />
-            <element signature="docComment;method#iterator#0;class#HashFunctionsList#0" />
-            <element signature="method#equals#0;class#HashFunctionsList#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedListIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -870,46 +875,6 @@
     <entry file="file://$PROJECT_DIR$/delete_keys.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BloomFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
-          <folding>
-            <element signature="docComment;field#bloomFilter#0;class#BloomFilter#0" />
-            <element signature="docComment;field#m1#0;class#BloomFilter#0" />
-            <element signature="docComment;field#hashFunctionsList#0;class#BloomFilter#0" />
-            <element signature="docComment;method#BloomFilter#0;class#BloomFilter#0" />
-            <element signature="method#BloomFilter#0;class#BloomFilter#0" />
-            <element signature="e#674#752#1" />
-            <element signature="docComment;method#updateTable#0;class#BloomFilter#0" />
-            <element signature="method#updateTable#0;class#BloomFilter#0" />
-            <element signature="docComment;method#updateFilter#0;class#BloomFilter#0" />
-            <element signature="method#updateFilter#0;class#BloomFilter#0" />
-            <element signature="docComment;method#checkPasswords#0;class#BloomFilter#0" />
-            <element signature="method#checkPasswords#0;class#BloomFilter#0" />
-            <element signature="docComment;method#checkAgainstFilter#0;class#BloomFilter#0" />
-            <element signature="method#checkAgainstFilter#0;class#BloomFilter#0" />
-            <element signature="docComment;method#getFalsePositivePercentage#0;class#BloomFilter#0" />
-            <element signature="method#getFalsePositivePercentage#0;class#BloomFilter#0" />
-            <element signature="docComment;method#goodPasswords#0;class#BloomFilter#0" />
-            <element signature="method#goodPasswords#0;class#BloomFilter#0" />
-            <element signature="docComment;method#falsePositives#0;class#BloomFilter#0" />
-            <element signature="method#falsePositives#0;class#BloomFilter#0" />
-            <element signature="method#equals#0;class#BloomFilter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="82" column="181" selection-start-line="82" selection-start-column="181" selection-end-line="82" selection-end-column="181" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HashFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -922,18 +887,6 @@
             <element signature="docComment;method#runFunction#0;class#HashFunction#0" />
             <element signature="method#equals#0;class#HashFunction#0" />
             <element signature="e#995#1103#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UsefulFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="112" selection-start-line="112" selection-end-line="113" selection-end-column="38" />
-          <folding>
-            <element signature="docComment;method#createNumberWithGivenBase#0;class#UsefulFunctions#0" />
-            <element signature="method#createNumberWithGivenBase#0;class#UsefulFunctions#0" />
-            <element signature="e#535#637#1" />
           </folding>
         </state>
       </provider>
@@ -1044,33 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding>
-            <element signature="docComment;field#table#0;class#HashTable#0" />
-            <element signature="docComment;field#m2#0;class#HashTable#0" />
-            <element signature="docComment;field#FNV_32_INIT#0;class#HashTable#0" />
-            <element signature="docComment;method#HashTable#0;class#HashTable#0" />
-            <element signature="method#HashTable#0;class#HashTable#0" />
-            <element signature="e#771#821#1" />
-            <element signature="docComment;method#updateTable#0;class#HashTable#0" />
-            <element signature="method#updateTable#0;class#HashTable#0" />
-            <element signature="e#1208#1332#1" />
-            <element signature="docComment;method#getSearchTime#0;class#HashTable#0" />
-            <element signature="method#getSearchTime#0;class#HashTable#0" />
-            <element signature="docComment;method#hashFunction#0;class#HashTable#0" />
-            <element signature="n#!!block;n#hashFunction#0;n#HashTable#0" />
-            <element signature="docComment;method#checkPasswords#0;class#HashTable#0" />
-            <element signature="method#checkPasswords#0;class#HashTable#0" />
-            <element signature="e#2884#2969#1" />
-            <element signature="docComment;method#checkInTable#0;class#HashTable#0" />
-            <element signature="n#!!block;n#checkInTable#0;n#HashTable#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1091,42 +1017,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BTreeIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#BTree#0;class#BTree#0" />
-            <element signature="e#1886#1887#0" expanded="true" />
-            <element signature="e#1929#1930#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BTreeIterator.java" />
     <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="119">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding>
             <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
             <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -1140,60 +1035,180 @@
             <element signature="method#getKeys#0;class#BTreeNode#0" />
             <element signature="docComment;method#getKey#0;class#BTreeNode#0" />
             <element signature="method#getKey#0;class#BTreeNode#0" />
-            <element signature="e#1156#1243#1" />
             <element signature="docComment;method#setKey#0;class#BTreeNode#0" />
             <element signature="method#setKey#0;class#BTreeNode#0" />
-            <element signature="e#1530#1617#1" />
             <element signature="docComment;method#getChild#0;class#BTreeNode#0" />
             <element signature="method#getChild#0;class#BTreeNode#0" />
-            <element signature="e#1861#1948#1" />
             <element signature="docComment;method#setChild#0;class#BTreeNode#0" />
             <element signature="method#setChild#0;class#BTreeNode#0" />
-            <element signature="e#2260#2347#1" />
             <element signature="docComment;method#search#0;class#BTreeNode#0" />
             <element signature="method#search#0;class#BTreeNode#0" />
-            <element signature="e#2773#2829#1" />
-            <element signature="e#2853#2889#1" />
-            <element signature="e#2902#2957#1" />
             <element signature="docComment;method#insert#0;class#BTreeNode#0" />
             <element signature="method#insert#0;class#BTreeNode#0" />
-            <element signature="e#3130#3199#0" />
-            <element signature="e#3249#3333#1" />
-            <element signature="e#3539#3577#1" />
             <element signature="docComment;method#findExpectedIndexOfKey#0;class#BTreeNode#0" />
             <element signature="method#findExpectedIndexOfKey#0;class#BTreeNode#0" />
-            <element signature="e#3765#3793#1" />
             <element signature="docComment;method#splitChild#0;class#BTreeNode#0" />
             <element signature="method#splitChild#0;class#BTreeNode#0" />
-            <element signature="e#4046#4105#1" />
             <element signature="docComment;method#insertMedianKey#0;class#BTreeNode#0" />
             <element signature="method#insertMedianKey#0;class#BTreeNode#0" />
-            <element signature="e#4490#4540#1" />
             <element signature="docComment;method#createNodeForSplit#0;class#BTreeNode#0" />
             <element signature="method#createNodeForSplit#0;class#BTreeNode#0" />
-            <element signature="e#4866#4957#1" />
-            <element signature="docComment;method#copyChildren#0;class#BTreeNode#0" />
             <element signature="method#transferChildren#0;class#BTreeNode#0" />
-            <element signature="e#5393#5496#1" />
             <element signature="docComment;method#insertNewChild#0;class#BTreeNode#0" />
-            <element signature="method#clearPlaceForChild#0;class#BTreeNode#0" />
-            <element signature="e#5953#6019#1" />
             <element signature="docComment;method#insertToKeysArray#0;class#BTreeNode#0" />
             <element signature="method#insertToKeysArray#0;class#BTreeNode#0" />
-            <element signature="e#6366#6423#1" />
-            <element signature="e#6499#6562#1" />
             <element signature="docComment;method#insertToCorrectChild#0;class#BTreeNode#0" />
             <element signature="method#insertToCorrectChild#0;class#BTreeNode#0" />
-            <element signature="e#6956#7004#1" />
-            <element signature="e#7017#7069#1" />
             <element signature="docComment;method#toString#1;class#BTreeNode#0" />
             <element signature="method#toString#1;class#BTreeNode#0" />
-            <element signature="e#7252#7312#1" />
-            <element signature="e#8677#8852#1" />
-            <element signature="e#8753#8842#1" />
             <element signature="docComment;method#addKeysToString#0;class#BTreeNode#0" />
             <element signature="method#addKeysToString#0;class#BTreeNode#0" />
-            <element signature="e#7660#7741#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UsefulFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <folding>
+            <element signature="docComment;method#getKeysList#0;class#UsefulFunctions#0" />
+            <element signature="method#getKeysList#0;class#UsefulFunctions#0" />
+            <element signature="docComment;method#binarySearch#0;class#UsefulFunctions#0" />
+            <element signature="n#!!block;n#binarySearch#0;n#UsefulFunctions#0" />
+            <element signature="docComment;method#binarySearch#1;class#UsefulFunctions#0" />
+            <element signature="method#binarySearch#1;class#UsefulFunctions#0" />
+            <element signature="e#2043#2389#1" />
+            <element signature="e#2140#2185#1" />
+            <element signature="e#2248#2322#1" />
+            <element signature="docComment;method#createStringListFromFile#0;class#UsefulFunctions#0" />
+            <element signature="method#createStringListFromFile#0;class#UsefulFunctions#0" />
+            <element signature="e#2906#3053#0" />
+            <element signature="e#2959#3012#1" />
+            <element signature="e#3076#3120#0" />
+            <element signature="docComment;method#convertToKeys#0;class#UsefulFunctions#0" />
+            <element signature="method#convertToKeys#0;class#UsefulFunctions#0" />
+            <element signature="e#3468#3543#1" />
+            <element signature="e#3723#4051#1" />
+            <element signature="e#3887#3987#1" />
+            <element signature="docComment;method#horner#0;class#UsefulFunctions#0" />
+            <element signature="method#horner#0;class#UsefulFunctions#0" />
+            <element signature="e#4557#4632#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashFunctionsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;field#hashFunctionsList#0;class#HashFunctionsList#0" />
+            <element signature="n#!!block;n#HashFunctionsList#0;n#HashFunctionsList#0" />
+            <element signature="docComment;method#createFunctionsList#0;class#HashFunctionsList#0" />
+            <element signature="method#createFunctionsList#0;class#HashFunctionsList#0" />
+            <element signature="e#670#745#1" />
+            <element signature="e#759#1310#0" />
+            <element signature="e#1036#1300#1" />
+            <element signature="e#1333#1377#0" />
+            <element signature="docComment;method#getSize#0;class#HashFunctionsList#0" />
+            <element signature="n#!!block;n#getSize#0;n#HashFunctionsList#0" />
+            <element signature="docComment;method#createHashFunction#0;class#HashFunctionsList#0" />
+            <element signature="docComment;method#iterator#0;class#HashFunctionsList#0" />
+            <element signature="method#equals#0;class#HashFunctionsList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BloomFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="docComment;field#bloomFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;field#m1#0;class#BloomFilter#0" />
+            <element signature="docComment;field#hashFunctionsList#0;class#BloomFilter#0" />
+            <element signature="docComment;method#BloomFilter#0;class#BloomFilter#0" />
+            <element signature="e#674#752#1" />
+            <element signature="docComment;method#updateTable#0;class#BloomFilter#0" />
+            <element signature="method#updateTable#0;class#BloomFilter#0" />
+            <element signature="docComment;method#updateFilter#0;class#BloomFilter#0" />
+            <element signature="method#updateFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;method#checkPasswords#0;class#BloomFilter#0" />
+            <element signature="method#checkPasswords#0;class#BloomFilter#0" />
+            <element signature="docComment;method#checkAgainstFilter#0;class#BloomFilter#0" />
+            <element signature="method#checkAgainstFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;method#getFalsePositivePercentage#0;class#BloomFilter#0" />
+            <element signature="method#getFalsePositivePercentage#0;class#BloomFilter#0" />
+            <element signature="docComment;method#goodPasswords#0;class#BloomFilter#0" />
+            <element signature="method#goodPasswords#0;class#BloomFilter#0" />
+            <element signature="docComment;method#falsePositives#0;class#BloomFilter#0" />
+            <element signature="method#falsePositives#0;class#BloomFilter#0" />
+            <element signature="method#equals#0;class#BloomFilter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="68" column="43" lean-forward="true" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+          <folding>
+            <element signature="docComment;method#BTree#0;class#BTree#0" />
+            <element signature="method#BTree#0;class#BTree#0" />
+            <element signature="docComment;method#insert#0;class#BTree#0" />
+            <element signature="method#insert#0;class#BTree#0" />
+            <element signature="e#664#700#1" />
+            <element signature="docComment;method#splitRoot#0;class#BTree#0" />
+            <element signature="method#splitRoot#0;class#BTree#0" />
+            <element signature="e#1184#1248#1" />
+            <element signature="docComment;method#createNewRoot#0;class#BTree#0" />
+            <element signature="method#createNewRoot#0;class#BTree#0" />
+            <element signature="method#getSearchTime#0;class#BTree#0" />
+            <element signature="method#deleteKeysFromTree#0;class#BTree#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="82" column="181" selection-start-line="82" selection-start-column="181" selection-end-line="82" selection-end-column="181" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BtreeInsertTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="docComment;field#table#0;class#HashTable#0" />
+            <element signature="docComment;field#m2#0;class#HashTable#0" />
+            <element signature="docComment;method#HashTable#0;class#HashTable#0" />
+            <element signature="method#HashTable#0;class#HashTable#0" />
+            <element signature="e#575#625#1" />
+            <element signature="docComment;method#updateTable#0;class#HashTable#0" />
+            <element signature="method#updateTable#0;class#HashTable#0" />
+            <element signature="e#1012#1136#1" />
+            <element signature="docComment;method#getSearchTime#0;class#HashTable#0" />
+            <element signature="method#getSearchTime#0;class#HashTable#0" />
+            <element signature="docComment;method#hashFunction#0;class#HashTable#0" />
+            <element signature="n#!!block;n#hashFunction#0;n#HashTable#0" />
+            <element signature="docComment;method#checkPasswords#0;class#HashTable#0" />
+            <element signature="method#checkPasswords#0;class#HashTable#0" />
+            <element signature="e#2140#2225#1" />
+            <element signature="docComment;method#checkInTable#0;class#HashTable#0" />
+            <element signature="n#!!block;n#checkInTable#0;n#HashTable#0" />
           </folding>
         </state>
       </provider>

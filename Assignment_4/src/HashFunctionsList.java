@@ -31,8 +31,8 @@ public class HashFunctionsList implements Iterable<HashFunction> {
             int alpha, beta;
             while((function = reader.readLine()) != null) {
                 functionVariables = function.split("_");
-                alpha = extractNumber(functionVariables[0]);
-                beta = extractNumber(functionVariables[1]);
+                alpha = Integer.parseInt(functionVariables[1]);
+                beta = Integer.parseInt(functionVariables[1]);
                 hashFunctionsList.add(createHashFunction(alpha,beta));
             }
         } catch (IOException e) {
@@ -56,15 +56,6 @@ public class HashFunctionsList implements Iterable<HashFunction> {
      */
     private HashFunction createHashFunction(int alpha, int beta) {
         return new HashFunction(alpha, beta);
-    }
-
-    /**
-     * Extracts a base 10 number from a string to int.
-     * @param num the string fo the number to extract.
-     * @return the int representation of the number.
-     */
-    private int extractNumber(String num){
-        return (int)UsefulFunctions.createNumberWithGivenBase(num, 10);
     }
 
     /**

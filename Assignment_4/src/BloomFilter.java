@@ -25,7 +25,7 @@ public class BloomFilter {
             throw new NullPointerException("An argument is null");
         }
         hashFunctionsList = new HashFunctionsList(path);
-        this.m1 = (int)UsefulFunctions.createNumberWithGivenBase(m1, 10);
+        this.m1 = Integer.parseInt(m1);
         bloomFilter = new boolean[this.m1];
     }
 

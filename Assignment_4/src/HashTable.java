@@ -15,7 +15,7 @@ public class HashTable {
      * @param m2 the size of the hash table.
      */
     public HashTable(String m2){
-        this.m2 = (int)UsefulFunctions.createNumberWithGivenBase(m2,10);
+        this.m2 = Integer.parseInt(m2);
         table = new HashList[this.m2];
         for(int i = 0; i < table.length; i++){
             table[i] = new HashList();
