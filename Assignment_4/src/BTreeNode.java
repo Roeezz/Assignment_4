@@ -1,6 +1,5 @@
-import java.util.Iterator;
-
 public class BTreeNode {
+    //FIELDS
     /**
      * The tree's constant.
      */
@@ -39,7 +38,6 @@ public class BTreeNode {
     }
 
     // Getters and Setters
-
     public void setN(int n) {this.n = n;}
     public int getN(){
         return n;
@@ -99,6 +97,7 @@ public class BTreeNode {
         children[i] = node;
     }
 
+    //Search, insert and remove.
     /**
      * Searches for a given key in the tree.
      * @param key the key to search for.
@@ -106,10 +105,7 @@ public class BTreeNode {
      * and the index of the key in it's keys array.
      */
     public OrderedPair search(String key){
-        int i = 0;
-        while(i < n && keys[i].compareTo(key) < 0){
-            i++;
-        }
+        int i = findExpectedIndexOfKey(key);
         if(i < n && keys[i].equals(key)){
             return new OrderedPair(this, i);
         }
@@ -130,14 +126,10 @@ public class BTreeNode {
         // in the keys array.
         if (isLeaf){
             insertToKeysArray(key);
-            n++;
+            setN(n + 1);
             return;
         }
-        // Finds the index of the child to insert the key to.
-        int i = 0;
-        while(i < n && keys[i].compareTo(key) < 0){
-            i++;
-        }
+        int i = findExpectedIndexOfKey(key);
         // If the node is full we split it.
         if(children[i].getN() == 2 * T_VAR -1){
             splitChild(i);
@@ -145,8 +137,21 @@ public class BTreeNode {
         insertToCorrectChild(key, i);
     }
 
-    // Methods related to insert.
+    /**
+     * Finds the expected index of the keys if it was in the current node's keys array.
+     * This helps to find the index of the child in which the key should be.
+     * @param key the key this searches for.
+     * @return the index of key, or the one it would have if it was in the keys array.
+     */
+    private int findExpectedIndexOfKey(String key) {
+        int i = 0;
+        while (i < n && keys[i].compareTo(key) < 0) {
+            i++;
+        }
+        return i;
+    }
 
+    // Methods related to insert.
     /**
      * Splits the child in given index to 2 children, and puts the middle key
      * of the child between the 2 pointers to the new children.
@@ -159,10 +164,24 @@ public class BTreeNode {
         if(!splitChild.isLeaf){
             transferChildren(splitChild, newChild);
         }
+        insertMedianKey(index, this, splitChild);
+        insertNewChild(index, this, newChild);
+        splitChild.setN(T_VAR - 1);
+    }
+
+    /**
+     * Sub method of insert that inserts the median key of the split child
+     * to it's right place in the father node
+     * @param index the index to insert the key to
+     * @param father the father node of the split child
+     * @param splitChild the split child.
+     */
+    private void insertMedianKey(int index, BTreeNode father, BTreeNode splitChild) {
+        for(int i = father.getN() - 1; i >= index; i--) {
+            father.setKey(i, this.getKey(i));
+        }
         setKey(n,splitChild.getKey(T_VAR - 1));
         setN(n + 1);
-        clearPlaceForChild(index, this, newChild);
-        splitChild.setN(T_VAR - 1);
     }
 
     /**
@@ -178,6 +197,7 @@ public class BTreeNode {
         int index2 = 0; //the index of the keys array of the new node
         for(int i = T_VAR; i < splitChild.getN(); i++) {
             newChild.setKey(index2,splitChild.getKey(i));
+            splitChild.setKey(i, null);
             index2++;
         }
         return newChild;
@@ -200,26 +220,22 @@ public class BTreeNode {
     }
 
     /**
-     * Clears a place for the new child in the father node's children array,
-     * right after the split child.
+     * Sub method of insert that clears a place for the new child in the father
+     * node's children array, right after the split child.
      * @param index the index of the split child.
      * @param father the father node of the new child and the split child.
      * @param newChild the new child to insert.
      */
-    private void clearPlaceForChild(int index, BTreeNode father, BTreeNode newChild) {
+    private void insertNewChild(int index, BTreeNode father, BTreeNode newChild) {
         for(int i = father.getN(); i >= i + 1; i--)
         {
             father.setChild(i,father.getChild(i - 1));
         }
         father.setChild(index + 1, newChild);
-        for(int i = father.getN()-1; i >= index; i--)
-        {
-            father.setKey(i,father.getKey(i));
-        }
     }
 
     /**
-     * Inserts a key to this nodes keys array.
+     * Sub method of insert that inserts a key to this nodes keys array.
      * @param key the key to insert.
      */
     private void insertToKeysArray(String key){
@@ -234,6 +250,12 @@ public class BTreeNode {
         keys[i + 1] = key;
     }
 
+    /**
+     * Sub method of insert used to decide on which of the 2 new children
+     * to call the recursive insertion on.
+     * @param key the key to insert.
+     * @param i the index of the key between the 2 new children.
+     */
     private void insertToCorrectChild(String key, int i) {
         if(i == n || key.compareTo(keys[i]) < 0){
             children[i].insert(key);
@@ -243,24 +265,38 @@ public class BTreeNode {
         }
     }
 
+    //toString
     @Override
     public String toString() {
-        return toString("", 0);
+        return toString(new StringBuilder(), 0).toString();
     }
 
-    private String toString(String acc, int depth){
+    /**
+     * Sub method of toString that builds the string representation
+     * of the subtree recursively.
+     * @param sb an accumulator that collects the subtree's toStrings
+     * @param depth the depth of the current subtree.
+     * @return a string visually representing the subtree.
+     */
+    private StringBuilder toString(StringBuilder sb, int depth){
         if(isLeaf()){
-            return acc + addKeysToString(depth);
+            return sb.append(addKeysToString(depth));
         }
+        //Gets the string representation of the sub tree of this node.
         for(int i = 0; i <= n; i++){
-            acc = children[i].toString(acc,depth + 1);
+            sb = children[i].toString(sb,depth + 1);
             if(i < n){
-                acc += keys[i] + "_" + depth +",";
+                sb.append(keys[i]).append("_").append(depth).append(",");
             }
         }
-        return acc;
+        return sb;
     }
 
+    /**
+     * Sub method of toString used to add the keys held in the current node.
+     * @param depth the depth of the current node.
+     * @return a string with the keys and the depth they are from.
+     */
     private String addKeysToString(int depth) {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < n; i++){

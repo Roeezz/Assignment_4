@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/testing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BTreeNode.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="256" column="20" selection-start-line="256" selection-start-column="20" selection-end-line="256" selection-end-column="20" />
+            <state relative-caret-position="238">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding>
                 <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
                 <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -41,35 +38,63 @@
                 <element signature="n#!!block;n#isLeaf#1;n#BTreeNode#0" />
                 <element signature="method#setN#0;class#BTreeNode#0" />
                 <element signature="n#!!block;n#getN#0;n#BTreeNode#0" />
-                <element signature="e#935#936#0" expanded="true" />
-                <element signature="e#964#965#0" expanded="true" />
                 <element signature="method#getKeys#0;class#BTreeNode#0" />
                 <element signature="docComment;method#getKey#0;class#BTreeNode#0" />
                 <element signature="method#getKey#0;class#BTreeNode#0" />
                 <element signature="e#1156#1243#1" />
                 <element signature="docComment;method#setKey#0;class#BTreeNode#0" />
+                <element signature="method#setKey#0;class#BTreeNode#0" />
                 <element signature="e#1530#1617#1" />
                 <element signature="docComment;method#getChild#0;class#BTreeNode#0" />
                 <element signature="method#getChild#0;class#BTreeNode#0" />
                 <element signature="e#1861#1948#1" />
                 <element signature="docComment;method#setChild#0;class#BTreeNode#0" />
+                <element signature="method#setChild#0;class#BTreeNode#0" />
+                <element signature="e#2260#2347#1" />
                 <element signature="docComment;method#search#0;class#BTreeNode#0" />
                 <element signature="method#search#0;class#BTreeNode#0" />
-                <element signature="e#2704#2732#1" />
                 <element signature="e#2773#2829#1" />
                 <element signature="e#2853#2889#1" />
                 <element signature="e#2902#2957#1" />
                 <element signature="docComment;method#insert#0;class#BTreeNode#0" />
+                <element signature="method#insert#0;class#BTreeNode#0" />
+                <element signature="e#3130#3199#0" />
+                <element signature="e#3249#3333#1" />
+                <element signature="e#3539#3577#1" />
+                <element signature="docComment;method#findExpectedIndexOfKey#0;class#BTreeNode#0" />
+                <element signature="method#findExpectedIndexOfKey#0;class#BTreeNode#0" />
+                <element signature="e#3765#3793#1" />
                 <element signature="docComment;method#splitChild#0;class#BTreeNode#0" />
+                <element signature="method#splitChild#0;class#BTreeNode#0" />
+                <element signature="e#4046#4105#1" />
+                <element signature="docComment;method#insertMedianKey#0;class#BTreeNode#0" />
+                <element signature="method#insertMedianKey#0;class#BTreeNode#0" />
+                <element signature="e#4490#4540#1" />
                 <element signature="docComment;method#createNodeForSplit#0;class#BTreeNode#0" />
+                <element signature="method#createNodeForSplit#0;class#BTreeNode#0" />
                 <element signature="e#4866#4957#1" />
                 <element signature="docComment;method#copyChildren#0;class#BTreeNode#0" />
-                <element signature="docComment;method#clearPlaceForChild#0;class#BTreeNode#0" />
+                <element signature="method#transferChildren#0;class#BTreeNode#0" />
+                <element signature="e#5393#5496#1" />
+                <element signature="docComment;method#insertNewChild#0;class#BTreeNode#0" />
+                <element signature="method#clearPlaceForChild#0;class#BTreeNode#0" />
                 <element signature="e#5953#6019#1" />
-                <element signature="e#6128#6186#1" />
                 <element signature="docComment;method#insertToKeysArray#0;class#BTreeNode#0" />
+                <element signature="method#insertToKeysArray#0;class#BTreeNode#0" />
+                <element signature="e#6366#6423#1" />
                 <element signature="e#6499#6562#1" />
-                <element signature="e#7100#7101#0" expanded="true" />
+                <element signature="docComment;method#insertToCorrectChild#0;class#BTreeNode#0" />
+                <element signature="method#insertToCorrectChild#0;class#BTreeNode#0" />
+                <element signature="e#6956#7004#1" />
+                <element signature="e#7017#7069#1" />
+                <element signature="docComment;method#toString#1;class#BTreeNode#0" />
+                <element signature="method#toString#1;class#BTreeNode#0" />
+                <element signature="e#7252#7312#1" />
+                <element signature="e#8677#8852#1" />
+                <element signature="e#8753#8842#1" />
+                <element signature="docComment;method#addKeysToString#0;class#BTreeNode#0" />
+                <element signature="method#addKeysToString#0;class#BTreeNode#0" />
+                <element signature="e#7660#7741#1" />
               </folding>
             </state>
           </provider>
@@ -78,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="261">
+              <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#BTree#0;class#BTree#0" />
@@ -326,7 +351,7 @@
       <workItem from="1558547123327" duration="4611000" />
       <workItem from="1558553065125" duration="3284000" />
       <workItem from="1558557584682" duration="842000" />
-      <workItem from="1558614909615" duration="8064000" />
+      <workItem from="1558614909615" duration="11970000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1558549538559</created>
@@ -377,11 +402,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558553683285</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Fixed insert completely in BTree and BtreeNode.&#10;- Fixed toString in BTreeNode.">
+      <created>1558625665430</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558625665430</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cleaned and refactored insert and toString,">
+      <created>1558628048534</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558628048534</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120284000" />
+    <option name="totallyTimeSpent" value="124190000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -406,8 +445,8 @@
       <window_info id="Learn" order="7" weight="0.3344504" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32768363" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32768363" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3983051" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32768363" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983051" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32627118" />
@@ -479,44 +518,34 @@
     <MESSAGE value="Test5" />
     <MESSAGE value="Deleted stupid comment" />
     <MESSAGE value="Added .gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .gitignore file" />
+    <MESSAGE value="- Fixed insert completely in BTree and BtreeNode.&#10;- Fixed toString in BTreeNode." />
+    <MESSAGE value="Cleaned and refactored insert and toString," />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned and refactored insert and toString," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>137</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>141</line>
+          <line>133</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>213</line>
+          <line>233</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>163</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>142</line>
+          <line>134</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>130</line>
+          <line>126</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -540,7 +569,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>38</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
@@ -554,173 +583,71 @@
           <url>file://$PROJECT_DIR$/src/BTree.java</url>
           <line>43</line>
           <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>47</line>
-          <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>39</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>192</line>
+          <line>212</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>98</line>
+          <line>96</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>49</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTree.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>276</line>
-          <properties />
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>277</line>
-          <properties />
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>279</line>
-          <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>281</line>
-          <properties />
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>285</line>
-          <properties />
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>283</line>
-          <properties />
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>286</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>287</line>
-          <properties />
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>289</line>
-          <properties />
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>291</line>
-          <properties />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>161</line>
-          <properties />
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>164</line>
-          <properties />
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>158</line>
+          <line>163</line>
           <properties />
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>159</line>
+          <line>164</line>
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>155</line>
+          <line>160</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>156</line>
+          <line>161</line>
           <properties />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>193</line>
+          <line>213</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>195</line>
+          <line>215</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>197</line>
+          <line>217</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
@@ -730,75 +657,9 @@
           <properties />
           <option name="timeStamp" value="88" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>274</line>
-          <properties />
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>252</line>
-          <properties />
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>251</line>
-          <properties />
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>254</line>
-          <properties />
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>255</line>
-          <properties />
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>256</line>
-          <properties />
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>257</line>
-          <properties />
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>264</line>
-          <properties />
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>265</line>
-          <properties />
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>266</line>
-          <properties />
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>268</line>
-          <properties />
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>94</line>
+          <line>92</line>
           <properties class="BTreeNode" method="setChild">
             <option name="EMULATED" value="true" />
           </properties>
@@ -814,35 +675,11 @@
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>191</line>
+          <line>211</line>
           <properties class="BTreeNode" method="transferChildren">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>272</line>
-          <properties class="BTreeNode">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>250</line>
-          <properties class="BTreeNode" method="toString">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/BTreeNode.java</url>
-          <line>263</line>
-          <properties class="BTreeNode" method="addKeysToString">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1254,19 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#BTree#0;class#BTree#0" />
-            <element signature="e#1886#1887#0" expanded="true" />
-            <element signature="e#1929#1930#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BTreeIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1286,10 +1110,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#BTree#0;class#BTree#0" />
+            <element signature="e#1886#1887#0" expanded="true" />
+            <element signature="e#1929#1930#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="256" column="20" selection-start-line="256" selection-start-column="20" selection-end-line="256" selection-end-column="20" />
+        <state relative-caret-position="238">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
             <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
             <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -1300,35 +1137,63 @@
             <element signature="n#!!block;n#isLeaf#1;n#BTreeNode#0" />
             <element signature="method#setN#0;class#BTreeNode#0" />
             <element signature="n#!!block;n#getN#0;n#BTreeNode#0" />
-            <element signature="e#935#936#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
             <element signature="method#getKeys#0;class#BTreeNode#0" />
             <element signature="docComment;method#getKey#0;class#BTreeNode#0" />
             <element signature="method#getKey#0;class#BTreeNode#0" />
             <element signature="e#1156#1243#1" />
             <element signature="docComment;method#setKey#0;class#BTreeNode#0" />
+            <element signature="method#setKey#0;class#BTreeNode#0" />
             <element signature="e#1530#1617#1" />
             <element signature="docComment;method#getChild#0;class#BTreeNode#0" />
             <element signature="method#getChild#0;class#BTreeNode#0" />
             <element signature="e#1861#1948#1" />
             <element signature="docComment;method#setChild#0;class#BTreeNode#0" />
+            <element signature="method#setChild#0;class#BTreeNode#0" />
+            <element signature="e#2260#2347#1" />
             <element signature="docComment;method#search#0;class#BTreeNode#0" />
             <element signature="method#search#0;class#BTreeNode#0" />
-            <element signature="e#2704#2732#1" />
             <element signature="e#2773#2829#1" />
             <element signature="e#2853#2889#1" />
             <element signature="e#2902#2957#1" />
             <element signature="docComment;method#insert#0;class#BTreeNode#0" />
+            <element signature="method#insert#0;class#BTreeNode#0" />
+            <element signature="e#3130#3199#0" />
+            <element signature="e#3249#3333#1" />
+            <element signature="e#3539#3577#1" />
+            <element signature="docComment;method#findExpectedIndexOfKey#0;class#BTreeNode#0" />
+            <element signature="method#findExpectedIndexOfKey#0;class#BTreeNode#0" />
+            <element signature="e#3765#3793#1" />
             <element signature="docComment;method#splitChild#0;class#BTreeNode#0" />
+            <element signature="method#splitChild#0;class#BTreeNode#0" />
+            <element signature="e#4046#4105#1" />
+            <element signature="docComment;method#insertMedianKey#0;class#BTreeNode#0" />
+            <element signature="method#insertMedianKey#0;class#BTreeNode#0" />
+            <element signature="e#4490#4540#1" />
             <element signature="docComment;method#createNodeForSplit#0;class#BTreeNode#0" />
+            <element signature="method#createNodeForSplit#0;class#BTreeNode#0" />
             <element signature="e#4866#4957#1" />
             <element signature="docComment;method#copyChildren#0;class#BTreeNode#0" />
-            <element signature="docComment;method#clearPlaceForChild#0;class#BTreeNode#0" />
+            <element signature="method#transferChildren#0;class#BTreeNode#0" />
+            <element signature="e#5393#5496#1" />
+            <element signature="docComment;method#insertNewChild#0;class#BTreeNode#0" />
+            <element signature="method#clearPlaceForChild#0;class#BTreeNode#0" />
             <element signature="e#5953#6019#1" />
-            <element signature="e#6128#6186#1" />
             <element signature="docComment;method#insertToKeysArray#0;class#BTreeNode#0" />
+            <element signature="method#insertToKeysArray#0;class#BTreeNode#0" />
+            <element signature="e#6366#6423#1" />
             <element signature="e#6499#6562#1" />
-            <element signature="e#7100#7101#0" expanded="true" />
+            <element signature="docComment;method#insertToCorrectChild#0;class#BTreeNode#0" />
+            <element signature="method#insertToCorrectChild#0;class#BTreeNode#0" />
+            <element signature="e#6956#7004#1" />
+            <element signature="e#7017#7069#1" />
+            <element signature="docComment;method#toString#1;class#BTreeNode#0" />
+            <element signature="method#toString#1;class#BTreeNode#0" />
+            <element signature="e#7252#7312#1" />
+            <element signature="e#8677#8852#1" />
+            <element signature="e#8753#8842#1" />
+            <element signature="docComment;method#addKeysToString#0;class#BTreeNode#0" />
+            <element signature="method#addKeysToString#0;class#BTreeNode#0" />
+            <element signature="e#7660#7741#1" />
           </folding>
         </state>
       </provider>

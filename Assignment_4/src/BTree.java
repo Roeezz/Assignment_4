@@ -35,20 +35,29 @@ public class BTree {
      * Creating two pointers from the new root to the other noes and update their values.
      */
     private void splitRoot() {
+        BTreeNode oldRoot = root;
         BTreeNode rightChild = root.createNodeForSplit(root);
         if(!root.isLeaf()){
             root.transferChildren(root, rightChild);
         }
+        BTreeNode newRoot = createNewRoot(rightChild);
+        oldRoot.setN(T_VAR - 1);
+        root = newRoot;
+    }
 
+    /**
+     * Creates and updates the new root to replace the old one with.
+     * @param rightChild the right child of the new root.
+     * @return the new updated root.
+     */
+    private BTreeNode createNewRoot(BTreeNode rightChild) {
         BTreeNode newRoot = new BTreeNode(T_VAR);
         String key = root.getKey(T_VAR - 1);
         newRoot.insert(key);
         newRoot.setChild(0,root);
         newRoot.setChild(1,rightChild);
-        root.setN(T_VAR - 1);
-
-        root = newRoot;
-        root.setLeaf(false);
+        newRoot.setLeaf(false);
+        return newRoot;
     }
 
     public void createFullTree(String s) {
