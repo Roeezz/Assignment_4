@@ -1,5 +1,7 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.Iterator;
+
 import static java.lang.Integer.parseInt;
 
 public class BTree {
@@ -21,7 +23,7 @@ public class BTree {
      * @param key the key to insert to the tree.
      */
     public void insert(String key){
-        if(root.getN() == 2*T_VAR -1){
+        if(root.getN() == 2 * T_VAR - 1){
             splitRoot();
         }
         root.insert(key);
@@ -35,7 +37,7 @@ public class BTree {
     private void splitRoot() {
         BTreeNode rightChild = root.createNodeForSplit(root);
         if(!root.isLeaf()){
-            root.copyChildren(root, rightChild);
+            root.transferChildren(root, rightChild);
         }
 
         BTreeNode newRoot = new BTreeNode(T_VAR);
@@ -46,6 +48,7 @@ public class BTree {
         root.setN(T_VAR - 1);
 
         root = newRoot;
+        root.setLeaf(false);
     }
 
     public void createFullTree(String s) {
@@ -61,5 +64,10 @@ public class BTree {
     public void deleteKeysFromTree(String s) {
         //TODO: implement deleteKeysFromTree
         throw new NotImplementedException();
+    }
+
+    @Override
+    public String toString() {
+        return root.toString();
     }
 }

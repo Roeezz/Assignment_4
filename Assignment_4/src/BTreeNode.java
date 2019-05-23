@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public class BTreeNode {
     /**
      * The tree's constant.
@@ -43,6 +45,10 @@ public class BTreeNode {
         return n;
     }
 
+    public void setLeaf(boolean leaf) {
+        isLeaf = leaf;
+    }
+
     public String[] getKeys (){return keys;}
 
     /**
@@ -63,7 +69,7 @@ public class BTreeNode {
      * @param str the new key to set the place in the array to to.
      */
     public void setKey(int i, String str) {
-        if(i < 0 || i >= n){
+        if(i < 0 || i > n){
             throw new IllegalArgumentException("Index: " + i + " n: " + n);
         }
         keys[i]=str;
@@ -90,7 +96,7 @@ public class BTreeNode {
         if(i < 0 || i > n){
             throw new IllegalArgumentException("Index: " + i + " n: " + n);
         }
-        children[i]=node;
+        children[i] = node;
     }
 
     /**
@@ -132,10 +138,11 @@ public class BTreeNode {
         while(i < n && keys[i].compareTo(key) < 0){
             i++;
         }
-        if(children[i].getN() == 2* T_VAR -1){
+        // If the node is full we split it.
+        if(children[i].getN() == 2 * T_VAR -1){
             splitChild(i);
         }
-        children[i].insert(key);
+        insertToCorrectChild(key, i);
     }
 
     // Methods related to insert.
@@ -150,13 +157,12 @@ public class BTreeNode {
         BTreeNode newChild = createNodeForSplit(splitChild);
 
         if(!splitChild.isLeaf){
-            copyChildren(splitChild, newChild);
+            transferChildren(splitChild, newChild);
         }
+        setKey(n,splitChild.getKey(T_VAR - 1));
+        setN(n + 1);
         clearPlaceForChild(index, this, newChild);
-        setKey(index-1,splitChild.getKey(T_VAR - 1));
-        setN(n+1);
         splitChild.setN(T_VAR - 1);
-
     }
 
     /**
@@ -183,11 +189,12 @@ public class BTreeNode {
      * @param splitChild the child being split.
      * @param newChild the new child created from the split.
      */
-    void copyChildren(BTreeNode splitChild, BTreeNode newChild) {
+    void transferChildren(BTreeNode splitChild, BTreeNode newChild) {
         int indexOther = 0;
-        for(int i = T_VAR +1; i<splitChild.getN(); i++)
+        for(int i = T_VAR; i <= splitChild.getN(); i++)
         {
             newChild.setChild(indexOther,splitChild.getChild(i));
+            splitChild.setChild(i, null);
             indexOther++;
         }
     }
@@ -225,5 +232,40 @@ public class BTreeNode {
             i--;
         }
         keys[i + 1] = key;
+    }
+
+    private void insertToCorrectChild(String key, int i) {
+        if(i == n || key.compareTo(keys[i]) < 0){
+            children[i].insert(key);
+        }
+        else{
+            children[i + 1].insert(key);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return toString("", 0);
+    }
+
+    private String toString(String acc, int depth){
+        if(isLeaf()){
+            return acc + addKeysToString(depth);
+        }
+        for(int i = 0; i <= n; i++){
+            acc = children[i].toString(acc,depth + 1);
+            if(i < n){
+                acc += keys[i] + "_" + depth +",";
+            }
+        }
+        return acc;
+    }
+
+    private String addKeysToString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < n; i++){
+            sb.append(keys[i]).append("_").append(depth).append(",");
+        }
+        return sb.toString();
     }
 }
