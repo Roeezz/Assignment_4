@@ -23,7 +23,7 @@ public class BTree {
         if(root.getN() == 2 * T_VAR - 1){
             splitRoot();
         }
-        root.insert(key);
+        root.insert(key.toLowerCase());
     }
 
     /**
@@ -54,7 +54,7 @@ public class BTree {
         int index = 0;
         OrderedPair[] keysLocations = new OrderedPair[keysList.getSize()];
         for (String key : keysList) {
-            keysLocations[index] = root.search(key);
+            keysLocations[index] = root.search(key.toLowerCase());
         }
         return keysLocations;
     }
@@ -75,7 +75,7 @@ public class BTree {
     }
 
     /**
-     * Inserts all keys from txt file of given path to the tree.
+     * Inserts all keys from txt file in given path to the tree.
      * @param path the path from which to read the keys.
      */
     public void createFullTree(String path) {
@@ -86,6 +86,12 @@ public class BTree {
         }
     }
 
+    /**
+     * Runs a search of keys from txt file in given path and gets the time
+     * took for the search.
+     * @param path the path of the txt file to read the keys from.
+     * @return a string containing the search time in milliseconds.
+     */
     public String getSearchTime(String path) {
         double startTime = System.nanoTime();
         search(path);
@@ -93,9 +99,27 @@ public class BTree {
         return Double.toString((endTime - startTime)/1000000.0).substring(0,6);
     }
 
+    /**
+     * Deletes all keys given in a txt file, if they exist in the tree.
+     * @param path the path to read the keys from.
+     */
     public void deleteKeysFromTree(String path) {
-        //TODO: implement deleteKeysFromTree
-        throw new NotImplementedException();
+        LinkedList<String> keysList = UsefulFunctions.createStringListFromFile(path);
+        assert keysList != null;
+        for (String key : keysList) {
+            delete(key.toLowerCase());
+        }
+    }
+
+    public boolean delete(String key){
+        if(root.getN() == T_VAR - 1){
+            mergeRoot();
+        }
+        return root.delete(key);
+    }
+
+    private void mergeRoot() {
+        //TODO implement mergeRoot.
     }
 
     @Override

@@ -1,3 +1,4 @@
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class HashTable {
@@ -29,7 +30,6 @@ public class HashTable {
     public void updateTable(String path) {
         LinkedList<Integer> badPasswords = UsefulFunctions.getKeysList(path);
         int index; Integer key;
-        System.out.println(badPasswords);
         for (Integer badPassword : badPasswords) {
             index = hashFunction(badPassword);
             key = badPassword;
@@ -38,13 +38,16 @@ public class HashTable {
     }
 
     /**
-     * TODO: document getSearchTime.
-     * @param path
-     * @return
+     * Runs a search of keys from txt file in given path and gets the time
+     * took for the search.
+     * @param path the path of the txt file to read the keys from.
+     * @return a string containing the search time in milliseconds.
      */
     public String getSearchTime(String path) {
-        //TODO: implement getSearchTime
-        throw new NotImplementedException();
+        double startTime = System.nanoTime();
+        checkPasswords(path);
+        double endTime = System.nanoTime();
+        return Double.toString((endTime - startTime)/1000000).substring(0,6);
     }
 
     /**

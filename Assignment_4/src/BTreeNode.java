@@ -304,4 +304,9 @@ public class BTreeNode {
         }
         return sb.toString();
     }
+
+    public Boolean delete(String key) {
+        //TODO implement delete.
+        return (null);
+    }
 }
