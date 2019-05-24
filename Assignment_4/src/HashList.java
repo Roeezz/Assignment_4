@@ -8,8 +8,13 @@ public class HashList extends LinkedList<Integer> {
     }
 
     @Override
-    public HashListElement createLink(Integer data) {
+    public HashListElement createFirstLink(Integer data) {
         return new HashListElement(data, (HashListElement) first);
+    }
+
+    @Override
+    protected HashListElement createLastLink(Integer data){
+        return new HashListElement(data,null);
     }
 
     @Override

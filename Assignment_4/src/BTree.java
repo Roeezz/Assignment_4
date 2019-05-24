@@ -15,7 +15,6 @@ public class BTree {
         root = new BTreeNode(T_VAR);
     }
 
-
     /**
      * Receives a key and inserts it into the root and splitting the roots if it is full.
      * @param key the key to insert to the tree.
@@ -44,6 +43,23 @@ public class BTree {
     }
 
     /**
+     * Searches in the tree all keys from txt file in given path.
+     * @param path the path of the txt file to read from.
+     * @return an ordered pair array, each element of it has a pointer
+     * to the node and the index of the searched key in the node.
+     */
+    public OrderedPair[] search(String path){
+        LinkedList<String> keysList = UsefulFunctions.createStringListFromFile(path);
+        assert keysList != null;
+        int index = 0;
+        OrderedPair[] keysLocations = new OrderedPair[keysList.getSize()];
+        for (String key : keysList) {
+            keysLocations[index] = root.search(key);
+        }
+        return keysLocations;
+    }
+
+    /**
      * Creates and updates the new root to replace the old one with.
      * @param rightChild the right child of the new root.
      * @return the new updated root.
@@ -67,8 +83,10 @@ public class BTree {
     }
 
     public String getSearchTime(String path) {
-        //TODO: implement getSearchTime
-        throw new NotImplementedException();
+        long startTime = System.nanoTime();
+        search(path);
+        long endTime = System.nanoTime();
+        return Long.toString((endTime - startTime)*1000000);
     }
 
     public void deleteKeysFromTree(String path) {

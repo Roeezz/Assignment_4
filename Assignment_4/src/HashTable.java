@@ -33,7 +33,7 @@ public class HashTable {
         for (Integer badPassword : badPasswords) {
             index = hashFunction(badPassword);
             key = badPassword;
-            table[index].add(key);
+            table[index].addFirst(key);
         }
     }
 
@@ -52,7 +52,7 @@ public class HashTable {
      * @param key the key to hash.
      * @return an int that is the hash code of the key.
      */
-    public int hashFunction(Integer key){
+    private int hashFunction(Integer key){
         return ((5*key + 3) % 15486907) % m2;
     }
 
@@ -78,7 +78,7 @@ public class HashTable {
      * @param password a keyed password to check.
      * @return true if the password is not in the table, meaning it's good, otherwise false.
      */
-    public boolean checkInTable(Integer password){
+    private boolean checkInTable(Integer password){
         return !table[hashFunction(password)].contains(password);
     }
 }

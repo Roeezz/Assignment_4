@@ -33,7 +33,7 @@ public class HashFunctionsList implements Iterable<HashFunction> {
                 functionVariables = function.split("_");
                 alpha = Integer.parseInt(functionVariables[1]);
                 beta = Integer.parseInt(functionVariables[1]);
-                hashFunctionsList.add(createHashFunction(alpha,beta));
+                hashFunctionsList.addFirst(createHashFunction(alpha,beta));
             }
         } catch (IOException e) {
             e.printStackTrace();

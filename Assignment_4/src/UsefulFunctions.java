@@ -63,7 +63,7 @@ public class UsefulFunctions {
         String line;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((line = br.readLine()) != null) {
-                stringList.add(line);
+                stringList.addLast(line);
             }
             return stringList;
         } catch (IOException e) {
@@ -94,7 +94,7 @@ public class UsefulFunctions {
                 polynomial[j] = ascii;
             }
 
-            keysList.add(horner(polynomial,length));
+            keysList.addLast(horner(polynomial,length));
         }
         return keysList;
     }

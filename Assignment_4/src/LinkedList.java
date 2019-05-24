@@ -5,6 +5,7 @@ public class LinkedList<T> implements Iterable<T> {
      * The first element in the list.
      */
     protected Link<T> first;
+    protected Link<T> last;
 
     /**
      * The getSize of the Linked list.
@@ -16,6 +17,7 @@ public class LinkedList<T> implements Iterable<T> {
      */
     public LinkedList() {
         first = null;
+        last = null;
         size = 0;
     }
 
@@ -49,16 +51,35 @@ public class LinkedList<T> implements Iterable<T> {
      * @param data the data to insert to the element.
      * @throws NullPointerException if given data is null.
      */
-    public void add(T data) {
+    public void addFirst(T data) {
         if(data == null) {
             throw new NullPointerException("Argument is null");
         }
-        first = createLink(data);
+        first = createFirstLink(data);
+        if (last == null) {
+            last = first;
+        }
         size++;
     }
 
-    public Link<T> createLink(T data){
+    public void addLast(T data){
+        if (data == null){
+            throw new NullPointerException("Argument is null");
+        }
+        if (last == null){
+            last = createLastLink(data);
+        }
+        else {
+            last.setNext(createLastLink(data));
+        }
+        size++;
+    }
+
+    protected Link<T> createFirstLink(T data){
         return new Link<>(data, first);
+    }
+    protected Link<T> createLastLink(T data){
+        return new Link<>(data, null);
     }
 
     /**

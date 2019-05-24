@@ -65,7 +65,7 @@ public class BTreeNode {
      * @param i the index to set.
      * @param str the new key to set the place in the array to to.
      */
-    public void setKey(int i, String str) {
+    private void setKey(int i, String str) {
         if(i < 0 || i > n){
             throw new IllegalArgumentException("Index: " + i + " n: " + n);
         }
@@ -77,7 +77,7 @@ public class BTreeNode {
      * @param i index in the children array
      * @return the node located in this index
      */
-    public BTreeNode getChild(int i){
+    private BTreeNode getChild(int i){
         if(i < 0 || i > n){
             throw new IllegalArgumentException("Index: " + i + " n: " + n);
         }
@@ -125,7 +125,6 @@ public class BTreeNode {
         // in the keys array.
         if (isLeaf){
             insertToKeysArray(key);
-            setN(n + 1);
             return;
         }
         int i = findExpectedIndexOfKey(key);
@@ -176,10 +175,10 @@ public class BTreeNode {
      * @param splitChild the split child.
      */
     private void insertMedianKey(int index, BTreeNode father, BTreeNode splitChild) {
-        for(int i = father.getN() - 1; i >= index; i--) {
-            father.setKey(i, this.getKey(i));
+        for(int i = father.getN(); i > index; i--) {
+            father.setKey(i, this.getKey(i - 1));
         }
-        setKey(n,splitChild.getKey(T_VAR - 1));
+        setKey(index,splitChild.getKey(T_VAR - 1));
         setN(n + 1);
     }
 
@@ -194,6 +193,7 @@ public class BTreeNode {
         newChild.isLeaf = splitChild.isLeaf;
         newChild.setN(T_VAR - 1);
         int index2 = 0; //the index of the keys array of the new node
+        int splitN;
         for(int i = T_VAR; i < splitChild.getN(); i++) {
             newChild.setKey(index2,splitChild.getKey(i));
             splitChild.setKey(i, null);
@@ -210,7 +210,7 @@ public class BTreeNode {
      */
     void transferChildren(BTreeNode splitChild, BTreeNode newChild) {
         int indexOther = 0;
-        for(int i = T_VAR; i <= splitChild.getN(); i++)
+        for(int i = T_VAR; i <= 2 * T_VAR - 1; i++)
         {
             newChild.setChild(indexOther,splitChild.getChild(i));
             splitChild.setChild(i, null);
@@ -226,7 +226,7 @@ public class BTreeNode {
      * @param newChild the new child to insert.
      */
     private void insertNewChild(int index, BTreeNode father, BTreeNode newChild) {
-        for(int i = father.getN(); i >= i + 1; i--)
+        for(int i = father.getN(); i > index; i--)
         {
             father.setChild(i,father.getChild(i - 1));
         }
@@ -247,6 +247,7 @@ public class BTreeNode {
             i--;
         }
         keys[i + 1] = key;
+        setN(n + 1);
     }
 
     /**
@@ -292,7 +293,7 @@ public class BTreeNode {
     }
 
     /**
-     * Sub method of toString used to add the keys held in the current node.
+     * Sub method of toString used to addFirst the keys held in the current node.
      * @param depth the depth of the current node.
      * @return a string with the keys and the depth they are from.
      */
