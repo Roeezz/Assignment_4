@@ -67,10 +67,12 @@ public class LinkedList<T> implements Iterable<T> {
             throw new NullPointerException("Argument is null");
         }
         if (last == null){
-            last = createLastLink(data);
+            first = createLastLink(data);
+            last = first;
         }
         else {
             last.setNext(createLastLink(data));
+            last = last.getNext();
         }
         size++;
     }

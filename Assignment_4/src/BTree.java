@@ -74,6 +74,10 @@ public class BTree {
         return newRoot;
     }
 
+    /**
+     * Inserts all keys from txt file of given path to the tree.
+     * @param path the path from which to read the keys.
+     */
     public void createFullTree(String path) {
         LinkedList<String> passwordsList = UsefulFunctions.createStringListFromFile(path);
         assert passwordsList != null;
@@ -83,10 +87,10 @@ public class BTree {
     }
 
     public String getSearchTime(String path) {
-        long startTime = System.nanoTime();
+        double startTime = System.nanoTime();
         search(path);
-        long endTime = System.nanoTime();
-        return Long.toString((endTime - startTime)*1000000);
+        double endTime = System.nanoTime();
+        return Double.toString((endTime - startTime)/1000000.0).substring(0,6);
     }
 
     public void deleteKeysFromTree(String path) {

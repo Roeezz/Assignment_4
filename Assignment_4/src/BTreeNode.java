@@ -77,7 +77,7 @@ public class BTreeNode {
      * @param i index in the children array
      * @return the node located in this index
      */
-    private BTreeNode getChild(int i){
+    public BTreeNode getChild(int i){
         if(i < 0 || i > n){
             throw new IllegalArgumentException("Index: " + i + " n: " + n);
         }
