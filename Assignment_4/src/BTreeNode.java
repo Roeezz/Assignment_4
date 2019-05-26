@@ -385,6 +385,21 @@ public class BTreeNode {
         moveElements(father,child,siblingIndex,childIndex);
         deleteOne(sibling);
     }
+    private int chooseASibling(BTreeNode father, int childIndex)
+    {
+        int siblingIndex;
+        if (childIndex==0)
+        {
+            siblingIndex=1;
+        }
+        if(childIndex==father.getN())
+        {
+            siblingIndex=childIndex-1;
+        }
+        else
+            siblingIndex=childIndex+1;
+        return siblingIndex;
+    }
 
     /**
      * TODO: DOCUMENT moveElements
@@ -393,7 +408,7 @@ public class BTreeNode {
      * @param siblingIndex
      * @param childIndex
      */
-    private void moveElements(BTreeNode father, BTreeNode child, int siblingIndex, int childIndex, )
+    private void moveElements(BTreeNode father, BTreeNode child, int siblingIndex, int childIndex)
     {
         BTreeNode sibling = father.getChild(siblingIndex);
         int keyIndexToChange=extractIndex(childIndex,siblingIndex);
@@ -480,22 +495,6 @@ public class BTreeNode {
         }
         return sibling;
     }
-    private int chooseASibling(BTreeNode father, int childIndex)
-    {
-        int siblingIndex;
-        if (childIndex==0)
-        {
-            siblingIndex=1;
-        }
-        if(childIndex==father.getN())
-        {
-            siblingIndex=childIndex-1;
-        }
-        else
-            siblingIndex=childIndex+1;
-        return siblingIndex;
-    }
-    private boolean handleCase1a (int index, BTreeNode father, )
 
     private void handleCase2() {
         //TODO: Implement handleCase2
