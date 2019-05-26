@@ -313,6 +313,6 @@ public class BTreeNode {
     }
 
     private void deleteKey(String key){
-        //TODO implement this
+        System.out.println("Omri is the king");
     }
 }
