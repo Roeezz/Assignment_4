@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="Started implementing delete in BTree and BTreeNode">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="test&#10;&#10;Signed-off-by: Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="311" column="22" lean-forward="true" selection-start-line="311" selection-start-column="22" selection-end-line="311" selection-end-column="22" />
+            <state relative-caret-position="303">
+              <caret line="303" column="9" lean-forward="true" selection-start-line="303" selection-start-column="9" selection-end-line="303" selection-end-column="9" />
               <folding>
                 <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
                 <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -89,6 +87,8 @@
                 <element signature="e#8061#8113#1" />
                 <element signature="docComment;method#toString#1;class#BTreeNode#0" />
                 <element signature="docComment;method#addKeysToString#0;class#BTreeNode#0" />
+                <element signature="e#9613#9614#0" expanded="true" />
+                <element signature="e#9648#9649#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -247,6 +247,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Omri Attal" />
         <option value="Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;" />
       </list>
     </option>
@@ -560,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558713162000</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="test&#10;&#10;Signed-off-by: Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;">
+      <created>1558866309211</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1558866309211</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -594,12 +602,12 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32627118" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32768363" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32768363" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.32768363" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.17090395" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32909605" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.32909605" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -669,7 +677,8 @@
     <MESSAGE value="- Fixed insert again as it seems it still had problems with indices&#10;- Created a test for time checking, which helped me realise insert&#10;wasn't working&#10;- Implemented an addLast method in LinkedList, and changed add &#10;to addFirst&#10;- Changed the functions UsefulFunctions that create the keys list to&#10;add to the linked list with addLast, so that the lists won't be &#10;reversed&#10;- Some cleanup" />
     <MESSAGE value="- Finished implementing getSearchTime in BTree&#10;- Fixed an issue with addLast that made the list not add anything if&#10;elements were added last to an empty list" />
     <MESSAGE value="Started implementing delete in BTree and BTreeNode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started implementing delete in BTree and BTreeNode" />
+    <MESSAGE value="test&#10;&#10;Signed-off-by: Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="test&#10;&#10;Signed-off-by: Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1125,8 +1134,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="311" column="22" lean-forward="true" selection-start-line="311" selection-start-column="22" selection-end-line="311" selection-end-column="22" />
+        <state relative-caret-position="303">
+          <caret line="303" column="9" lean-forward="true" selection-start-line="303" selection-start-column="9" selection-end-line="303" selection-end-column="9" />
           <folding>
             <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
             <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -1188,6 +1197,8 @@
             <element signature="e#8061#8113#1" />
             <element signature="docComment;method#toString#1;class#BTreeNode#0" />
             <element signature="docComment;method#addKeysToString#0;class#BTreeNode#0" />
+            <element signature="e#9613#9614#0" expanded="true" />
+            <element signature="e#9648#9649#0" expanded="true" />
           </folding>
         </state>
       </provider>
