@@ -50,11 +50,13 @@ public class BTree {
      */
     public OrderedPair[] search(String path){
         LinkedList<String> keysList = UsefulFunctions.createStringListFromFile(path);
-        assert keysList != null;
         int index = 0;
-        OrderedPair[] keysLocations = new OrderedPair[keysList.getSize()];
-        for (String key : keysList) {
-            keysLocations[index] = root.search(key.toLowerCase());
+        OrderedPair[] keysLocations = new OrderedPair[0];
+        if (keysList != null) {
+            keysLocations = new OrderedPair[keysList.getSize()];
+            for (String key : keysList) {
+                keysLocations[index] = root.search(key.toLowerCase());
+            }
         }
         return keysLocations;
     }
@@ -80,9 +82,10 @@ public class BTree {
      */
     public void createFullTree(String path) {
         LinkedList<String> passwordsList = UsefulFunctions.createStringListFromFile(path);
-        assert passwordsList != null;
-        for (String password : passwordsList) {
-            insert(password);
+        if (passwordsList != null) {
+            for (String password : passwordsList) {
+                insert(password);
+            }
         }
     }
 
@@ -105,9 +108,10 @@ public class BTree {
      */
     public void deleteKeysFromTree(String path) {
         LinkedList<String> keysList = UsefulFunctions.createStringListFromFile(path);
-        assert keysList != null;
-        for (String key : keysList) {
-            delete(key.toLowerCase());
+        if (keysList != null) {
+            for (String key : keysList) {
+                delete(key.toLowerCase());
+            }
         }
     }
 
@@ -119,7 +123,8 @@ public class BTree {
     }
 
     private void mergeRoot() {
-        //TODO implement mergeRoot.
+        //TODO: Implement mergeRoot
+
     }
 
     @Override

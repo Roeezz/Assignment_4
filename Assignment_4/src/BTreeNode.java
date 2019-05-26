@@ -306,7 +306,13 @@ public class BTreeNode {
     }
 
     public Boolean delete(String key) {
-        //TODO implement delete.
+        if(isLeaf){
+
+        }
         return (null);
+    }
+
+    private void deleteKey(String key){
+
     }
 }

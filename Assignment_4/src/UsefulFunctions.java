@@ -58,6 +58,9 @@ public class UsefulFunctions {
      * @return a LinkedList of Strings.
      */
     public static LinkedList<String> createStringListFromFile(String path) {
+        if(path == null){
+            throw new NullPointerException("Argument is null");
+        }
         LinkedList<String> stringList = new LinkedList<>();
         File file = new File(path);
         String line;
