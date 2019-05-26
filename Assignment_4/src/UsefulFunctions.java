@@ -37,16 +37,16 @@ public class UsefulFunctions {
         if(right>=left)
         {
             int mid = (left+right)/2;
-            if(array[mid].compareTo(key)==0)
+            if(array[mid].compareTo(key) == 0)
             {
                 return  mid;
 
             }
-            else if (array[mid].compareTo(key)>0)
+            else if (array[mid].compareTo(key) > 0)
             {
                 return binarySearch(array,key,left,mid-1);
             }
-            return binarySearch(array,key,mid+1,right);
+            return binarySearch(array, key,mid + 1, right);
 
         }
         return -1;

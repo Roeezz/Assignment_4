@@ -305,7 +305,7 @@ public class BTreeNode {
         return sb.toString();
     }
 
-    public void delete(String key, int index, BTreeNode father) {
+    public void delete(String key, BTreeNode father) {
         if(n < T_VAR){
             handleCase1();
         }
@@ -340,9 +340,10 @@ public class BTreeNode {
 
     }
 
-    private void deleteKey(String key) {
-        //TODO: Implement deleteKey
-
+    public void deleteKey(String key) {
+        int index = (int)search(key).getSecondElement();
+        if (n - index >= 0) System.arraycopy(keys, index + 1, keys, index, n - index);
+        setN(n - 1);
     }
 
 }

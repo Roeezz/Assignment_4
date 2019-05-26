@@ -115,11 +115,11 @@ public class BTree {
         }
     }
 
-    public boolean delete(String key){
+    public void delete(String key){
         if(root.getN() == T_VAR - 1){
             mergeRoot();
         }
-        return root.delete(key);
+        root.delete(key, root);
     }
 
     private void mergeRoot() {
