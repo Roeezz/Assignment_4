@@ -305,14 +305,44 @@ public class BTreeNode {
         return sb.toString();
     }
 
-    public Boolean delete(String key) {
-        if(isLeaf){
-
+    public void delete(String key, int index, BTreeNode father) {
+        if(n < T_VAR){
+            handleCase1();
         }
-        return (null);
+        boolean keyExist = searchKey(key);
+        if(keyExist && !isLeaf){
+            handleCase2();
+        }
+        else if(keyExist && isLeaf){
+            deleteKey(key);
+            return;
+        }
+        else{ //Key not in the node
+            handleCase3();
+        }
     }
 
-    private void deleteKey(String key){
-        System.out.println("Omri is the king");
+    private boolean searchKey(String key) {
+        return UsefulFunctions.binarySearch(keys, key) != -1;
     }
+
+    private void handleCase1() {
+        //TODO: Implement handleCase1
+    }
+
+    private void handleCase2() {
+        //TODO: Implement handleCase2
+
+    }
+
+    private void handleCase3() {
+        //TODO: Implement handleCase3
+
+    }
+
+    private void deleteKey(String key) {
+        //TODO: Implement deleteKey
+
+    }
+
 }
