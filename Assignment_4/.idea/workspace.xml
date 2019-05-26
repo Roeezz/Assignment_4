@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="Started implementing delete in BTree and BTreeNode">
+    <list default="true" id="ebddb0d7-fb63-42c7-8b24-6190936b82c1" name="Default Changelist" comment="test&#10;&#10;Signed-off-by: Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BTreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BtreeInsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BtreeInsertTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UsefulFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UsefulFunctions.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="315" column="8" lean-forward="true" selection-start-line="315" selection-start-column="8" selection-end-line="315" selection-end-column="8" />
+            <state relative-caret-position="17">
+              <caret line="330" column="5" lean-forward="true" selection-start-line="330" selection-start-column="5" selection-end-line="330" selection-end-column="5" />
               <folding>
                 <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
                 <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -93,6 +90,8 @@
                 <element signature="e#8061#8113#1" />
                 <element signature="docComment;method#toString#1;class#BTreeNode#0" />
                 <element signature="docComment;method#addKeysToString#0;class#BTreeNode#0" />
+                <element signature="e#9930#9931#0" expanded="true" />
+                <element signature="e#9998#9999#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="121" column="32" lean-forward="true" selection-start-line="121" selection-start-column="32" selection-end-line="121" selection-end-column="32" />
+            <state relative-caret-position="234">
+              <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
               <folding>
                 <element signature="docComment;method#BTree#0;class#BTree#0" />
                 <element signature="method#BTree#0;class#BTree#0" />
@@ -129,7 +128,6 @@
                 <element signature="e#3849#3959#1" />
                 <element signature="e#3891#3949#1" />
                 <element signature="e#4042#4078#1" />
-                <element signature="method#mergeRoot#0;class#BTree#0" />
               </folding>
             </state>
           </provider>
@@ -139,7 +137,7 @@
         <entry file="file://$PROJECT_DIR$/src/HashListElement.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="docComment;method#HashListElement#0;class#HashListElement#0" />
                 <element signature="method#equals#0;class#HashListElement#0" />
@@ -152,7 +150,7 @@
         <entry file="file://$PROJECT_DIR$/src/HashList.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
               <folding>
                 <element signature="docComment;method#HashList#0;class#HashList#0" />
                 <element signature="method#equals#0;class#HashList#0" />
@@ -164,7 +162,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
+            <state relative-caret-position="408">
               <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
               <folding>
                 <element signature="docComment;field#first#0;class#LinkedList#0" />
@@ -220,7 +218,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HashTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="289">
               <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
             </state>
           </provider>
@@ -251,6 +249,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Omri Attal" />
         <option value="Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;" />
       </list>
     </option>
@@ -324,7 +323,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,6 +339,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,7 +358,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -564,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558713162000</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="test&#10;&#10;Signed-off-by: Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;">
+      <created>1558866309211</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1558866309211</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -583,7 +589,7 @@
     <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24865952" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16957104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -597,8 +603,8 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3983051" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32627118" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32768363" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.19350283" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32768363" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.32768363" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.17090395" />
@@ -673,7 +679,8 @@
     <MESSAGE value="- Fixed insert again as it seems it still had problems with indices&#10;- Created a test for time checking, which helped me realise insert&#10;wasn't working&#10;- Implemented an addLast method in LinkedList, and changed add &#10;to addFirst&#10;- Changed the functions UsefulFunctions that create the keys list to&#10;add to the linked list with addLast, so that the lists won't be &#10;reversed&#10;- Some cleanup" />
     <MESSAGE value="- Finished implementing getSearchTime in BTree&#10;- Fixed an issue with addLast that made the list not add anything if&#10;elements were added last to an empty list" />
     <MESSAGE value="Started implementing delete in BTree and BTreeNode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started implementing delete in BTree and BTreeNode" />
+    <MESSAGE value="test&#10;&#10;Signed-off-by: Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="test&#10;&#10;Signed-off-by: Roee Weiss Lipshitz &lt;roeeweisslip@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1005,13 +1012,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Learning">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Learning" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1088,10 +1089,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BtreeInsertTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="82" selection-start-line="4" selection-start-column="82" selection-end-line="4" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BloomFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="96" column="47" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="47" />
+          <folding>
+            <element signature="docComment;field#bloomFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;field#m1#0;class#BloomFilter#0" />
+            <element signature="docComment;field#hashFunctionsList#0;class#BloomFilter#0" />
+            <element signature="docComment;method#BloomFilter#0;class#BloomFilter#0" />
+            <element signature="e#674#752#1" />
+            <element signature="docComment;method#updateTable#0;class#BloomFilter#0" />
+            <element signature="method#updateTable#0;class#BloomFilter#0" />
+            <element signature="docComment;method#updateFilter#0;class#BloomFilter#0" />
+            <element signature="method#updateFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;method#checkPasswords#0;class#BloomFilter#0" />
+            <element signature="method#checkPasswords#0;class#BloomFilter#0" />
+            <element signature="docComment;method#checkAgainstFilter#0;class#BloomFilter#0" />
+            <element signature="method#checkAgainstFilter#0;class#BloomFilter#0" />
+            <element signature="docComment;method#getFalsePositivePercentage#0;class#BloomFilter#0" />
+            <element signature="docComment;method#goodPasswords#0;class#BloomFilter#0" />
+            <element signature="method#goodPasswords#0;class#BloomFilter#0" />
+            <element signature="docComment;method#falsePositives#0;class#BloomFilter#0" />
+            <element signature="method#falsePositives#0;class#BloomFilter#0" />
+            <element signature="method#equals#0;class#BloomFilter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HashListElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="docComment;method#HashListElement#0;class#HashListElement#0" />
             <element signature="method#equals#0;class#HashListElement#0" />
@@ -1102,7 +1148,7 @@
     <entry file="file://$PROJECT_DIR$/src/HashList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
           <folding>
             <element signature="docComment;method#HashList#0;class#HashList#0" />
             <element signature="method#equals#0;class#HashList#0" />
@@ -1112,7 +1158,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
+        <state relative-caret-position="408">
           <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
           <folding>
             <element signature="docComment;field#first#0;class#LinkedList#0" />
@@ -1164,62 +1210,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BtreeInsertTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="82" selection-start-line="4" selection-start-column="82" selection-end-line="4" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BloomFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="96" column="47" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="47" />
-          <folding>
-            <element signature="docComment;field#bloomFilter#0;class#BloomFilter#0" />
-            <element signature="docComment;field#m1#0;class#BloomFilter#0" />
-            <element signature="docComment;field#hashFunctionsList#0;class#BloomFilter#0" />
-            <element signature="docComment;method#BloomFilter#0;class#BloomFilter#0" />
-            <element signature="e#674#752#1" />
-            <element signature="docComment;method#updateTable#0;class#BloomFilter#0" />
-            <element signature="method#updateTable#0;class#BloomFilter#0" />
-            <element signature="docComment;method#updateFilter#0;class#BloomFilter#0" />
-            <element signature="method#updateFilter#0;class#BloomFilter#0" />
-            <element signature="docComment;method#checkPasswords#0;class#BloomFilter#0" />
-            <element signature="method#checkPasswords#0;class#BloomFilter#0" />
-            <element signature="docComment;method#checkAgainstFilter#0;class#BloomFilter#0" />
-            <element signature="method#checkAgainstFilter#0;class#BloomFilter#0" />
-            <element signature="docComment;method#getFalsePositivePercentage#0;class#BloomFilter#0" />
-            <element signature="docComment;method#goodPasswords#0;class#BloomFilter#0" />
-            <element signature="method#goodPasswords#0;class#BloomFilter#0" />
-            <element signature="docComment;method#falsePositives#0;class#BloomFilter#0" />
-            <element signature="method#falsePositives#0;class#BloomFilter#0" />
-            <element signature="method#equals#0;class#BloomFilter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HashTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
+        <state relative-caret-position="289">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="121" column="32" lean-forward="true" selection-start-line="121" selection-start-column="32" selection-end-line="121" selection-end-column="32" />
+        <state relative-caret-position="234">
+          <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
           <folding>
             <element signature="docComment;method#BTree#0;class#BTree#0" />
             <element signature="method#BTree#0;class#BTree#0" />
@@ -1246,15 +1247,14 @@
             <element signature="e#3849#3959#1" />
             <element signature="e#3891#3949#1" />
             <element signature="e#4042#4078#1" />
-            <element signature="method#mergeRoot#0;class#BTree#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="315" column="8" lean-forward="true" selection-start-line="315" selection-start-column="8" selection-end-line="315" selection-end-column="8" />
+        <state relative-caret-position="17">
+          <caret line="330" column="5" lean-forward="true" selection-start-line="330" selection-start-column="5" selection-end-line="330" selection-end-column="5" />
           <folding>
             <element signature="docComment;field#T_VAR#0;class#BTreeNode#0" />
             <element signature="docComment;field#n#0;class#BTreeNode#0" />
@@ -1316,6 +1316,8 @@
             <element signature="e#8061#8113#1" />
             <element signature="docComment;method#toString#1;class#BTreeNode#0" />
             <element signature="docComment;method#addKeysToString#0;class#BTreeNode#0" />
+            <element signature="e#9930#9931#0" expanded="true" />
+            <element signature="e#9998#9999#0" expanded="true" />
           </folding>
         </state>
       </provider>

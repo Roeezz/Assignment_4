@@ -305,7 +305,7 @@ public class BTreeNode {
         return sb.toString();
     }
 
-    public void delete(String key, int index, BTreeNode father) {
+    public void delete(String key, BTreeNode father) {
         if(n < T_VAR){
             handleCase1();
         }
@@ -314,11 +314,11 @@ public class BTreeNode {
             handleCase2();
         }
         else if(keyExist && isLeaf){
-            deleteKey(key);
+            deleteKey(key); //case 3
             return;
         }
         else{ //Key not in the node
-            handleCase3();
+            handleCase4(key);
         }
     }
 
@@ -335,9 +335,32 @@ public class BTreeNode {
 
     }
 
-    private void handleCase3() {
-        //TODO: Implement handleCase3
 
+    /**
+     * This functions handles the case in which the key is not in the current node.
+     * We check where to continue searching for it.
+     * @param key to check in which child it might be in
+     */
+    private void handleCase4(String key) {
+        if(getKey(0).compareTo(key)>0) //if the key should be in the beginning
+        {
+            delete(key,getChild(0));
+        }
+        else if(getKey(getN()-1).compareTo(key)>0) // if the key should be in the end
+        {
+            delete(key,getChild(getN()));
+        }
+        else
+        {
+            for (int i = 1; i < getN(); i++) {
+                String key2 = getKey(i);
+                String key1 = getKey(i-1);
+                if(key1.compareTo(key)<0 && key2.compareTo(key)>0)
+                {
+                    delete(key,getChild(i));
+                }
+            }
+        }
     }
 
     private void deleteKey(String key) {
