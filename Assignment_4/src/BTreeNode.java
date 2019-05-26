@@ -100,7 +100,7 @@ public class BTreeNode {
      * @param node the new node to set the child pointer to.
      */
     public void setChild(int i, BTreeNode node) {
-        if (i < 0 || i > n) {
+        if (i < 0 || i > n+1) {
             throw new IllegalArgumentException("Index: " + i + " n: " + n);
         }
         children[i] = node;
@@ -119,9 +119,11 @@ public class BTreeNode {
         int i = findExpectedIndexOfKey(key);
         if (i < n && keys[i].equals(key)) {
             return new OrderedPair(this, i);
-        } else if (isLeaf) {
+        }
+        else if (isLeaf) {
             return null;
-        } else {
+        }
+        else {
             return children[i].search(key);
         }
     }
@@ -277,7 +279,8 @@ public class BTreeNode {
     private void insertToCorrectChild(String key, int i) {
         if (i == n || key.compareTo(keys[i]) < 0) {
             children[i].insert(key);
-        } else {
+        }
+        else {
             children[i + 1].insert(key);
         }
     }
@@ -324,9 +327,15 @@ public class BTreeNode {
         return sb.toString();
     }
 
-    public void delete(String key, BTreeNode father) {
+    /**
+     *
+     * @param key to remove
+     * @param childIndex the child in which the current node is the child at that index in his father's array
+     * @param father
+     */
+    public void delete(String key, int childIndex, BTreeNode father) {
         if (n < T_VAR) {
-            handleCase1();
+            handleCase1(childIndex,father);
         }
         boolean keyExist = searchKey(key);
         if (keyExist && !isLeaf) {
@@ -345,9 +354,148 @@ public class BTreeNode {
         return UsefulFunctions.binarySearch(keys, key) != -1;
     }
 
-    private void handleCase1() {
-        //TODO: Implement handleCase1
+    /**
+     * Handles case 1 of the algorithm: if a node has less than t-1 keys
+     * @param childIndex the index of the node in his father's array with less than t-1 keys
+     * @param father the father of the node
+     */
+    private void handleCase1(int childIndex,BTreeNode father) {
+        int siblingIndex = checkSiblings(childIndex,father);
+        if(siblingIndex!=-1)
+        {
+            handleCase1a(childIndex,siblingIndex,father);
+        }
+        else //its siblings has t-1 keys
+        {
+            int siblingToMerge = chooseASibling(father,childIndex);
+
+        }
     }
+
+    /**
+     * Handles the case in which at least on of a node's siblings has more than t-1 keys
+     * @param childIndex the node of the child who has t-1 keys
+     * @param siblingIndex the index of the sibling with more than t-1 keys
+     * @param father father of each nodes
+     */
+    private void handleCase1a(int childIndex,int siblingIndex, BTreeNode father)
+    {
+        BTreeNode child = father.getChild(childIndex);
+        BTreeNode sibling = father.getChild(siblingIndex);
+        moveElements(father,child,siblingIndex,childIndex);
+        deleteOne(sibling);
+    }
+
+    /**
+     * TODO: DOCUMENT moveElements
+     * @param father
+     * @param child
+     * @param siblingIndex
+     * @param childIndex
+     */
+    private void moveElements(BTreeNode father, BTreeNode child, int siblingIndex, int childIndex, )
+    {
+        BTreeNode sibling = father.getChild(siblingIndex);
+        int keyIndexToChange=extractIndex(childIndex,siblingIndex);
+        changeKeysAndChild(keyIndexToChange,father,sibling,child);
+        if(!sibling.isLeaf)
+        {
+            child.setChild(child.getN(),sibling.getChild(0));
+        }
+    }
+
+    /**
+     * //TODO: Document changeKeysAndChild
+     * @param keyIndexToChange
+     * @param father
+     * @param sibling
+     * @param child
+     */
+    private void changeKeysAndChild(int keyIndexToChange, BTreeNode father, BTreeNode sibling,BTreeNode child)
+    {
+        String median = sibling.getKey(0);
+        String moveToChild = father.getKey(keyIndexToChange);
+        father.setKey(keyIndexToChange,median);
+        child.setKey(child.getN(),moveToChild);
+        child.setChild(child.getN(),sibling.getChild(0));
+        child.setN(child.getN()+1);
+    }
+
+    /**
+     * //TODO: Document extractIndex
+     * @param childIndex
+     * @param siblingIndex
+     * @return
+     */
+    private int extractIndex(int childIndex, int siblingIndex)
+    {
+        int keyIndexToChange;
+        if(siblingIndex>childIndex)
+            keyIndexToChange=childIndex;
+        else
+            keyIndexToChange=siblingIndex;
+        return keyIndexToChange;
+
+    }
+    /**
+     * Deletes the first key and the first child
+     * @param node to delete the first key and the first child
+     */
+    private void deleteOne(BTreeNode node)
+    {
+        for(int i = 1; i<node.getN();i++)
+        {
+            node.setKey(i-1,node.getKey(i));
+        }
+        node.setKey(node.getN()-1,null);
+        if (!node.isLeaf()) {
+            for (int i = 1; i <= node.getN(); i++) {
+                node.setChild(i - 1, node.getChild(i));
+            }
+            node.setChild(node.getN(),null);
+        }
+        node.setN(node.getN()-1);
+    }
+    /**
+     * Checks if a siblings of a node can lend elements to it
+     * @param father the father of the node in index
+     * @param index of the node in the children array to check its siblings from
+     * @return the index of a sibling with T_VAR keys at the least or -1
+     */
+    private int checkSiblings(int index,BTreeNode father) {
+        int sibling = -1;
+        if (index == 0 && father.getChild(1).getN() > T_VAR - 1)
+             sibling=1;
+        else if (index == getN() && father.getChild(getN() - 1).getN() > T_VAR - 1)
+            sibling=0;
+        else {
+            if (father.getChild(index + 1).getN() > T_VAR - 1)
+            {
+                sibling=index+1;
+            }
+            else if(father.getChild(index - 1).getN() > T_VAR - 1)
+            {
+                sibling=index-1;
+            }
+        }
+        return sibling;
+    }
+    private int chooseASibling(BTreeNode father, int childIndex)
+    {
+        int siblingIndex;
+        if (childIndex==0)
+        {
+            siblingIndex=1;
+        }
+        if(childIndex==father.getN())
+        {
+            siblingIndex=childIndex-1;
+        }
+        else
+            siblingIndex=childIndex+1;
+        return siblingIndex;
+    }
+    private boolean handleCase1a (int index, BTreeNode father, )
 
     private void handleCase2() {
         //TODO: Implement handleCase2
@@ -367,10 +515,11 @@ public class BTreeNode {
             String keyCheck = getKey(i);
             if (keyCheck.compareTo(key) > 0) //keyCheck > key
             {
-                delete(key, getChild(i));
+                getChild(i).delete(key,i,this);
+
             }
         }
-        delete(key, getChild(getN()));
+        delete(key,getN(), getChild(getN()));
     }
 
     public void deleteKey(String key) {
