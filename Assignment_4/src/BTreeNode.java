@@ -337,9 +337,9 @@ public class BTreeNode {
         if (n < T_VAR) {
             handleCase1(childIndex,father);
         }
-        boolean keyExist = searchKey(key);
+        boolean keyExist = keyExist(key);
         if (keyExist && !isLeaf) {
-            handleCase2();
+            handleCase2(key);
         }
         else if (keyExist && isLeaf) {
             deleteKey(key); //case 3
@@ -388,7 +388,7 @@ public class BTreeNode {
      * @param siblingIndex
      * @param childIndex
      */
-    private void moveElements(BTreeNode father, BTreeNode child, int siblingIndex, int childIndex, )
+    private void moveElements(BTreeNode father, BTreeNode child, int siblingIndex, int childIndex)
     {
         BTreeNode sibling = father.getChild(siblingIndex);
         int keyIndexToChange=extractIndex(childIndex,siblingIndex);
@@ -464,18 +464,15 @@ public class BTreeNode {
         else if (index == getN() && father.getChild(getN() - 1).getN() > T_VAR - 1)
             sibling=0;
         else {
-            if (father.getChild(index + 1).getN() > T_VAR - 1)
-            {
+            if (father.getChild(index + 1).getN() > T_VAR - 1) {
                 sibling=index+1;
             }
-            else if(father.getChild(index - 1).getN() > T_VAR - 1)
-            {
+            else if(father.getChild(index - 1).getN() > T_VAR - 1) {
                 sibling=index-1;
             }
         }
         return sibling;
     }
-    private boolean handleCase1a (int index, BTreeNode father, )
 
     private void handleCase2() {
         //TODO: Implement handleCase2
