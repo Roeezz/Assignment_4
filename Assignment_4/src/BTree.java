@@ -127,6 +127,10 @@ public class BTree {
 
     }
 
+    public BTreeNode getRoot() {
+        return root;
+    }
+
     @Override
     public String toString() {
         return root.toString();

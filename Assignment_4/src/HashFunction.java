@@ -26,7 +26,7 @@ public class HashFunction{
      * @return an int that is the hashed key.
      */
     public int runFunction(long key, int m1) {
-        return (int)(((ALPHA *key + BETA) % prime) % m1);
+        return (int) (((ALPHA *key + BETA) % prime) % m1);
     }
 
     @Override
