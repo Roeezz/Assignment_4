@@ -345,15 +345,20 @@ public class BTreeNode {
         }
         else if (keyExist && isLeaf) {
             deleteKey(key); //case 3
-            return;
         }
         else { //Key not in the node
             handleCase4(key);
         }
     }
 
-    private boolean searchKey(String key) {
-        return UsefulFunctions.binarySearch(keys, key) != -1;
+    private boolean keyExist(String key) {
+        int index = -1;
+        for (int i = 0; getKey(i).compareTo(key) <= 0 && i < n; i++) {
+            if (getKey(i).equals(key)) {
+                index = i;
+            }
+        }
+        return index != -1;
     }
 
     //CASE 1
@@ -611,6 +616,83 @@ public class BTreeNode {
         return siblingIndex;
     }
 
+    /**
+     * TODO: document copyChildrenToMerged
+     *
+     * @param leftChild
+     * @param rightChild
+     */
+    
+    private void copyChildrenToMerged(BTreeNode leftChild, BTreeNode rightChild) {
+        for (int i = 0; i < T_VAR; i++) {
+            setChild(i, leftChild.getChild(i));
+            setChild(i + T_VAR, rightChild.getChild(i));
+        }
+    }
+
+    /**
+     * TODO: document copyKeysToMerged
+     *
+     * @param leftChild
+     * @param rightChild
+     * @param key
+     */
+    private void copyKeysToMerged(BTreeNode leftChild, BTreeNode rightChild, String key) {
+        for (int i = 0; i < T_VAR - 1; i++) {
+            setKey(i, leftChild.getKey(i));
+            setKey(i + T_VAR, rightChild.getKey(i));
+        }
+        setKey(T_VAR-1, key);
+    }
+
+    /**
+     * Searches for the max key in the the child, replaces the key in the node with it, then deletes
+     * the max key in the subtree of the child.
+     *
+     * @param index the index of the child in the children array.
+     * @param child the
+     * @param isLeftChild
+     */
+    private void replaceKeyWithMaxKey(int index, BTreeNode child, boolean isLeftChild) {
+        int childIndex = index;
+        if (!isLeftChild) {
+            childIndex = index + 1;
+        }
+        String max = findMaxKeyInChild(child);
+        setKey(index, max);
+        child.delete(max, childIndex, this);
+    }
+
+    /**
+     * Linear searches for given key in given array.
+     *
+     * @param arr the array to search in.
+     * @param key the key to search.
+     * @return the index of the key in the array.
+     */
+    private int linearSearch(Object[] arr, String key) {
+        int index = -1;
+        for (int i = 0; !arr[i].equals(key) && i < n; i++) {
+            index = i;
+        }
+        return index;
+    }
+
+    /**
+     * Finds the max key in give childes sub tree.
+     *
+     * @param child the child to search the max key in.
+     * @return the max key in the subtree.
+     */
+    private String findMaxKeyInChild(BTreeNode child) {
+        BTreeNode current = child;
+        int currentN = current.getN();
+        while (!current.isLeaf) {
+            current = current.getChild(currentN);
+            currentN = current.getN();
+        }
+        currentN = current.getN();
+        return current.getKey(currentN - 1);
     }
 
     //CASE 4
