@@ -1,5 +1,3 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import static java.lang.Integer.parseInt;
 
 public class BTree {
@@ -119,7 +117,7 @@ public class BTree {
         if(root.getN() == T_VAR - 1){
             mergeRoot();
         }
-        root.delete(key, root);
+        root.delete(key,-1, root);
     }
 
     private void mergeRoot() {
