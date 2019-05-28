@@ -415,7 +415,7 @@ public class BTreeNode {
         String median;
         if(siblingIndex>childIndex)
         {
-             median = sibling.getKey(0); //min
+            median = sibling.getKey(0); //min
         }
         else
             median=sibling.getKey(sibling.getN()-1);//max
@@ -519,7 +519,7 @@ public class BTreeNode {
     public int checkSiblings(int index,BTreeNode father) {
         int sibling = -1;
         if (index == 0 && father.getChild(1).getN() > T_VAR - 1)
-             sibling=index+1;
+            sibling=index+1;
         else if (index == getN() && father.getChild(getN() - 1).getN() > T_VAR - 1)
             sibling=index-1;
         else {
