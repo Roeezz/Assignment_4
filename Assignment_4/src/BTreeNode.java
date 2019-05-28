@@ -586,7 +586,7 @@ public class BTreeNode {
      * @param key       the key to put as median.
      * @return the merged node.
      */
-    public BTreeNode merge(BTreeNode leftNode, BTreeNode rightNode, String key) {
+    private BTreeNode merge(BTreeNode leftNode, BTreeNode rightNode, String key) {
         BTreeNode merged = new BTreeNode(T_VAR);
         // We set the n value of the node to the expected n so that we could add to it keys simultaneously
         // on different places.
