@@ -1,5 +1,23 @@
 public class DeleteTests {
     public static void main(String[] args) {
+        BTree tree = new BTree("2");
+         tree.insert("Z");
+        tree.insert("W");
+        tree.insert("R");
+        tree.insert("M");
+        tree.insert("L");
+        tree.insert("J");
+        tree.insert("A");
+        tree.insert("O");
+        tree.insert("B");
+        tree.insert("K");
+        tree.insert("Q");
+        tree.insert("S");
+        tree.insert("P");
+        System.out.println(tree);
+        tree.delete("J");
+        System.out.println(tree);
+
         BTreeNode node1 = new BTreeNode(2);
         BTreeNode node2 = new BTreeNode(2);
         BTreeNode node11 = new BTreeNode(2);
