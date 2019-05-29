@@ -285,54 +285,11 @@ public class BTreeNode {
         }
     }
 
-    //toString
-    @Override
-    public String toString() {
-        String toString = toString(new StringBuilder(), 0).toString();
-        return toString.substring(0, toString.length() - 1);
-    }
-
-    /**
-     * Sub method of toString that builds the string representation
-     * of the subtree recursively.
-     *
-     * @param sb    an accumulator that collects the subtree's toStrings
-     * @param depth the depth of the current subtree.
-     * @return a string visually representing the subtree.
-     */
-    private StringBuilder toString(StringBuilder sb, int depth) {
-        if (isLeaf()) {
-            return sb.append(addKeysToString(depth));
-        }
-        //Gets the string representation of the sub tree of this node.
-        for (int i = 0; i <= n; i++) {
-            sb = children[i].toString(sb, depth + 1);
-            if (i < n) {
-                sb.append(keys[i]).append("_").append(depth).append(",");
-            }
-        }
-        return sb;
-    }
-
-    /**
-     * Sub method of toString used to addFirst the keys held in the current node.
-     *
-     * @param depth the depth of the current node.
-     * @return a string with the keys and the depth they are from.
-     */
-    private String addKeysToString(int depth) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < n; i++) {
-            sb.append(keys[i]).append("_").append(depth).append(",");
-        }
-        return sb.toString();
-    }
-
     /**
      * Deletes given key from the sub tree of this node, and while climbing down the tree
      * makes sure that the deletion would be possible by manipulating the tree's nodes.
      *
-     * @param key        to remove
+     * @param key        to remove.
      * @param childIndex the index of the current node in the father's children array.
      * @param father     the father of the current node.
      */
@@ -345,7 +302,7 @@ public class BTreeNode {
             handleCase2(key);
         }
         else if (keyExist && isLeaf) {
-            deleteKey(key); //case 3
+            deleteKey(key); //CASE 3
         }
         else { //Key not in the node
             handleCase4(key);
@@ -358,7 +315,7 @@ public class BTreeNode {
      * @param key to check if the key exists in the node
      * @return true - if it exists in the node and false otherwise.
      */
-    private boolean keyExist(String key) {
+    public boolean keyExist(String key) {
         int index = -1;
         for (int i = 0; getKey(i).compareTo(key) <= 0 && i < n; i++) {
             if (getKey(i).equals(key)) {
@@ -626,7 +583,7 @@ public class BTreeNode {
      *
      * @param key the key to delete.
      */
-    private void handleCase2(String key) {
+    public void handleCase2(String key) {
         int index = UsefulFunctions.binarySearch(getKeys(), key, getN());
         BTreeNode leftChild = getChild(index);
         BTreeNode rightChild = getChild(index + 1);
@@ -796,7 +753,7 @@ public class BTreeNode {
      *
      * @param key to check in which child it might be in
      */
-    private void handleCase4(String key) {
+    public void handleCase4(String key) {
 
         for (int i = 0; i <getN(); i++) {
             String keyCheck = getKey(i);
@@ -807,5 +764,48 @@ public class BTreeNode {
             }
         }
         getChild(getN()).delete(key, getN(), this);
+    }
+
+    //toString
+    @Override
+    public String toString() {
+        String toString = toString(new StringBuilder(), 0).toString();
+        return toString.substring(0, toString.length() - 1);
+    }
+
+    /**
+     * Sub method of toString that builds the string representation
+     * of the subtree recursively.
+     *
+     * @param sb    an accumulator that collects the subtree's toStrings
+     * @param depth the depth of the current subtree.
+     * @return a string visually representing the subtree.
+     */
+    private StringBuilder toString(StringBuilder sb, int depth) {
+        if (isLeaf()) {
+            return sb.append(addKeysToString(depth));
+        }
+        //Gets the string representation of the sub tree of this node.
+        for (int i = 0; i <= n; i++) {
+            sb = children[i].toString(sb, depth + 1);
+            if (i < n) {
+                sb.append(keys[i]).append("_").append(depth).append(",");
+            }
+        }
+        return sb;
+    }
+
+    /**
+     * Sub method of toString used to addFirst the keys held in the current node.
+     *
+     * @param depth the depth of the current node.
+     * @return a string with the keys and the depth they are from.
+     */
+    private String addKeysToString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            sb.append(keys[i]).append("_").append(depth).append(",");
+        }
+        return sb.toString();
     }
 }

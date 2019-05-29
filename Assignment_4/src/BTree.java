@@ -124,7 +124,12 @@ public class BTree {
         if (root.getN() == 1) {
             root = mergeSingleKeyRoot();
         }
-        root.getChild(0).delete(key, 0, root);
+        if(root.keyExist(key)){
+            root.handleCase2(key);
+        }
+        else {
+            root.handleCase4(key);
+        }
     }
 
     /**
