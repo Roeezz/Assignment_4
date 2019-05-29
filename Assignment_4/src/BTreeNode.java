@@ -518,6 +518,7 @@ public class BTreeNode {
     /**
      * deletes one key and child from the sibling, depending on its position.
      * @param sibling to delete the first key and the first child
+     * TODO: CLEAN UP THIS FUNCTION
      */
     public void deleteOne(BTreeNode sibling, int siblingIndex, int childIndex) {
         if (siblingIndex > childIndex) {
@@ -649,8 +650,7 @@ public class BTreeNode {
     }
 
     /**
-     * TODO: document copyChildrenToMerged
-     *
+     * copy the children of the right child to the right child
      * @param leftChild
      * @param rightChild
      */
@@ -663,11 +663,10 @@ public class BTreeNode {
     }
 
     /**
-     * TODO: document copyKeysToMerged
-     *
+     * Copies the keys of the right child to the left child and the median key.
      * @param leftChild
      * @param rightChild
-     * @param key
+     * @param key the median of the left child and the right child
      */
     private void copyKeysToMerged(BTreeNode leftChild, BTreeNode rightChild, String key) {
         for (int i = 0; i < T_VAR - 1; i++) {
@@ -735,6 +734,7 @@ public class BTreeNode {
      *
      * @param key to check in which child it might be in
      */
+
 
     private void handleCase4(String key) {
 
