@@ -37,7 +37,7 @@ public class BTreeNode {
         return isLeaf;
     }
 
-    // Getters and Setters
+    // Getters and Setters-
     public void setN(int n) {
         this.n = n;
     }
@@ -294,7 +294,6 @@ public class BTreeNode {
     /**
      * Sub method of toString that builds the string representation
      * of the subtree recursively.
-     *
      * @param sb    an accumulator that collects the subtree's toStrings
      * @param depth the depth of the current subtree.
      * @return a string visually representing the subtree.
@@ -351,6 +350,11 @@ public class BTreeNode {
         }
     }
 
+    /**
+     * Checks if a key is in the node
+     * @param key to check if the key exists in the node
+     * @return true - if it exists in the node and false otherwise.
+     */
     private boolean keyExist(String key) {
         int index = -1;
         for (int i = 0; getKey(i).compareTo(key) <= 0 && i < n; i++) {
@@ -365,7 +369,6 @@ public class BTreeNode {
 
     /**
      * Handles case 1 of the algorithm: if a node has less than t-1 keys
-     *
      * @param childIndex the index of the node in his father's array with less than t-1 keys
      * @param father     the father of the node
      */
@@ -377,43 +380,51 @@ public class BTreeNode {
         else //its siblings have t-1 keys
         {
             int siblingToMerge = chooseASibling(father, childIndex);
-
+            handleCase1b(siblingToMerge,father,childIndex);
         }
     }
 
     /**
+     * Handles case 1b of the algorihm - merges 2 siblings into one node
+     * @param siblingToMerge the index of the sibling
+     * @param father the father of the child and the sibling
+     * @param childIndex the index of the child
+     */
+    private void handleCase1b(int siblingToMerge,BTreeNode father,int childIndex)
+    {
+        if(siblingToMerge>childIndex)
+        {
+            String key = father.getKey(childIndex);
+            BTreeNode sibling = father.getChild(siblingToMerge);
+            BTreeNode child = father.getChild(childIndex);
+            father.mergeChildrenWithKeyAndPlaceMerged(key,childIndex,child,sibling);
+        }
+        else
+        {
+            String key = father.getKey(siblingToMerge);
+            BTreeNode sibling = father.getChild(siblingToMerge);
+            BTreeNode child = father.getChild(childIndex);
+            father.mergeChildrenWithKeyAndPlaceMerged(key,siblingToMerge,sibling,child);
+        }
+    }
+    /**
      * Handles the case in which at least on of a node's siblings has more than t-1 keys
-     *
      * @param childIndex   the node of the child who has t-1 keys
      * @param siblingIndex the index of the sibling with more than t-1 keys
-     * @param father       father of each nodes
+     * @param father  father of each nodes
      */
     public void handleCase1a(int childIndex, int siblingIndex, BTreeNode father) {
         BTreeNode child = father.getChild(childIndex);
-        BTreeNode sibling = father.getChild(siblingIndex);
-        moveElements(father, child, siblingIndex, childIndex);
-    }
-
-    /**
-     * TODO: DOCUMENT moveElements
-     *
-     * @param father
-     * @param child
-     * @param siblingIndex
-     * @param childIndex
-     */
-    public void moveElements(BTreeNode father, BTreeNode child, int siblingIndex, int childIndex) {
         BTreeNode sibling = father.getChild(siblingIndex);
         int keyIndexToChange = extractIndex(childIndex, siblingIndex);
         changeKeysAndChild(keyIndexToChange, father, sibling, child, siblingIndex, childIndex);
     }
 
     /**
-     * //TODO: Document changeKeysAndChild
-     *
-     * @param keyIndexToChange
-     * @param father
-     * @param sibling
+     * Makes the various changes to the keys and children to be made in case 1a.
+     * @param keyIndexToChange the index in the father's array keys array
+     * @param father the father of the sibling and the child
+     * @param sibling the sibling of the child
      * @param child
      */
     public void changeKeysAndChild(int keyIndexToChange, BTreeNode father, BTreeNode sibling, BTreeNode child, int siblingIndex, int childIndex) {
@@ -429,6 +440,15 @@ public class BTreeNode {
         addAndDeleteOne(sibling, child, siblingIndex, childIndex, moveToChild);
     }
 
+    /**
+     * Adds a key a child of the sibling and deletes a key and the child from the sibling.
+     * @param sibling
+     * @param child
+     * @param siblingIndex the index of the sibling
+     * @param childIndex the index of the child
+     * @param moveToChild the string to insert into the child.
+     */
+
     private void addAndDeleteOne(BTreeNode sibling, BTreeNode child, int siblingIndex, int childIndex, String moveToChild) {
         addOneKey(child, moveToChild, childIndex, siblingIndex);
         addOneChild(child, sibling, childIndex, siblingIndex);
@@ -436,6 +456,13 @@ public class BTreeNode {
 
     }
 
+    /**
+     * Adds one key to the child
+     * @param child child
+     * @param toAdd the string to add to the child
+     * @param childIndex the index of the child
+     * @param siblingIndex the ibdes
+     */
     private void addOneKey(BTreeNode child, String toAdd, int childIndex, int siblingIndex) {
         if (siblingIndex > childIndex) {
             child.setKey(child.getN(), toAdd);
@@ -451,6 +478,13 @@ public class BTreeNode {
 
     }
 
+    /**
+     * Adds one child to the child's children array.
+     * @param child the child we will transfer the child to
+     * @param sibling the sibling
+     * @param childIndex the index of the child
+     * @param siblingIndex the index of the sibling.
+     */
     private void addOneChild(BTreeNode child, BTreeNode sibling, int childIndex, int siblingIndex) {
         if (!sibling.isLeaf()) {
             if (siblingIndex > childIndex) {
@@ -466,11 +500,10 @@ public class BTreeNode {
     }
 
     /**
-     * //TODO: Document extractIndex
-     *
-     * @param childIndex
-     * @param siblingIndex
-     * @return
+     * Determines which key index in the father's array need to be changed
+     * @param childIndex the index of the child
+     * @param siblingIndex the index of the sibling
+     * @return the index of the key needed to change.
      */
     public int extractIndex(int childIndex, int siblingIndex) {
         int keyIndexToChange;
@@ -483,6 +516,7 @@ public class BTreeNode {
     }
 
     /**
+     * deletes one key and child from the sibling, depending on its position.
      * @param sibling to delete the first key and the first child
      */
     public void deleteOne(BTreeNode sibling, int siblingIndex, int childIndex) {
@@ -510,7 +544,6 @@ public class BTreeNode {
 
     /**
      * Checks if a siblings of a node can lend elements to it
-     *
      * @param father the father of the node in index
      * @param index  of the node in the children array to check its siblings from
      * @return the index of a sibling with T_VAR keys at the least or -1
@@ -562,7 +595,6 @@ public class BTreeNode {
      * Creates a new node and merges the two given sibling children into it,
      * with the key between them as the median. Then places the new node in
      * place of the left child merged, and deletes the key from the father.
-     *
      * @param key        the key to put in the median
      * @param index      the index
      * @param leftChild  the child left of the key.
@@ -596,12 +628,19 @@ public class BTreeNode {
         return merged;
     }
 
+    /**
+     * both of a child's siblins have t-1 keys.
+     * The function determines which sibling to merge with the child
+     * @param father
+     * @param childIndex
+     * @return the index of the sibling to be merged
+     */
     public int chooseASibling(BTreeNode father, int childIndex) {
         int siblingIndex;
         if (childIndex == 0) {
             siblingIndex = 1;
         }
-        if (childIndex == father.getN()) {
+        else if (childIndex == father.getN()) {
             siblingIndex = childIndex - 1;
         }
         else
@@ -699,7 +738,7 @@ public class BTreeNode {
 
     private void handleCase4(String key) {
 
-        for (int i = 0; i < getN(); i++) {
+        for (int i = 0; i <getN(); i++) {
             String keyCheck = getKey(i);
             if (keyCheck.compareTo(key) > 0) //keyCheck > key
             {
@@ -707,7 +746,7 @@ public class BTreeNode {
 
             }
         }
-        delete(key, getN(), getChild(getN()));
+        getChild(getN()).delete(key, getN(), this);
     }
 
     private void deleteKey(String key) {
