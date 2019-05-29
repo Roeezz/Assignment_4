@@ -396,18 +396,18 @@ public class BTreeNode {
     /**
      * Makes the various changes to the keys and children to be made in case 1a.
      * TODO: finish documenting
+     *
      * @param keyIndexToChange the index in the father's array keys array
      * @param father           the father of the sibling and the child
      * @param sibling          the sibling of the child
      * @param child
      */
-    public void changeKeysAndChild(int keyIndexToChange, BTreeNode father, BTreeNode sibling,
-                                   BTreeNode child, int siblingIndex, int childIndex) {
+    public void changeKeysAndChild(int keyIndexToChange, BTreeNode father, BTreeNode sibling, BTreeNode child, int siblingIndex, int childIndex) {
         String median;
         if (siblingIndex > childIndex) {
             median = sibling.getKey(0); //min
         }
-        else{
+        else {
             median = sibling.getKey(sibling.getN() - 1);//max
         }
 
@@ -602,10 +602,10 @@ public class BTreeNode {
         BTreeNode rightChild = getChild(index + 1);
 
         if (leftChild.getN() >= T_VAR) {
-            replaceKeyWithMaxKey(index, leftChild, true);
+            replaceKeyWithMaxKey(index, leftChild);
         }
         else if (rightChild.getN() >= T_VAR) {
-            replaceKeyWithMaxKey(index, rightChild, false);
+            replaceKeyWithMinKey(index, rightChild);
         }
         else {
             mergeChildrenWithKeyAndPlaceMerged(key, index, leftChild, rightChild);
@@ -699,19 +699,13 @@ public class BTreeNode {
      * Searches for the max key in the the child, replaces the key in the node with it,
      * then deletes the max key in the subtree of the child.
      *
-     * @param index       the index of the child in the children array.
-     * @param child       the child to search the max key in.
-     * @param isLeftChild a boolean determining if the child is the left child of the key,
-     *                    if not then it's left child.
+     * @param index the index of the child in the children array.
+     * @param child the child to search the max key in.
      */
-    private void replaceKeyWithMaxKey(int index, BTreeNode child, boolean isLeftChild) {
-        int childIndex = index;
-        if (!isLeftChild) {
-            childIndex = index + 1;
-        }
+    private void replaceKeyWithMaxKey(int index, BTreeNode child) {
         String max = findMaxKeyInChild(child);
         setKey(index, max);
-        child.delete(max, childIndex, this);
+        child.delete(max, index, this);
     }
 
     /**
@@ -723,12 +717,40 @@ public class BTreeNode {
     private String findMaxKeyInChild(BTreeNode child) {
         BTreeNode current = child;
         int currentN = current.getN();
+
         while (!current.isLeaf) {
             current = current.getChild(currentN);
             currentN = current.getN();
         }
         currentN = current.getN();
         return current.getKey(currentN - 1);
+    }
+
+    /**
+     * TODO: document replaceKeyWithMinKey
+     *
+     * @param index
+     * @param child
+     */
+    private void replaceKeyWithMinKey(int index, BTreeNode child) {
+        String min = findMinKeyInChild(child);
+        setKey(index, min);
+        child.delete(min, index, this);
+    }
+
+    /**
+     * TODO: document findMinKeyInChild
+     *
+     * @param child
+     * @return
+     */
+    private String findMinKeyInChild(BTreeNode child) {
+        BTreeNode current = child;
+
+        while (!current.isLeaf) {
+            current = current.getChild(0);
+        }
+        return current.getKey(0);
     }
 
     //CASE3 & GENERAL USE
