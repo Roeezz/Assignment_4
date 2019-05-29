@@ -1,7 +1,13 @@
 import static java.lang.Integer.parseInt;
 
 public class BTree {
+    /**
+     * The t constant of the tree.
+     */
     private final int T_VAR;
+    /**
+     * The root of the tree.
+     */
     private BTreeNode root;
 
     /**
@@ -116,8 +122,15 @@ public class BTree {
         }
     }
 
+    /**
+     * TODO: document delete
+     *
+     * @param key
+     */
     public void delete(String key) {
-        if (root.getN() == 1) {
+        BTreeNode leftChild = root.getChild(0);
+        BTreeNode rightChild = root.getChild(1);
+        if (root.getN() == 1 && leftChild.getN() < T_VAR && rightChild.getN() < T_VAR) {
             root = mergeSingleKeyRoot();
         }
         if(root.keyExist(key)){
