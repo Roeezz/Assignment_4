@@ -519,8 +519,10 @@ public class BTreeNode {
      */
     public int extractIndex(int childIndex, int siblingIndex) {
         int keyIndexToChange;
-        if (siblingIndex > childIndex) keyIndexToChange = childIndex;
-        else keyIndexToChange = siblingIndex;
+        if (siblingIndex > childIndex)
+            keyIndexToChange = childIndex;
+        else
+            keyIndexToChange = siblingIndex;
         return keyIndexToChange;
 
     }
@@ -529,6 +531,7 @@ public class BTreeNode {
      * deletes one key and child from the sibling, depending on its position.
      *
      * @param sibling to delete the first key and the first child
+     * TODO: CLEAN UP THIS FUNCTION
      */
     public void deleteOne(BTreeNode sibling, int siblingIndex, int childIndex) {
         if (siblingIndex > childIndex) {
@@ -562,8 +565,10 @@ public class BTreeNode {
      */
     public int checkSiblings(int index, BTreeNode father) {
         int sibling = -1;
-        if (index == 0 && father.getChild(1).getN() > T_VAR - 1) sibling = index + 1;
-        else if (index == getN() && father.getChild(getN() - 1).getN() > T_VAR - 1) sibling = index - 1;
+        if (index == 0 && father.getChild(1).getN() > T_VAR - 1)
+            sibling = index + 1;
+        else if (index == getN() && father.getChild(getN() - 1).getN() > T_VAR - 1)
+            sibling = index - 1;
         else {
             if (father.getChild(index + 1).getN() > T_VAR - 1) {
                 sibling = index + 1;
