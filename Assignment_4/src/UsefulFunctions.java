@@ -20,8 +20,8 @@ public class UsefulFunctions {
      * @param key the key to search.
      * @return its index if the key is in the array and -1 otherwise.
      */
-    public static int binarySearch(String[] array, String key){
-        return binarySearch(array, key, 0, array.length - 1);
+    public static int binarySearch(String[] array, String key, int size){
+        return binarySearch(array, key, 0, size - 1);
     }
 
     /**
@@ -74,6 +74,7 @@ public class UsefulFunctions {
         }
         return null;
     }
+
 
     /**
      * Converts a LinkedList of strings into a LinkedList of Integer keys using horner's rule

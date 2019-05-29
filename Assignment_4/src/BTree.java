@@ -6,19 +6,21 @@ public class BTree {
 
     /**
      * Constructs an empty BTree.
+     *
      * @param tVal the value of the tree's constant.
      */
-    public BTree(String tVal){
+    public BTree(String tVal) {
         T_VAR = parseInt(tVal);
         root = new BTreeNode(T_VAR);
     }
 
     /**
      * Receives a key and inserts it into the root and splitting the roots if it is full.
+     *
      * @param key the key to insert to the tree.
      */
-    public void insert(String key){
-        if(root.getN() == 2 * T_VAR - 1){
+    public void insert(String key) {
+        if (root.getN() == 2 * T_VAR - 1) {
             splitRoot();
         }
         root.insert(key.toLowerCase());
@@ -32,7 +34,7 @@ public class BTree {
     private void splitRoot() {
         BTreeNode oldRoot = root;
         BTreeNode rightChild = root.createNodeForSplit(root);
-        if(!root.isLeaf()){
+        if (!root.isLeaf()) {
             root.transferChildren(root, rightChild);
         }
         BTreeNode newRoot = createNewRoot(rightChild);
@@ -41,26 +43,23 @@ public class BTree {
     }
 
     /**
-     * Searches in the tree all keys from txt file in given path.
-     * @param path the path of the txt file to read from.
-     * @return an ordered pair array, each element of it has a pointer
-     * to the node and the index of the searched key in the node.
+     * Searches a given key in the tree
+     *
+     * @param key the key to search
+     * @return an ordered pair with the first element being the node in the tree
+     * and the second element being the index of the key in the node.
      */
-    public OrderedPair[] search(String path){
-        LinkedList<String> keysList = UsefulFunctions.createStringListFromFile(path);
-        int index = 0;
-        OrderedPair[] keysLocations = new OrderedPair[0];
-        if (keysList != null) {
-            keysLocations = new OrderedPair[keysList.getSize()];
-            for (String key : keysList) {
-                keysLocations[index] = root.search(key.toLowerCase());
-            }
-        }
-        return keysLocations;
+    public OrderedPair search(String key) {
+        return root.search(key);
+    }
+
+    public BTreeNode getRoot() {
+        return root;
     }
 
     /**
      * Creates and updates the new root to replace the old one with.
+     *
      * @param rightChild the right child of the new root.
      * @return the new updated root.
      */
@@ -68,14 +67,15 @@ public class BTree {
         BTreeNode newRoot = new BTreeNode(T_VAR);
         String key = root.getKey(T_VAR - 1);
         newRoot.insert(key);
-        newRoot.setChild(0,root);
-        newRoot.setChild(1,rightChild);
+        newRoot.setChild(0, root);
+        newRoot.setChild(1, rightChild);
         newRoot.setLeaf(false);
         return newRoot;
     }
 
     /**
      * Inserts all keys from txt file in given path to the tree.
+     *
      * @param path the path from which to read the keys.
      */
     public void createFullTree(String path) {
@@ -90,18 +90,25 @@ public class BTree {
     /**
      * Runs a search of keys from txt file in given path and gets the time
      * took for the search.
+     *
      * @param path the path of the txt file to read the keys from.
      * @return a string containing the search time in milliseconds.
      */
     public String getSearchTime(String path) {
+        LinkedList<String> keysList = UsefulFunctions.createStringListFromFile(path);
         double startTime = System.nanoTime();
-        search(path);
+        if (keysList != null) {
+            for (String key : keysList) {
+                search(key.toLowerCase());
+            }
+        }
         double endTime = System.nanoTime();
-        return Double.toString((endTime - startTime)/1000000.0).substring(0,6);
+        return Double.toString((endTime - startTime) / 1000000.0).substring(0, 6);
     }
 
     /**
      * Deletes all keys given in a txt file, if they exist in the tree.
+     *
      * @param path the path to read the keys from.
      */
     public void deleteKeysFromTree(String path) {
@@ -113,20 +120,23 @@ public class BTree {
         }
     }
 
-    public void delete(String key){
-        if(root.getN() == T_VAR - 1){
-            mergeRoot();
+    public void delete(String key) {
+        if (root.getN() == 1) {
+            root = mergeSingleKeyRoot();
         }
-        root.getChild(0).delete(key,0,root);
+        root.getChild(0).delete(key, 0, root);
     }
 
-    private void mergeRoot() {
-        //TODO: Implement mergeRoot
-
-    }
-
-    public BTreeNode getRoot() {
-        return root;
+    /**
+     * Merges a root with single key with it's two children.
+     *
+     * @return the merged node
+     */
+    private BTreeNode mergeSingleKeyRoot() {
+        String rootKey = root.getKey(0);
+        BTreeNode leftChild = root.getChild(0);
+        BTreeNode rightChild = root.getChild(1);
+        return root.merge(leftChild, rightChild, rootKey);
     }
 
     @Override
