@@ -516,33 +516,50 @@ public class BTreeNode {
     }
 
     /**
-     * deletes one key and child from the sibling, depending on its position.
+     * Deletes one key and child from the sibling, depending on its position.
      * @param sibling to delete the first key and the first child
-     * TODO: CLEAN UP THIS FUNCTION
      */
     public void deleteOne(BTreeNode sibling, int siblingIndex, int childIndex) {
         if (siblingIndex > childIndex) {
-            for (int i = 1; i < sibling.getN(); i++) {
-                sibling.setKey(i - 1, sibling.getKey(i));
-            }
-            sibling.setKey(sibling.getN() - 1, null);
-            if (!sibling.isLeaf()) {
-                for (int i = 1; i <= sibling.getN(); i++) {
-                    sibling.setChild(i - 1, sibling.getChild(i));
-                }
-                sibling.setChild(sibling.getN(), null);
-            }
+            deleteOneCase1(sibling);
         }
         else {
-            if (!sibling.isLeaf()) {
-                sibling.setChild(sibling.getN(), null);
-
-            }
-            sibling.setKey(sibling.getN() - 1, null);
+            deleteOneCase2(sibling);
         }
         sibling.setN(sibling.getN() - 1);
     }
 
+    /**
+     * Deletes a key and a childs of a sibling if its index is larger than the child.
+     * Moves the keys and children left and deletes the last ones
+     * @param node the sibling in Case1a
+     */
+    private void deleteOneCase1(BTreeNode node)
+    {
+        for (int i = 1; i < node.getN(); i++) {
+            node.setKey(i - 1, node.getKey(i));
+        }
+        node.setKey(node.getN() - 1, null);
+        if (!node.isLeaf()) {
+            for (int i = 1; i <= node.getN(); i++) {
+                node.setChild(i - 1, node.getChild(i));
+            }
+            node.setChild(node.getN(), null);
+        }
+    }
+
+    /**
+     * Deletes a key and a child of a sibling if its index is smaller than the child
+     * @param node the sibling in Case1a
+     */
+    private void deleteOneCase2(BTreeNode node)
+    {
+        if (!node.isLeaf()) {
+            node.setChild(node.getN(), null);
+
+        }
+        node.setKey(node.getN() - 1, null);
+    }
     /**
      * Checks if a siblings of a node can lend elements to it
      * @param father the father of the node in index
