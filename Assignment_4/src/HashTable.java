@@ -1,6 +1,3 @@
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class HashTable {
     /**
      * An array representing the table to which we chain the HashLists.

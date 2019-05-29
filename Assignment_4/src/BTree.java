@@ -53,10 +53,6 @@ public class BTree {
         return root.search(key);
     }
 
-    public BTreeNode getRoot() {
-        return root;
-    }
-
     /**
      * Creates and updates the new root to replace the old one with.
      *

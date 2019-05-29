@@ -211,7 +211,6 @@ public class BTreeNode {
         newChild.isLeaf = splitChild.isLeaf;
         newChild.setN(T_VAR - 1);
         int index2 = 0; //the index of the keys array of the new node
-        int splitN;
         for (int i = T_VAR; i < splitChild.getN(); i++) {
             newChild.setKey(index2, splitChild.getKey(i));
             splitChild.setKey(i, null);
@@ -537,7 +536,7 @@ public class BTreeNode {
      * @param index  of the node in the children array to check its siblings from
      * @return the index of a sibling with T_VAR keys at the least or -1
      */
-    public int checkSiblings(int index, BTreeNode father) {
+    private int checkSiblings(int index, BTreeNode father) {
         int sibling = -1;
         if (index == 0 && father.getChild(1).getN() > T_VAR - 1)
             sibling = index + 1;
@@ -563,7 +562,7 @@ public class BTreeNode {
      * @param childIndex
      * @return
      */
-    public int chooseASibling(BTreeNode father, int childIndex) {
+    private int chooseASibling(BTreeNode father, int childIndex) {
         int siblingIndex;
         if (childIndex == 0) {
             siblingIndex = 1;
@@ -625,7 +624,7 @@ public class BTreeNode {
      *
      * @param index the index of the merged child.
      */
-    public void deleteOldChild(int index) {
+    private void deleteOldChild(int index) {
         for (int i = index; i < getN(); i++) {
             setChild(i, getChild(i + 1));
         }
