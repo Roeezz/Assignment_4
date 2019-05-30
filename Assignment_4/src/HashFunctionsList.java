@@ -23,9 +23,7 @@ public class HashFunctionsList implements Iterable<HashFunction> {
             throw new NullPointerException("Argument is null");
         }
 
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(path));
-
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))){
             hashFunctionsList = new LinkedList<>();
             String function; String[] functionVariables;
             int alpha, beta;
