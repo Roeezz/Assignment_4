@@ -24,8 +24,4 @@ public class HashList extends LinkedList<Integer> {
         return false;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }

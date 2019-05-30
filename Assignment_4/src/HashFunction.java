@@ -2,7 +2,7 @@ public class HashFunction{
     /**
      * A prime number used in the calculation of the function.
      */
-    private int prime = 15486907;
+    private final int prime = 15486907;
     /**
      * Constants used in the calculation of the function.
      */

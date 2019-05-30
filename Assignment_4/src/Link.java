@@ -64,8 +64,8 @@ public class Link <T> {
 
     @Override
     public boolean equals(Object other) {
-        if(other instanceof Link)
-            return data.equals(((Link) other).data) && next.equals(((Link) other).next);
+        if(other instanceof Link<?>)
+            return getData().equals(((Link<?>) other).getData()) && getNext().equals(((Link<?>) other).getNext());
         return false;
     }
 

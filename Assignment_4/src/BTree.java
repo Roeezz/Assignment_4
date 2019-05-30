@@ -143,7 +143,7 @@ public class BTree {
      * @param key the key to delete.
      */
     public void delete(String key) {
-        BTreeNode root = getRoot();
+        key = key.toLowerCase();
         BTreeNode leftChild = root.getChild(0);
         BTreeNode rightChild = root.getChild(1);
         if (root.getN() == 1 && leftChild.getN() < T_VAR && rightChild.getN() < T_VAR) {

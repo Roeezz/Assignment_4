@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * This class implements an ordered pair that holds 2 ordered elements.
  */

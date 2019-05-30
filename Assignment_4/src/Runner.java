@@ -21,10 +21,10 @@ public class Runner {
 		HashTable hashTable = contructHashTable(args[1]);
 
 		//Find the percentage of false-positives
-		String falsePositivesPercent = bloomFilter.getFalsePositivePercentage(hashTable, System.getProperty("user.dir")+"/requested_passwords.txt");
+		String falsePositivesPercent = bloomFilter.getFalsePositivePercentage(hashTable, System.getProperty("user.dir")+ "/requested_passwords.txt");
 
 		//Find the number of rejected passwords
-		String rejectedPasswordsAmount = bloomFilter.getRejectedPasswordsAmount(System.getProperty("user.dir")+"/requested_passwords.txt");
+		String rejectedPasswordsAmount = bloomFilter.getRejectedPasswordsAmount(System.getProperty("user.dir")+ "/requested_passwords.txt");
 
 		//Create the B tree using the t value and the path to the bad_passwords file.
 		BTree btree = createTree(args[2]);
@@ -39,22 +39,22 @@ public class Runner {
 		String treeLayoutAfterDeletions = deleteKeysFromTree(btree);
 
 		//Create a file with the program's expected output
-		createOutputFile(falsePositivesPercent, rejectedPasswordsAmount, treeLayout, searchTime, treeLayoutAfterDeletions, System.getProperty("user.dir")+"/output.txt");
+		createOutputFile(falsePositivesPercent, rejectedPasswordsAmount, treeLayout, searchTime, treeLayoutAfterDeletions, System.getProperty("user.dir")+ "/output.txt");
 
 	}
 
 
 	private static BloomFilter contructBloomFilter(String m1) {
-		BloomFilter bloomFilter = new BloomFilter(m1, System.getProperty("user.dir")+"/hash_functions.txt");
+		BloomFilter bloomFilter = new BloomFilter(m1, System.getProperty("user.dir")+ "/hash_functions.txt");
 		//update the Bloom Filter's table with the bad passwords
-		bloomFilter.updateTable(System.getProperty("user.dir")+"/bad_passwords.txt");
+		bloomFilter.updateTable(System.getProperty("user.dir")+ "/bad_passwords.txt");
 		return bloomFilter;
 	}
 
 	private static HashTable contructHashTable(String m2) {
 		HashTable hashTable = new HashTable(m2);
 		//update the Hash Table with the bad passwords
-		hashTable.updateTable(System.getProperty("user.dir")+"/bad_passwords.txt");
+		hashTable.updateTable(System.getProperty("user.dir")+ "/bad_passwords.txt");
 		return hashTable;
 	}
 
@@ -62,20 +62,20 @@ public class Runner {
 	// Insert the bad passwords into the tree.
 	private static BTree createTree(String tVal) {
 		BTree btree = new BTree(tVal);
-		btree.createFullTree(System.getProperty("user.dir")+"/bad_passwords.txt");
+		btree.createFullTree(System.getProperty("user.dir")+ "/bad_passwords.txt");
 		return btree;
 	}
 
 	private static String getSearchTime(HashTable hashTable, BTree btree) {
 		//Get the time required to perform a search of all requested words when using the B tree.
-		String btreeSearchTime = btree.getSearchTime(System.getProperty("user.dir")+"/requested_passwords.txt");
+		String btreeSearchTime = btree.getSearchTime(System.getProperty("user.dir")+ "/requested_passwords.txt");
 		//Get the time required to perform a search of all requested words when using the hash table.
-		String hashTableSearchTime = hashTable.getSearchTime(System.getProperty("user.dir")+"/requested_passwords.txt");
+		String hashTableSearchTime = hashTable.getSearchTime(System.getProperty("user.dir")+ "/requested_passwords.txt");
 		return btreeSearchTime+"_"+hashTableSearchTime;
 	}
 
 	private static String deleteKeysFromTree(BTree btree) {
-		btree.deleteKeysFromTree(System.getProperty("user.dir")+"/delete_keys.txt");
+		btree.deleteKeysFromTree(System.getProperty("user.dir")+ "/delete_keys.txt");
 		return btree.toString();
 	}
 

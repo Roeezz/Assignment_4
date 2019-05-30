@@ -103,7 +103,7 @@ public class BloomFilter {
     }
 
     /**
-     * Gets the correct type of passwords from the hash table and checks how many true good passowrds there are
+     * Gets the correct type of passwords from the hash table and checks how many true good passwords there are
      * @param trueBadPasswords an array which in every index has true if the password is good and false otherwise
      * @return The correct amount of good passwords
      */

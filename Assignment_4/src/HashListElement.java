@@ -16,8 +16,4 @@ public class HashListElement extends Link<Integer> {
         return false;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }

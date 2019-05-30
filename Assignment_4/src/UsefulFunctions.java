@@ -30,7 +30,7 @@ public class UsefulFunctions {
      * @param array of strings to search the key in.
      * @param left the left end of the search area.
      * @param right the right end of the search area.
-     * @param key the keay to search
+     * @param key the key to search
      * @return its index if the key is in the array and -1 otherwise.
      */
     private static int binarySearch(String[] array, String key, int left, int right) {

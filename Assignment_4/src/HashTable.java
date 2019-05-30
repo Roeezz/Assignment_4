@@ -2,11 +2,11 @@ public class HashTable {
     /**
      * An array representing the table to which we chain the HashLists.
      */
-    private HashList[] table;
+    private final HashList[] table;
     /**
      * The size of the hashtable.
      */
-    private int m2;
+    private final int m2;
 
     /**
      * Constructs an empty HashTable.
