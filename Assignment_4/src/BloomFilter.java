@@ -48,9 +48,9 @@ public class BloomFilter {
         for(int i = 0; i< badPassKeysList.getSize(); i++)
         {
             Integer k = badPassKeysList.get(i);
-            for(HashFunction func: hashFunctionsList) {
-                int index = func.runFunction(k,m1);
-                bloomFilter[index] = true;
+            for(HashFunction func: getHashFunctionsList()) {
+                int index = func.runFunction(k,getM1());
+                setFilterPosition(index,true);
             }
         }
     }
@@ -79,9 +79,9 @@ public class BloomFilter {
      */
     private boolean checkAgainstFilter(Integer password){
         int index;
-        for(HashFunction function: hashFunctionsList){
-            index = function.runFunction(password,m1);
-            if(!bloomFilter[index])
+        for(HashFunction function: getHashFunctionsList()){
+            index = function.runFunction(password,getM1());
+            if(!getFilterPosition(index))
                 return true;
         }
         return false;
@@ -149,16 +149,39 @@ public class BloomFilter {
         return Integer.toString(rejected);
     }
 
+    // GETTERS AND SETTERS
+
+    public boolean getFilterPosition(int i) {
+        return bloomFilter[i];
+    }
+
+    public void setFilterPosition(int i, boolean exist){
+        bloomFilter[i] = exist;
+    }
+
+    public boolean[] getBloomFilter() {
+        return bloomFilter;
+    }
+
+    public HashFunctionsList getHashFunctionsList() {
+        return hashFunctionsList;
+    }
+
+    public int getM1() {
+        return m1;
+    }
+
+    //EQUALS AND toSTRING
     @Override
     public String toString() {
-        return Arrays.toString(bloomFilter);
+        return Arrays.toString(getBloomFilter());
     }
 
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof BloomFilter){
-            return Arrays.equals(bloomFilter, ((BloomFilter) obj).bloomFilter) &&
-                    hashFunctionsList.equals(((BloomFilter) obj).hashFunctionsList);
+            return Arrays.equals(getBloomFilter(), ((BloomFilter) obj).getBloomFilter()) &&
+                    getHashFunctionsList().equals(((BloomFilter) obj).getHashFunctionsList());
         }
         return false;
     }

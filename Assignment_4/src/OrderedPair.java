@@ -33,14 +33,14 @@ public class OrderedPair {
 
     @Override
     public String toString() {
-        return "Node Subtree: " + firstElement.toString() + "\nIndex: " + secondElement.toString();
+        return "Node Subtree: " + getFirstElement().toString() + "\nIndex: " + getSecondElement().toString();
     }
 
     @Override
     public boolean equals(Object other) {
         if(other instanceof  OrderedPair){
-            return firstElement.equals(((OrderedPair) other).firstElement)
-                    && secondElement.equals(((OrderedPair) other).secondElement);
+            return getFirstElement().equals(((OrderedPair) other).getFirstElement())
+                    && getSecondElement().equals(((OrderedPair) other).getSecondElement());
         }
         return false;
     }

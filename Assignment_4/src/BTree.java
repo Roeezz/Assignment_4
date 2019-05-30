@@ -1,6 +1,9 @@
 import static java.lang.Integer.parseInt;
 
 public class BTree {
+
+    //FIELDS
+
     /**
      * The t constant of the tree.
      */
@@ -9,6 +12,8 @@ public class BTree {
      * The root of the tree.
      */
     private BTreeNode root;
+
+    //GETTERS AND SETTERS
 
     /**
      * Constructs an empty BTree.
@@ -20,16 +25,24 @@ public class BTree {
         root = new BTreeNode(T_VAR);
     }
 
+    public BTreeNode getRoot() {
+        return root;
+    }
+
+    public void setRoot(BTreeNode root) {
+        this.root = root;
+    }
+
     /**
      * Receives a key and inserts it into the root and splitting the roots if it is full.
      *
      * @param key the key to insert to the tree.
      */
     public void insert(String key) {
-        if (root.getN() == 2 * T_VAR - 1) {
+        if (getRoot().getN() == 2 * T_VAR - 1) {
             splitRoot();
         }
-        root.insert(key.toLowerCase());
+        getRoot().insert(key.toLowerCase());
     }
 
     /**
@@ -38,14 +51,16 @@ public class BTree {
      * Creating two pointers from the new root to the other noes and update their values.
      */
     private void splitRoot() {
-        BTreeNode oldRoot = root;
-        BTreeNode rightChild = root.createNodeForSplit(root);
-        if (!root.isLeaf()) {
-            root.transferChildren(root, rightChild);
+        BTreeNode oldRoot = getRoot();
+        BTreeNode rightChild = oldRoot.createNodeForSplit(oldRoot);
+
+        if (!oldRoot.isLeaf()) {
+            oldRoot.transferChildren(oldRoot, rightChild);
         }
+
         BTreeNode newRoot = createNewRoot(rightChild);
         oldRoot.setN(T_VAR - 1);
-        root = newRoot;
+        setRoot(newRoot);
     }
 
     /**
@@ -56,7 +71,7 @@ public class BTree {
      * and the second element being the index of the key in the node.
      */
     public OrderedPair search(String key) {
-        return root.search(key);
+        return getRoot().search(key);
     }
 
     /**
@@ -67,9 +82,9 @@ public class BTree {
      */
     private BTreeNode createNewRoot(BTreeNode rightChild) {
         BTreeNode newRoot = new BTreeNode(T_VAR);
-        String key = root.getKey(T_VAR - 1);
+        String key = getRoot().getKey(T_VAR - 1);
         newRoot.insert(key);
-        newRoot.setChild(0, root);
+        newRoot.setChild(0, getRoot());
         newRoot.setChild(1, rightChild);
         newRoot.setLeaf(false);
         return newRoot;
@@ -128,6 +143,7 @@ public class BTree {
      * @param key the key to delete.
      */
     public void delete(String key) {
+        BTreeNode root = getRoot();
         BTreeNode leftChild = root.getChild(0);
         BTreeNode rightChild = root.getChild(1);
         if (root.getN() == 1 && leftChild.getN() < T_VAR && rightChild.getN() < T_VAR) {
@@ -147,6 +163,7 @@ public class BTree {
      * @return the merged node
      */
     private BTreeNode mergeSingleKeyRoot() {
+        BTreeNode root = getRoot();
         String rootKey = root.getKey(0);
         BTreeNode leftChild = root.getChild(0);
         BTreeNode rightChild = root.getChild(1);
@@ -155,6 +172,6 @@ public class BTree {
 
     @Override
     public String toString() {
-        return root.toString();
+        return getRoot().toString();
     }
 }

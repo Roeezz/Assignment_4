@@ -21,7 +21,7 @@ public class LinkedListIterator <T> implements Iterator<T> {
      */
     @Override
     public boolean hasNext() {
-        return current != null;
+        return getCurrent() != null;
     }
 
     /**
@@ -34,8 +34,18 @@ public class LinkedListIterator <T> implements Iterator<T> {
             throw new NoSuchElementException();
         }
 
-        T next = current.getData();
-        current = current.getNext();
+        T next = getCurrent().getData();
+        setCurrent(getCurrent().getNext());
         return next;
+    }
+
+    //GETTERS AND SETTERS
+
+    public Link<T> getCurrent() {
+        return current;
+    }
+
+    public void setCurrent(Link<T> current) {
+        this.current = current;
     }
 }

@@ -117,14 +117,14 @@ public class BTreeNode {
      */
     public OrderedPair search(String key) {
         int i = findExpectedIndexOfKey(key);
-        if (i < n && keys[i].equals(key)) {
+        if (i < getN() && getKey(i).equals(key)) {
             return new OrderedPair(this, i);
         }
-        else if (isLeaf) {
+        else if (isLeaf()) {
             return null;
         }
         else {
-            return children[i].search(key);
+            return getChild(i).search(key);
         }
     }
 
@@ -138,13 +138,13 @@ public class BTreeNode {
     public void insert(String key) {
         // If this node is a leaf then the key is inserted in the right place
         // in the keys array.
-        if (isLeaf) {
+        if (isLeaf()) {
             insertToKeysArray(key);
             return;
         }
         int i = findExpectedIndexOfKey(key);
         // If the node is full we split it.
-        if (children[i].getN() == 2 * T_VAR - 1) {
+        if (getChild(i).getN() == 2 * T_VAR - 1) {
             splitChild(i);
         }
         insertToCorrectChild(key, i);
@@ -159,7 +159,7 @@ public class BTreeNode {
      */
     private int findExpectedIndexOfKey(String key) {
         int i = 0;
-        while (i < n && keys[i].compareTo(key) < 0) {
+        while (i < getN() && getKey(i).compareTo(key) < 0) {
             i++;
         }
         return i;
@@ -172,10 +172,10 @@ public class BTreeNode {
      * @param index the index of the child to split.
      */
     private void splitChild(int index) {
-        BTreeNode splitChild = children[index];
+        BTreeNode splitChild = getChild(index);
         BTreeNode newChild = createNodeForSplit(splitChild);
 
-        if (!splitChild.isLeaf) {
+        if (!splitChild.isLeaf()) {
             transferChildren(splitChild, newChild);
         }
         insertMedianKey(index, this, splitChild);
@@ -196,7 +196,7 @@ public class BTreeNode {
             father.setKey(i, this.getKey(i - 1));
         }
         setKey(index, splitChild.getKey(T_VAR - 1));
-        setN(n + 1);
+        setN(getN() + 1);
     }
 
     /**
@@ -208,7 +208,7 @@ public class BTreeNode {
      */
     public BTreeNode createNodeForSplit(BTreeNode splitChild) {
         BTreeNode newChild = new BTreeNode(T_VAR);
-        newChild.isLeaf = splitChild.isLeaf;
+        newChild.setLeaf(splitChild.isLeaf());
         newChild.setN(T_VAR - 1);
         int index2 = 0; //the index of the keys array of the new node
         for (int i = T_VAR; i < splitChild.getN(); i++) {
@@ -259,13 +259,13 @@ public class BTreeNode {
         if (key == null) {
             throw new NullPointerException();
         }
-        int i = n - 1;
-        while (i >= 0 && keys[i].compareTo(key) > 0) {
-            keys[i + 1] = keys[i];
+        int i = getN() - 1;
+        while (i >= 0 && getKey(i).compareTo(key) > 0) {
+            setKey(i + 1, getKey(i));
             i--;
         }
-        keys[i + 1] = key;
-        setN(n + 1);
+        setKey(i + 1, key);
+        setN(getN() + 1);
     }
 
     /**
@@ -276,11 +276,11 @@ public class BTreeNode {
      * @param i   the index of the key between the 2 new children.
      */
     private void insertToCorrectChild(String key, int i) {
-        if (i == n || key.compareTo(keys[i]) < 0) {
-            children[i].insert(key);
+        if (i == getN() || key.compareTo(getKey(i)) < 0) {
+            getChild(i).insert(key);
         }
         else {
-            children[i + 1].insert(key);
+            getChild(i).insert(key);
         }
     }
 
@@ -295,7 +295,7 @@ public class BTreeNode {
      * @param father     the father of the current node.
      */
     public void delete(String key, int childIndex, BTreeNode father) {
-        if (n < T_VAR) {
+        if (getN() < T_VAR) {
             handleCase1(childIndex, father);
 
             //Sends delete to new merged child
@@ -304,7 +304,7 @@ public class BTreeNode {
         else {
             boolean keyExist = keyExist(key);
             if (keyExist) {
-                if (!isLeaf) {
+                if (!isLeaf()) {
                     handleCase2(key);
                 }
 
@@ -312,11 +312,15 @@ public class BTreeNode {
                     deleteKey(key); //CASE 3
                 }
             }
+            else if (isLeaf()) {
+                System.out.println("Key '" + key + "' is not in the tree.");
+            }
 
             else { //Key not in the node
                 handleCase4(key);
             }
         }
+
     }
 
     /**
@@ -750,7 +754,7 @@ public class BTreeNode {
         BTreeNode current = child;
         int currentN = current.getN();
 
-        while (!current.isLeaf) {
+        while (!current.isLeaf()) {
             current = current.getChild(currentN);
             currentN = current.getN();
         }
@@ -780,7 +784,7 @@ public class BTreeNode {
     private String findMinKeyInChild(BTreeNode child) {
         BTreeNode current = child;
 
-        while (!current.isLeaf) {
+        while (!current.isLeaf()) {
             current = current.getChild(0);
         }
         return current.getKey(0);
@@ -794,11 +798,11 @@ public class BTreeNode {
      * @param key the key to delete.
      */
     public void deleteKey(String key) {
-        int index = UsefulFunctions.binarySearch(keys, key, getN());
+        int index = UsefulFunctions.binarySearch(getKeys(), key, getN());
         for (int i = index; i < getN() - 1; i++) {
             setKey(i, getKey(i + 1));
         }
-        setN(n - 1);
+        setN(getN() - 1);
     }
 
     //CASE 4
@@ -842,10 +846,10 @@ public class BTreeNode {
             return sb.append(addKeysToString(depth));
         }
         //Gets the string representation of the sub tree of this node.
-        for (int i = 0; i <= n; i++) {
-            sb = children[i].toString(sb, depth + 1);
-            if (i < n) {
-                sb.append(keys[i]).append("_").append(depth).append(",");
+        for (int i = 0; i <= getN(); i++) {
+            sb = getChild(i).toString(sb, depth + 1);
+            if (i < getN()) {
+                sb.append(getKey(i)).append("_").append(depth).append(",");
             }
         }
         return sb;
@@ -859,8 +863,8 @@ public class BTreeNode {
      */
     private String addKeysToString(int depth) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < n; i++) {
-            sb.append(keys[i]).append("_").append(depth).append(",");
+        for (int i = 0; i < getN(); i++) {
+            sb.append(getKey(i)).append("_").append(depth).append(",");
         }
         return sb.toString();
     }

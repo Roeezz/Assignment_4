@@ -53,7 +53,7 @@ public class HashTable {
      * @return an int that is the hash code of the key.
      */
     private int hashFunction(Integer key){
-        return ((5*key + 3) % 15486907) % m2;
+        return ((5*key + 3) % 15486907) % getM2();
     }
 
     /**
@@ -73,12 +73,20 @@ public class HashTable {
         return results;
     }
 
+    public int getM2() {
+        return m2;
+    }
+
+    public HashList getTableCell(int i){
+        return table[i];
+    }
+
     /**
      * Checks the password against the hash table to see if it's good or bad.
      * @param password a keyed password to check.
      * @return true if the password is not in the table, meaning it's good, otherwise false.
      */
     private boolean checkInTable(Integer password){
-        return !table[hashFunction(password)].contains(password);
+        return !getTableCell(hashFunction(password)).contains(password);
     }
 }

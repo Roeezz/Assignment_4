@@ -9,6 +9,7 @@ public class DeleteTests {
             tree.delete(delete);
         }
         System.out.println(tree);
+        tree.delete("delete");
     }
 
 }

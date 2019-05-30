@@ -1,6 +1,9 @@
 import java.util.Iterator;
 
 public class LinkedList<T> implements Iterable<T> {
+
+    //FIELDS
+
     /**
      * The first element in the list.
      */
@@ -21,12 +24,30 @@ public class LinkedList<T> implements Iterable<T> {
         size = 0;
     }
 
-    /**
-     * Gets the amount of elements in the list.
-     * @return the value of the field 'size'.
-     */
+    //GETTERS AND SETTERS
+
+    public Link<T> getFirst() {
+        return first;
+    }
+
+    public Link<T> getLast() {
+        return last;
+    }
+
+    public void setFirst(Link<T> first) {
+        this.first = first;
+    }
+
+    public void setLast(Link<T> last) {
+        this.last = last;
+    }
+
     public int getSize() {
         return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 
     /**
@@ -34,7 +55,7 @@ public class LinkedList<T> implements Iterable<T> {
      * @return true if the list is empty, otherwise false.
      */
     public boolean isEmpty() {
-        return first == null;
+        return getFirst() == null;
     }
 
     /**
@@ -55,30 +76,30 @@ public class LinkedList<T> implements Iterable<T> {
         if(data == null) {
             throw new NullPointerException("Argument is null");
         }
-        first = createFirstLink(data);
-        if (last == null) {
-            last = first;
+        setFirst(createFirstLink(data));
+        if (getLast() == null) {
+            setLast(getFirst());
         }
-        size++;
+        setSize(getSize() + 1);
     }
 
     public void addLast(T data){
         if (data == null){
             throw new NullPointerException("Argument is null");
         }
-        if (last == null){
-            first = createLastLink(data);
-            last = first;
+        if (getLast() == null){
+            setFirst(createLastLink(data));
+            setLast(getFirst());
         }
         else {
-            last.setNext(createLastLink(data));
-            last = last.getNext();
+            getLast().setNext(createLastLink(data));
+            setLast(getLast().getNext());
         }
-        size++;
+        setSize(getSize() + 1);
     }
 
     protected Link<T> createFirstLink(T data){
-        return new Link<>(data, first);
+        return new Link<>(data, getFirst());
     }
     protected Link<T> createLastLink(T data){
         return new Link<>(data, null);
@@ -90,16 +111,13 @@ public class LinkedList<T> implements Iterable<T> {
      * @return the index of the searched element if it exists, otherwise -1.
      * @throws NullPointerException if given data is null.
      */
-    public int indexOf(Object data)
-    {
+    public int indexOf(Object data) {
         if(data == null) {
             throw new NullPointerException("Argument is null");
         }
         int index = 0;
-        for(Link<T> current = first; current != null; current = current.getNext())
-        {
-            if(current.getData().equals(data))
-            {
+        for(Link<T> current = getFirst(); current != null; current = current.getNext()) {
+            if(current.getData().equals(data)) {
                 return index;
             }
             index++;
@@ -114,10 +132,10 @@ public class LinkedList<T> implements Iterable<T> {
      * @throws IndexOutOfBoundsException if given index is out of bounds.
      */
     public T get(int index) {
-        if(0 > index && index >= size){
-            throw new IndexOutOfBoundsException("Index: " + index + " getSize: " + size);
+        if(0 > index && index >= getSize()){
+            throw new IndexOutOfBoundsException("Index: " + index + " getSize: " + getSize());
         }
-        Link<T> current = first;
+        Link<T> current = getFirst();
         for(int i = 0; i < index; i++){
             current = current.getNext();
         }
@@ -134,14 +152,12 @@ public class LinkedList<T> implements Iterable<T> {
         if (toRemove == null){
             throw new NullPointerException("Argument is null");
         }
-        Link<T> current = first;
+        Link<T> current = getFirst();
         Link<T> prev = current;
-        while(current != null)
-        {
-            if(current.getData().equals(toRemove))
-            {
-                if(first.equals(current))
-                    first = first.getNext();
+        while(current != null) {
+            if(current.getData().equals(toRemove)) {
+                if(getFirst().equals(current))
+                    setFirst(getFirst().getNext());
                 else prev.setNext(current.getNext());
                 return true;
             }
@@ -158,13 +174,13 @@ public class LinkedList<T> implements Iterable<T> {
      * @throws IndexOutOfBoundsException if given index is out of bounds.
      */
     public T remove(int index) {
-        if(0 > index && index >= size){
-            throw new IndexOutOfBoundsException("Index: " + index + " getSize: " + size);
+        if(0 > index && index >= getSize()){
+            throw new IndexOutOfBoundsException("Index: " + index + " getSize: " + getSize());
         }
         if(index == 0){
-            first = first.getNext();
+            setFirst(getFirst().getNext());
         }
-        Link<T> current = first;
+        Link<T> current = getFirst();
         while(index > 1){
             current = current.getNext();
             index--;
@@ -185,7 +201,7 @@ public class LinkedList<T> implements Iterable<T> {
         }
 
         boolean output = false;
-        for (Link<T> curr = first; curr != null & !output; curr = curr.getNext()){
+        for (Link<T> curr = getFirst(); curr != null & !output; curr = curr.getNext()){
             output = curr.getData().equals(element);
         }
         return output;
@@ -196,7 +212,7 @@ public class LinkedList<T> implements Iterable<T> {
         if(isEmpty()) return "";
 
         StringBuilder sb = new StringBuilder();
-        Link<T> current = first;
+        Link<T> current = getFirst();
         while(current != null){
             sb.append("=>");
             sb.append(current);
@@ -210,7 +226,7 @@ public class LinkedList<T> implements Iterable<T> {
     public boolean equals(Object other) {
         if (other instanceof LinkedList<?>){
             if(isEmpty() && ((LinkedList<?>) other).isEmpty()){
-                return first.equals(((LinkedList<?>) other).first);
+                return getFirst().equals(((LinkedList<?>) other).getFirst());
             }
         }
         return false;
