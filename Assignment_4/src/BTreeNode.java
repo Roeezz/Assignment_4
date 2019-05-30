@@ -37,17 +37,17 @@ public class BTreeNode {
         return isLeaf;
     }
 
-    // Getters and Setters
-    public void setN(int n) {
-        this.n = n;
+    public void setLeaf(boolean leaf) {
+        isLeaf = leaf;
     }
 
     public int getN() {
         return n;
     }
 
-    public void setLeaf(boolean leaf) {
-        isLeaf = leaf;
+    // Getters and Setters
+    public void setN(int n) {
+        this.n = n;
     }
 
     public String[] getKeys() {
@@ -698,8 +698,9 @@ public class BTreeNode {
     }
 
     // FIND PREDECESSOR AND SUCCESSOR
+
     /**
-     * Searches for the max key in the the child, replaces the key in the node with it,
+     * Searches for the max key in the the child's subtree, replaces the key in the node with it,
      * then deletes the max key in the subtree of the child.
      *
      * @param index the index of the child in the children array.
@@ -730,10 +731,11 @@ public class BTreeNode {
     }
 
     /**
-     * TODO: document replaceKeyWithMinKey
+     * Searches for the min key in the the child's subtree, replaces the key in the node with it,
+     * then deletes the min key in the child's subtree.
      *
-     * @param index
-     * @param child
+     * @param index the index of the child in the children array.
+     * @param child the child to search the min key in.
      */
     private void replaceKeyWithMinKey(int index, BTreeNode child) {
         String min = findMinKeyInChild(child);
@@ -742,10 +744,10 @@ public class BTreeNode {
     }
 
     /**
-     * TODO: document findMinKeyInChild
+     * Finds the min key in give childes sub tree.
      *
-     * @param child
-     * @return
+     * @param child the child to search the min key in.
+     * @return the min key in the subtree.
      */
     private String findMinKeyInChild(BTreeNode child) {
         BTreeNode current = child;

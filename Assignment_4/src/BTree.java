@@ -123,9 +123,9 @@ public class BTree {
     }
 
     /**
-     * TODO: document delete
+     * Deletes given key from the tree.
      *
-     * @param key
+     * @param key the key to delete.
      */
     public void delete(String key) {
         BTreeNode leftChild = root.getChild(0);
@@ -133,7 +133,7 @@ public class BTree {
         if (root.getN() == 1 && leftChild.getN() < T_VAR && rightChild.getN() < T_VAR) {
             root = mergeSingleKeyRoot();
         }
-        if(root.keyExist(key)){
+        if (root.keyExist(key)) {
             root.handleCase2(key);
         }
         else {
