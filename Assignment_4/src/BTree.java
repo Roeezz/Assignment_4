@@ -71,7 +71,7 @@ public class BTree {
      * and the second element being the index of the key in the node.
      */
     public OrderedPair search(String key) {
-        return getRoot().search(key);
+        return getRoot().search(key.toLowerCase());
     }
 
     /**
@@ -116,7 +116,7 @@ public class BTree {
         double startTime = System.nanoTime();
         if (keysList != null) {
             for (String key : keysList) {
-                search(key.toLowerCase());
+                search(key);
             }
         }
         double endTime = System.nanoTime();
