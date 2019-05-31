@@ -29,7 +29,7 @@ public class HashFunctionsList implements Iterable<HashFunction> {
             int alpha, beta;
             while((function = reader.readLine()) != null) {
                 functionVariables = function.split("_");
-                alpha = Integer.parseInt(functionVariables[1]);
+                alpha = Integer.parseInt(functionVariables[0]);
                 beta = Integer.parseInt(functionVariables[1]);
                 hashFunctionsList.addFirst(createHashFunction(alpha,beta));
             }
