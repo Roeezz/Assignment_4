@@ -9,29 +9,32 @@ public class HashFunctionsList implements Iterable<HashFunction> {
      */
     private LinkedList<HashFunction> hashFunctionsList;
 
-    public HashFunctionsList(String path){
+    public HashFunctionsList(String path) {
         createFunctionsList(path);
     }
 
     /**
      * Creates a list of hash functions with the parameters read from a txt file.
+     *
      * @param path the specified path of the txt file.
      * @throws NullPointerException if given path is null.
      */
-    private void createFunctionsList(String path){
-        if(path == null){
+    private void createFunctionsList(String path) {
+        if (path == null) {
             throw new NullPointerException("Argument is null");
         }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(path))){
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
             hashFunctionsList = new LinkedList<>();
-            String function; String[] functionVariables;
+            String function;
+            String[] functionVariables;
             int alpha, beta;
-            while((function = reader.readLine()) != null) {
+
+            while ((function = reader.readLine()) != null) {
                 functionVariables = function.split("_");
-                alpha = Integer.parseInt(functionVariables[1]);
+                alpha = Integer.parseInt(functionVariables[0]);
                 beta = Integer.parseInt(functionVariables[1]);
-                hashFunctionsList.addFirst(createHashFunction(alpha,beta));
+                hashFunctionsList.addFirst(createHashFunction(alpha, beta));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -40,16 +43,18 @@ public class HashFunctionsList implements Iterable<HashFunction> {
 
     /**
      * Gets the amount of functions of the list.
+     *
      * @return the size of hashFunctionsList.
      */
-    public int getSize(){
+    public int getSize() {
         return hashFunctionsList.getSize();
     }
 
     /**
      * Creates a HashFunctions with given parameters.
+     *
      * @param alpha a parameter used to calculate the function.
-     * @param beta a parameter used to calculate the function.
+     * @param beta  a parameter used to calculate the function.
      * @return a HashFunction.
      */
     private HashFunction createHashFunction(int alpha, int beta) {
@@ -58,6 +63,7 @@ public class HashFunctionsList implements Iterable<HashFunction> {
 
     /**
      * Creates an iterator on the hash functions list.
+     *
      * @return an iterator of the list.
      */
     @Override
@@ -67,8 +73,7 @@ public class HashFunctionsList implements Iterable<HashFunction> {
 
     @Override
     public boolean equals(Object other) {
-        if(other instanceof HashFunctionsList)
-            return hashFunctionsList.equals(other);
+        if (other instanceof HashFunctionsList) return hashFunctionsList.equals(other);
         return false;
     }
 
