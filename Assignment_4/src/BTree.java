@@ -146,11 +146,17 @@ public class BTree {
         key = key.toLowerCase();
         BTreeNode leftChild = root.getChild(0);
         BTreeNode rightChild = root.getChild(1);
-        if (root.getN() == 1 && leftChild.getN() < T_VAR && rightChild.getN() < T_VAR) {
+
+        if (!root.isLeaf() && root.getN() == 1 && leftChild.getN() < T_VAR && rightChild.getN() < T_VAR) {
             root = mergeSingleKeyRoot();
         }
         if (root.keyExist(key)) {
-            root.handleCase2(key);
+            if (root.isLeaf()) {
+                root.deleteKey(key);
+            }
+            else {
+                root.handleCase2(key);
+            }
         }
         else {
             root.handleCase4(key);
@@ -172,6 +178,13 @@ public class BTree {
 
     @Override
     public String toString() {
+        if (isEmpty()) {
+            return "";
+        }
         return getRoot().toString();
+    }
+
+    private boolean isEmpty() {
+        return root.getN() == 0;
     }
 }
