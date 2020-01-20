@@ -35,7 +35,6 @@ public class BTreeNode {
         return isLeaf;
     }
 
-    // Getters and Setters
     public void setLeaf(boolean leaf) {
         isLeaf = leaf;
     }
@@ -44,6 +43,7 @@ public class BTreeNode {
         return n;
     }
 
+    // Getters and Setters
     public void setN(int n) {
         this.n = n;
     }
